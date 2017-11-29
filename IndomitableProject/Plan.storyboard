@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Sx7-R4-9yq">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="AvenirNext.ttc">
+            <string>AvenirNext-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--PlanTable-->
+        <scene sceneID="5PH-Yh-tpH">
+            <objects>
+                <viewController title="PlanTable" id="tbt-rg-NoO" customClass="PlanTableViewController" customModule="IndomitableProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="i5T-iL-6pJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="EoG-aK-3yZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7T6-TV-6v7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="KHC-Lx-AfE">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="planCell" rowHeight="240" id="mJF-9i-8us" customClass="PlanTableViewCell" customModule="IndomitableProject" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="240"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mJF-9i-8us" id="4sn-vU-Qhy">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="239.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="acp-WC-thA" customClass="PlanLine" customModule="IndomitableProject" customModuleProvider="target">
+                                                    <rect key="frame" x="140" y="111" width="94" height="121.5"/>
+                                                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </view>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nfA-hD-wQy" customClass="PlanBubble" customModule="IndomitableProject" customModuleProvider="target">
+                                                    <rect key="frame" x="97" y="12" width="180" height="100"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Planning" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Rq-sL-Iui">
+                                                            <rect key="frame" x="20" y="20" width="140" height="61"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="20"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="100" id="jXG-hp-gmo"/>
+                                                        <constraint firstAttribute="width" constant="180" id="wxb-MG-BKr"/>
+                                                    </constraints>
+                                                </view>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="xx d" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zmM-QN-g40">
+                                                    <rect key="frame" x="110" y="165" width="22" height="13.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                    <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="acp-WC-thA" secondAttribute="bottom" constant="-0.5" id="09O-RU-F0p"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="nfA-hD-wQy" secondAttribute="trailing" constant="83" id="8wu-cu-AZS"/>
+                                                <constraint firstItem="acp-WC-thA" firstAttribute="top" secondItem="4sn-vU-Qhy" secondAttribute="top" constant="111" id="DJR-Ta-cLX"/>
+                                                <constraint firstItem="acp-WC-thA" firstAttribute="centerY" secondItem="zmM-QN-g40" secondAttribute="centerY" id="Mv2-ec-DWH"/>
+                                                <constraint firstItem="acp-WC-thA" firstAttribute="leading" secondItem="4sn-vU-Qhy" secondAttribute="leading" constant="140" id="TJh-bv-LLF"/>
+                                                <constraint firstItem="nfA-hD-wQy" firstAttribute="top" secondItem="4sn-vU-Qhy" secondAttribute="topMargin" constant="1" id="YWG-ln-qxG"/>
+                                                <constraint firstAttribute="bottom" secondItem="nfA-hD-wQy" secondAttribute="bottom" constant="127.5" id="fcg-2C-ZmO"/>
+                                                <constraint firstAttribute="trailing" secondItem="acp-WC-thA" secondAttribute="trailing" constant="141" id="fyX-t5-Iy3"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="nfA-hD-wQy" secondAttribute="bottom" constant="116" id="nQN-sL-GQd"/>
+                                                <constraint firstItem="nfA-hD-wQy" firstAttribute="leading" secondItem="4sn-vU-Qhy" secondAttribute="leadingMargin" constant="82" id="pJ2-lb-ZIc"/>
+                                                <constraint firstItem="acp-WC-thA" firstAttribute="leading" secondItem="zmM-QN-g40" secondAttribute="trailing" constant="8" symbolic="YES" id="sVz-4i-0Sa"/>
+                                                <constraint firstItem="zmM-QN-g40" firstAttribute="top" secondItem="nfA-hD-wQy" secondAttribute="bottom" constant="53" id="xiQ-cC-0ZW"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="bubble" destination="nfA-hD-wQy" id="ANg-dq-FOe"/>
+                                            <outlet property="days" destination="zmM-QN-g40" id="gqL-BT-GkO"/>
+                                            <outlet property="line" destination="acp-WC-thA" id="N27-hU-2Pq"/>
+                                            <outlet property="name" destination="6Rq-sL-Iui" id="FJY-fg-pMR"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <sections/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="U6q-24-8zU"/>
+                    <connections>
+                        <outlet property="planTableView" destination="KHC-Lx-AfE" id="2ok-Xh-Vga"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8MV-iT-mCd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2414" y="258"/>
+        </scene>
+        <!--Plan Table View Controller-->
+        <scene sceneID="f6e-dp-KPL">
+            <objects>
+                <tableViewController id="uJg-tO-sof" customClass="PlanTableViewController" customModule="IndomitableProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="P0v-NW-roP">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="planCell" rowHeight="271" id="jtb-ec-Az1" customClass="PlanTableViewCell" customModule="IndomitableProject" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="271"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="jtb-ec-Az1" id="xHq-MU-mEH">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="270.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8ab-gt-t5O" customClass="PlanBubble" customModule="IndomitableProject" customModuleProvider="target">
+                                            <rect key="frame" x="97" y="48" width="180" height="100"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Planning" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ywy-Ia-MRy">
+                                                    <rect key="frame" x="20" y="20" width="140" height="61"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="20"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="100" id="8QQ-TQ-iDE"/>
+                                                <constraint firstAttribute="width" constant="180" id="9hv-ky-GvF"/>
+                                            </constraints>
+                                        </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y5t-1q-ptO" customClass="PlanLine" customModule="IndomitableProject" customModuleProvider="target">
+                                            <rect key="frame" x="140" y="148" width="94" height="122"/>
+                                            <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="121.5" id="97i-ZB-pMc"/>
+                                                <constraint firstAttribute="width" constant="94" id="qki-7N-ceb"/>
+                                            </constraints>
+                                        </view>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="xx d" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GW9-8P-2X6">
+                                            <rect key="frame" x="105" y="201" width="27" height="14"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                            <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="y5t-1q-ptO" firstAttribute="leading" secondItem="GW9-8P-2X6" secondAttribute="trailing" constant="8" symbolic="YES" id="0wc-dD-eqA"/>
+                                        <constraint firstItem="y5t-1q-ptO" firstAttribute="top" secondItem="8ab-gt-t5O" secondAttribute="bottom" id="HAz-Ty-Rqg"/>
+                                        <constraint firstItem="GW9-8P-2X6" firstAttribute="top" secondItem="8ab-gt-t5O" secondAttribute="bottom" constant="53" id="IUm-H8-KJw"/>
+                                        <constraint firstItem="GW9-8P-2X6" firstAttribute="leading" secondItem="xHq-MU-mEH" secondAttribute="leadingMargin" constant="89" id="R5Q-2g-qZI"/>
+                                        <constraint firstItem="y5t-1q-ptO" firstAttribute="centerX" secondItem="8ab-gt-t5O" secondAttribute="centerX" id="aTY-bW-xgR"/>
+                                        <constraint firstItem="8ab-gt-t5O" firstAttribute="leading" secondItem="xHq-MU-mEH" secondAttribute="leadingMargin" constant="81" id="cqe-JB-lWD"/>
+                                        <constraint firstItem="8ab-gt-t5O" firstAttribute="top" secondItem="xHq-MU-mEH" secondAttribute="topMargin" constant="37" id="lIA-7I-oEO"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="8ab-gt-t5O" secondAttribute="trailing" constant="82" id="mkr-bg-M1H"/>
+                                        <constraint firstAttribute="bottom" secondItem="y5t-1q-ptO" secondAttribute="bottom" constant="1" id="wKV-Y2-7Sc"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="bubble" destination="8ab-gt-t5O" id="wWM-Lt-FxD"/>
+                                    <outlet property="days" destination="GW9-8P-2X6" id="tbh-Lz-g3t"/>
+                                    <outlet property="line" destination="y5t-1q-ptO" id="O1g-zt-QtV"/>
+                                    <outlet property="name" destination="Ywy-Ia-MRy" id="6aW-6K-m8U"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <sections/>
+                        <connections>
+                            <outlet property="dataSource" destination="uJg-tO-sof" id="BbU-Mw-u6g"/>
+                            <outlet property="delegate" destination="uJg-tO-sof" id="RLY-Fx-NxW"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="JBj-mJ-C2S"/>
+                    <connections>
+                        <outlet property="planTableView" destination="P0v-NW-roP" id="3cw-AZ-4ac"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e3N-oP-Fy8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1240.8" y="609.44527736131943"/>
+        </scene>
+        <!--Plan-->
+        <scene sceneID="6BA-HS-K3Z">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Sx7-R4-9yq" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Plan" id="dHx-0z-RTE"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="euF-Ph-PIC">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="uJg-tO-sof" kind="relationship" relationship="rootViewController" id="VLy-vh-M53"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aO9-kE-QKr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="363.19999999999999" y="610.79460269865069"/>
+        </scene>
+    </scenes>
+</document>
