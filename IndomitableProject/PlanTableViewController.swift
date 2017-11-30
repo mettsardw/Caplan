@@ -14,7 +14,7 @@ class PlanTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        plans = manageProject()
+       // plans = manageProject()
         
         print(plans.count)
     }
@@ -41,7 +41,7 @@ class PlanTableViewController: UITableViewController {
         return cell
     }
     
-    func manageProject() -> [Plan] {
+    /*func manageProject() -> [Plan] {
         //initialize project, tasks.
         var plan: Plan = Plan(name: "Planning")
         //var plan2: Plan = Plan(name: "Sprinting")
@@ -51,7 +51,7 @@ class PlanTableViewController: UITableViewController {
         
         project.schedule.plans.append(plan)
         return project.schedule.plans
-    }
+    }*/
 }
 
 
