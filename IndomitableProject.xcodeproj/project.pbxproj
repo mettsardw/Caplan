@@ -43,6 +43,7 @@
 		92959A161FC6CDB0005B331F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92959A141FC6CDB0005B331F /* LaunchScreen.storyboard */; };
 		929682AF1FCFAF4600BBF591 /* coreDataCaplan.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 929682AD1FCFAF4500BBF591 /* coreDataCaplan.xcdatamodeld */; };
 		92C4BACE1FCFC95700B7C2DB /* TaskSprintSetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C4BACD1FCFC95700B7C2DB /* TaskSprintSetView.swift */; };
+		968AFD5D1FCFE8A000722C97 /* TaskAddedInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968AFD5C1FCFE8A000722C97 /* TaskAddedInfoView.swift */; };
 		96CD07771FCD64E700C0D563 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CD07761FCD64E700C0D563 /* Event.swift */; };
 		96CD07791FCDA30D00C0D563 /* TaskPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CD07781FCDA30D00C0D563 /* TaskPickerView.swift */; };
 		96CD079B1FCE89F700C0D563 /* TaskActivitiesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CD079A1FCE89F700C0D563 /* TaskActivitiesView.swift */; };
@@ -87,6 +88,7 @@
 		92959A171FC6CDB0005B331F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		929682AE1FCFAF4500BBF591 /* coreDataCaplan.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = coreDataCaplan.xcdatamodel; sourceTree = "<group>"; };
 		92C4BACD1FCFC95700B7C2DB /* TaskSprintSetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskSprintSetView.swift; sourceTree = "<group>"; };
+		968AFD5C1FCFE8A000722C97 /* TaskAddedInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskAddedInfoView.swift; sourceTree = "<group>"; };
 		96CD07761FCD64E700C0D563 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		96CD07781FCDA30D00C0D563 /* TaskPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskPickerView.swift; sourceTree = "<group>"; };
 		96CD079A1FCE89F700C0D563 /* TaskActivitiesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskActivitiesView.swift; sourceTree = "<group>"; };
@@ -194,6 +196,7 @@
 				96CD07781FCDA30D00C0D563 /* TaskPickerView.swift */,
 				96CD079A1FCE89F700C0D563 /* TaskActivitiesView.swift */,
 				92C4BACD1FCFC95700B7C2DB /* TaskSprintSetView.swift */,
+				968AFD5C1FCFE8A000722C97 /* TaskAddedInfoView.swift */,
 			);
 			path = UIAddTask;
 			sourceTree = "<group>";
@@ -293,6 +296,7 @@
 				220838C41FCC60DF003CD62A /* Project.swift in Sources */,
 				96CD07771FCD64E700C0D563 /* Event.swift in Sources */,
 				220838BE1FCC5D54003CD62A /* Plan.swift in Sources */,
+				968AFD5D1FCFE8A000722C97 /* TaskAddedInfoView.swift in Sources */,
 				22FB98791FCE9538000DD7F2 /* TestTableViewController.swift in Sources */,
 				929682AF1FCFAF4600BBF591 /* coreDataCaplan.xcdatamodeld in Sources */,
 				92959A0C1FC6CDB0005B331F /* AppDelegate.swift in Sources */,

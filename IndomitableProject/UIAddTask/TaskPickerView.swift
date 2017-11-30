@@ -40,7 +40,7 @@ class TaskPickerView: UIViewController, UIPickerViewDataSource, UIPickerViewDele
             let destination = segue.destination as! TaskActivitesView
             let selectedData: String = taskData[dataPicker.selectedRow(inComponent: 0)]
             
-            destination.sourceTitle = selectedData
+            destination.sourceTask = selectedData
             if selectedData == "Requirement" {
                 destination.dataActivites.append("Requirement Ghatering")
                 destination.dataActivites.append("Requirement Analysis")
