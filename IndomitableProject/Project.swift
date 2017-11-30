@@ -23,7 +23,7 @@ class Project {
         //image is optional
     }
     
-//    func getTasks(index: Int) -> [Task] {
-//        return self.schedule.plans[index].tasks
-//    }
+    func getTasks(index: Int) -> [Task] {
+        return self.schedule.plans[index].tasks
+    }
 }
