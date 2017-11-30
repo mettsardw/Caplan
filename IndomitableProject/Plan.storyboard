@@ -40,7 +40,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="acp-WC-thA" customClass="PlanLine" customModule="IndomitableProject" customModuleProvider="target">
-                                                    <rect key="frame" x="140" y="111" width="94" height="121.5"/>
+                                                    <rect key="frame" x="140" y="111" width="94" height="129"/>
                                                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </view>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nfA-hD-wQy" customClass="PlanBubble" customModule="IndomitableProject" customModuleProvider="target">
@@ -60,7 +60,7 @@
                                                     </constraints>
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="xx d" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zmM-QN-g40">
-                                                    <rect key="frame" x="110" y="165" width="22" height="13.5"/>
+                                                    <rect key="frame" x="110" y="165" width="22" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                     <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
@@ -73,9 +73,7 @@
                                                 <constraint firstItem="acp-WC-thA" firstAttribute="centerY" secondItem="zmM-QN-g40" secondAttribute="centerY" id="Mv2-ec-DWH"/>
                                                 <constraint firstItem="acp-WC-thA" firstAttribute="leading" secondItem="4sn-vU-Qhy" secondAttribute="leading" constant="140" id="TJh-bv-LLF"/>
                                                 <constraint firstItem="nfA-hD-wQy" firstAttribute="top" secondItem="4sn-vU-Qhy" secondAttribute="topMargin" constant="1" id="YWG-ln-qxG"/>
-                                                <constraint firstAttribute="bottom" secondItem="nfA-hD-wQy" secondAttribute="bottom" constant="127.5" id="fcg-2C-ZmO"/>
                                                 <constraint firstAttribute="trailing" secondItem="acp-WC-thA" secondAttribute="trailing" constant="141" id="fyX-t5-Iy3"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="nfA-hD-wQy" secondAttribute="bottom" constant="116" id="nQN-sL-GQd"/>
                                                 <constraint firstItem="nfA-hD-wQy" firstAttribute="leading" secondItem="4sn-vU-Qhy" secondAttribute="leadingMargin" constant="82" id="pJ2-lb-ZIc"/>
                                                 <constraint firstItem="acp-WC-thA" firstAttribute="leading" secondItem="zmM-QN-g40" secondAttribute="trailing" constant="8" symbolic="YES" id="sVz-4i-0Sa"/>
                                                 <constraint firstItem="zmM-QN-g40" firstAttribute="top" secondItem="nfA-hD-wQy" secondAttribute="bottom" constant="53" id="xiQ-cC-0ZW"/>
