@@ -10,18 +10,19 @@ import UIKit
 
 class PlanTableViewController: UITableViewController {
     @IBOutlet weak var planTableView: UITableView!
-    var plans: [Plan]! //get plans from project
+    //var plans: [Plan]! //get plans from project
     
     override func viewDidLoad() {
         super.viewDidLoad()
        // plans = manageProject()
         
-        print(plans.count)
+       // print(plans.count)
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         print("b")
-        return plans.count
+        //return plans.count
+        return 0
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -29,17 +30,17 @@ class PlanTableViewController: UITableViewController {
         return 1
     }
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = planTableView.dequeueReusableCell(withIdentifier: "planCell", for: indexPath) as! PlanTableViewCell
-        print("a")
-        // Configure the cell...
-        let cellData = plans[indexPath.row]
-        
-        cell.name.text = cellData.name
-        cell.days.text = "\(cellData.duration)d"
-        
-        return cell
-    }
+//    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+////        let cell = planTableView.dequeueReusableCell(withIdentifier: "planCell", for: indexPath) as! PlanTableViewCell
+////        print("a")
+////        // Configure the cell...
+////        let cellData = plans[indexPath.row]
+////
+////        cell.name.text = cellData.name
+////        cell.days.text = "\(cellData.duration)d"
+////
+//        return cell
+//    }
     
 //    func manageProject() -> [Plan] {
 //        //initialize project, tasks.
