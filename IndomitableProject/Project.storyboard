@@ -39,7 +39,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9fy-zw-Xbk">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="DOmlkBBX4AEWBLN" translatesAutoresizingMaskIntoConstraints="NO" id="9fy-zw-Xbk">
                                         <rect key="frame" x="137" y="21" width="100" height="100"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
@@ -82,7 +82,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Project" id="tAa-51-4pA"/>
                     <navigationItem key="navigationItem" id="9hN-MM-r4z"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="daysLabel" destination="9Pl-iu-fDI" id="TZd-TY-sOx"/>
                         <outlet property="projectImage" destination="9fy-zw-Xbk" id="0ph-RF-dT9"/>
@@ -94,12 +96,13 @@
             </objects>
             <point key="canvasLocation" x="919.20000000000005" y="568.06596701649175"/>
         </scene>
-        <!--Item-->
+        <!--Project-->
         <scene sceneID="ux9-VS-ur5">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qCF-3t-kjd" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="Ms6-mR-zzk"/>
+                <navigationController title="Project" automaticallyAdjustsScrollViewInsets="NO" id="qCF-3t-kjd" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Project" id="wcF-lq-gmg"/>
                     <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="m7w-Cd-bN7">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -115,6 +118,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="DOmlkBBX4AEWBLN" width="800" height="1200"/>
         <image name="icons8-back-50" width="50" height="50"/>
     </resources>
 </document>

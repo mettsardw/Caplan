@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Initial Tab Controller-->
+        <!--Initial Tab-->
         <scene sceneID="n3F-ci-a7I">
             <objects>
-                <tabBarController id="1ma-8l-ZtK" customClass="InitialTabController" customModule="IndomitableProject" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController title="Initial Tab" id="1ma-8l-ZtK" customClass="InitialTabController" customModule="IndomitableProject" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="kcv-1T-GHU">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -21,8 +21,8 @@
                     <connections>
                         <segue destination="OJF-KS-mOD" kind="relationship" relationship="viewControllers" id="haf-L0-vGR"/>
                         <segue destination="QsK-ZV-zv7" kind="relationship" relationship="viewControllers" id="0et-Lk-PLG"/>
-                        <segue destination="PoD-C1-CbM" kind="relationship" relationship="viewControllers" id="xOD-0Z-fc3"/>
                         <segue destination="Q5w-ep-DTO" kind="relationship" relationship="viewControllers" id="XNM-z8-3Sc"/>
+                        <segue destination="PoD-C1-CbM" kind="relationship" relationship="viewControllers" id="lD3-13-Xre"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Slv-8G-Yka" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -67,7 +67,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jdV-er-cyD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="366" y="378"/>
+            <point key="canvasLocation" x="366" y="61"/>
         </scene>
         <!--Settings-->
         <scene sceneID="8HQ-3r-JRu">

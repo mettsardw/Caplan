@@ -13,11 +13,23 @@ class ProjectTableViewControlelr: UIViewController, UITableViewDelegate, UITable
     @IBOutlet weak var projectImage: UIImageView!
     @IBOutlet weak var daysLabel: UILabel!
     @IBOutlet weak var projectLabel: UILabel!
+    
+    var projectName: String = "My Project"
+    var projectDays: Int = 100
+    var projectIcon: UIImage?
     var labels: [String] = ["edit project name","edit time limit","reset"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //initialize view
+        projectLabel.text = projectName
+        daysLabel.text = "\(projectDays) days left"
+        
+        //initialize image view
+        projectImage.layer.masksToBounds = false
+        projectImage.layer.cornerRadius = projectImage.frame.height/2
+        projectImage.clipsToBounds = true
         
         projectTableView.dataSource = self
         projectTableView.delegate = self
