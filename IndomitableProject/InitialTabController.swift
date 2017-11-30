@@ -15,7 +15,7 @@ class InitialTabController: UITabBarController {
         super.viewDidLoad()
         //print("first")
         
-       // manageProject()
+       manageProject()
     }
 }
 
