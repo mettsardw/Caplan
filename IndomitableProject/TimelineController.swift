@@ -10,8 +10,8 @@ import UIKit
 
 class TimelineController: UIViewController {
     var taskCount: Int = 0
-//    var taskButtons: [TaskButton] = []
-//    var taskLines: [TaskLine] = []
+    var taskButtons: [TaskButton] = []
+    var taskLines: [TaskLine] = []
     var taskBundles: [TaskBundle] = []
     
     var scrollView: UIScrollView!
@@ -26,6 +26,7 @@ class TimelineController: UIViewController {
         //get tasks
         var count = 0
         for task in project.getTasks(index: 0){
+            //print(task.name.rawValue)
             taskBundles.append(TaskBundle(frame: self.view.frame, from: CGFloat(50 + count * 50), length: 100.0, task: task, color: #colorLiteral(red: 0.4666666687, green: 0.7647058964, blue: 0.2666666806, alpha: 1)))
             scrollView.addSubview(taskBundles[taskBundles.endIndex-1])
             count += 1
@@ -33,10 +34,10 @@ class TimelineController: UIViewController {
         
         //display buttons
         for index in 0..<taskCount {
-//            taskLines.append(TaskLine(frame: self.view.frame, center: self.view.frame.width/2, from: CGFloat(100 + index*100), length: 100.0))
-//            self.view.addSubview(taskLines[index])
-//            taskButtons.append(TaskButton(frame: self.view.frame, height: CGFloat(100 + index*100)))
-//            self.view.addSubview(taskButtons[index])
+            taskLines.append(TaskLine(frame: self.view.frame, from: CGFloat(100 + index*100), length: 100.0, color: #colorLiteral(red: 0.4666666687, green: 0.7647058964, blue: 0.2666666806, alpha: 1)))
+            self.view.addSubview(taskLines[index])
+            taskButtons.append(TaskButton(frame: self.view.frame, ypos: CGFloat(100 + index*100), color: #colorLiteral(red: 0.4666666687, green: 0.7647058964, blue: 0.2666666806, alpha: 1)))
+            self.view.addSubview(taskButtons[index])
 
             //edit index constant according to length? PR
 //            taskBundles.append(TaskBundle(frame: self.view.frame, from: CGFloat(50 + index*50), length: 100.0))

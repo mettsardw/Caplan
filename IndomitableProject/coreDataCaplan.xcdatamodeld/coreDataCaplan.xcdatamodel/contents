@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="13533" systemVersion="16G1111" minimumToolsVersion="Xcode 8.0" sourceLanguage="Swift" userDefinedModelVersionIdentifier="coreDataCaplan">
-    <entity name="EventCore" representedClassName="EventCore" syncable="YES" codeGenerationType="class">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="13533" systemVersion="17B1003" minimumToolsVersion="Xcode 8.0" sourceLanguage="Swift" userDefinedModelVersionIdentifier="coreDataCaplan">
+    <entity name="EventCore" representedClassName=".EventCore" syncable="YES">
         <attribute name="memberCount" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="taskEvent" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="TaskCore" inverseName="event" inverseEntity="TaskCore" syncable="YES"/>
         <relationship name="time" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="TimeCore" syncable="YES"/>
     </entity>
-    <entity name="PlanCore" representedClassName="PlanCore" syncable="YES" codeGenerationType="class">
+    <entity name="PlanCore" representedClassName="PlanCore" syncable="YES">
         <attribute name="duration" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="limit" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="tasks" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="TaskCore" syncable="YES"/>
     </entity>
-    <entity name="ScheduleCore" representedClassName="ScheduleCore" syncable="YES" codeGenerationType="class">
+    <entity name="ScheduleCore" representedClassName="ScheduleCore" syncable="YES">
         <relationship name="currPlan" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="PlanCore" syncable="YES"/>
         <relationship name="plans" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="PlanCore" syncable="YES"/>
     </entity>
-    <entity name="TaskCore" representedClassName="TaskCore" syncable="YES" codeGenerationType="class">
+    <entity name="TaskCore" representedClassName="TaskCore" syncable="YES">
         <attribute name="memberCount" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="notes" optional="YES" attributeType="String" syncable="YES"/>
@@ -25,12 +25,12 @@
         <relationship name="event" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="EventCore" inverseName="taskEvent" inverseEntity="EventCore" syncable="YES"/>
         <relationship name="time" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="TimeCore" inverseName="taskTime" inverseEntity="TimeCore" syncable="YES"/>
     </entity>
-    <entity name="TimeCore" representedClassName="TimeCore" syncable="YES" codeGenerationType="class">
+    <entity name="TimeCore" representedClassName="TimeCore" syncable="YES">
         <attribute name="duration" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="unit" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="taskTime" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="TaskCore" inverseName="time" inverseEntity="TaskCore" syncable="YES"/>
     </entity>
-    <entity name="TipsCore" representedClassName="TipsCore" syncable="YES" codeGenerationType="class">
+    <entity name="TipsCore" representedClassName="TipsCore" syncable="YES">
         <attribute name="content" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="frequency" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <relationship name="event" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="EventCore" syncable="YES"/>
@@ -38,11 +38,11 @@
         <relationship name="task" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="TaskCore" syncable="YES"/>
     </entity>
     <elements>
-        <element name="EventCore" positionX="-29" positionY="-351" width="128" height="103"/>
-        <element name="PlanCore" positionX="-173" positionY="-639" width="128" height="103"/>
-        <element name="ScheduleCore" positionX="-371" positionY="-531" width="128" height="73"/>
-        <element name="TaskCore" positionX="-756" positionY="-481" width="128" height="148"/>
-        <element name="TimeCore" positionX="-470" positionY="-207" width="128" height="88"/>
-        <element name="TipsCore" positionX="-515" positionY="-765" width="128" height="118"/>
+        <element name="EventCore" positionX="-29" positionY="-351" width="128" height="105"/>
+        <element name="PlanCore" positionX="-173" positionY="-639" width="128" height="105"/>
+        <element name="ScheduleCore" positionX="-371" positionY="-531" width="128" height="75"/>
+        <element name="TaskCore" positionX="-756" positionY="-481" width="128" height="150"/>
+        <element name="TimeCore" positionX="-470" positionY="-207" width="128" height="90"/>
+        <element name="TipsCore" positionX="-515" positionY="-765" width="128" height="120"/>
     </elements>
 </model>
