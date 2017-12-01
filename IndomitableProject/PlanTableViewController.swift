@@ -42,17 +42,17 @@ class PlanTableViewController: UITableViewController {
 //        return cell
 //    }
     
-//    func manageProject() -> [Plan] {
-//        //initialize project, tasks.
-//        var plan: Plan = Plan(name: "Planning")
-//        //var plan2: Plan = Plan(name: "Sprinting")
-//        plan.addTask(task: Task(name: "Design", memberCount: 1, time: Time(duration: 10, unit: .days)))
-//        plan.addTask(task: Task(name: "Code", memberCount: 1, time: Time(duration: 5, unit: .days)))
-//        plan.addTask(task: Task(name: "Testing", memberCount: 1, time: Time(duration: 7, unit: .days)))
-//
-//        project.schedule.plans.append(plan)
-//        return project.schedule.plans
-//    }
+    /*func manageProject() -> [Plan] {
+        //initialize project, tasks.
+        var plan: Plan = Plan(name: "Planning")
+        //var plan2: Plan = Plan(name: "Sprinting")
+        plan.addTask(task: Task(name: "Design", memberCount: 1, time: Time(duration: 10, unit: .days)))
+        plan.addTask(task: Task(name: "Code", memberCount: 1, time: Time(duration: 5, unit: .days)))
+        plan.addTask(task: Task(name: "Testing", memberCount: 1, time: Time(duration: 7, unit: .days)))
+        
+        project.schedule.plans.append(plan)
+        return project.schedule.plans
+    }*/
 }
 
 
