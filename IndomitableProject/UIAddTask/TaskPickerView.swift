@@ -16,6 +16,12 @@ class TaskPickerView: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     @IBOutlet weak var dataPicker: UIPickerView!
     var taskData: [String] = ["Requirement","Design","Coding","Testing","Review"]
     
+    @IBOutlet weak var numberMember: UITextField!
+    
+    @IBAction func stepper(_ sender: UIStepper) {
+        numberMember.text = String(format: "%.0f",sender.value)
+    }
+    
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
@@ -34,7 +40,7 @@ class TaskPickerView: UIViewController, UIPickerViewDataSource, UIPickerViewDele
             let destination = segue.destination as! TaskActivitesView
             let selectedData: String = taskData[dataPicker.selectedRow(inComponent: 0)]
             
-            destination.sourceTitle = selectedData
+            destination.sourceTask = selectedData
             if selectedData == "Requirement" {
                 destination.dataActivites.append("Requirement Ghatering")
                 destination.dataActivites.append("Requirement Analysis")
@@ -61,8 +67,6 @@ class TaskPickerView: UIViewController, UIPickerViewDataSource, UIPickerViewDele
 
             }
             
-           // destination.countryText = countryData[dataPicker.selectedRow(inComponent: 0)]
-           // destination.animalText = animalData[dataPicker.selectedRow(inComponent: 1)]
         }
     }
 

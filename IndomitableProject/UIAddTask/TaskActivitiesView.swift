@@ -10,9 +10,20 @@ import UIKit
 
 class TaskActivitesView: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
     
+    @IBAction func backButton(_ sender: Any) {
+        self.presentingViewController?.dismiss(animated: true, completion: nil)
+    }
     @IBOutlet weak var activitiesPicker: UIPickerView!
     var dataActivites: [String] = []
-    var sourceTitle: String?
+    var sourceTask: String?
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "sprintSetup" {
+            let destination = segue.destination as! TaskSprintSetView
+            destination.sourceTask = sourceTask
+        }
+    }
+    
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
@@ -32,6 +43,6 @@ class TaskActivitesView: UIViewController, UIPickerViewDataSource, UIPickerViewD
         super.viewDidLoad()
         activitiesPicker.dataSource = self
         activitiesPicker.delegate = self
-        self.title = sourceTitle
+        self.title = sourceTask
     }
 }

@@ -14,6 +14,7 @@ enum Tasks: String {
     case Coding
     case Testing
     case Review
+    case noMatchFound
     
 }
 
@@ -27,7 +28,7 @@ class Task{
     var priority: Int
     
     init(name: Tasks, memberCount: Int, time: Time) {
-        self.name = .Requirement
+        self.name = name
         self.notes = ""
         self.memberCount = memberCount
         self.time = time
