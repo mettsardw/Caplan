@@ -44,9 +44,9 @@
 		96CD07771FCD64E700C0D563 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CD07761FCD64E700C0D563 /* Event.swift */; };
 		96CD07791FCDA30D00C0D563 /* TaskPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CD07781FCDA30D00C0D563 /* TaskPickerView.swift */; };
 		96CD079B1FCE89F700C0D563 /* TaskActivitiesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CD079A1FCE89F700C0D563 /* TaskActivitiesView.swift */; };
-		CEAC67F81FCFAA7B00AB0212 /* SprintPlanningTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAC67F71FCFAA7B00AB0212 /* SprintPlanningTableViewController.swift */; };
-		CEAC67FA1FCFAAB600AB0212 /* SprintPlanningTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAC67F91FCFAAB600AB0212 /* SprintPlanningTableViewCell.swift */; };
-		CEAC67FC1FCFADF700AB0212 /* SprintPlanning.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAC67FB1FCFADF700AB0212 /* SprintPlanning.swift */; };
+		CEAC67F81FCFAA7B00AB0212 /* TaskTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAC67F71FCFAA7B00AB0212 /* TaskTableViewController.swift */; };
+		CEAC67FA1FCFAAB600AB0212 /* TaskTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAC67F91FCFAAB600AB0212 /* TaskTableViewCell.swift */; };
+		CEAC67FC1FCFADF700AB0212 /* PlanTasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAC67FB1FCFADF700AB0212 /* PlanTasks.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -89,9 +89,9 @@
 		96CD07761FCD64E700C0D563 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		96CD07781FCDA30D00C0D563 /* TaskPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskPickerView.swift; sourceTree = "<group>"; };
 		96CD079A1FCE89F700C0D563 /* TaskActivitiesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskActivitiesView.swift; sourceTree = "<group>"; };
-		CEAC67F71FCFAA7B00AB0212 /* SprintPlanningTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SprintPlanningTableViewController.swift; sourceTree = "<group>"; };
-		CEAC67F91FCFAAB600AB0212 /* SprintPlanningTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SprintPlanningTableViewCell.swift; sourceTree = "<group>"; };
-		CEAC67FB1FCFADF700AB0212 /* SprintPlanning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SprintPlanning.swift; sourceTree = "<group>"; };
+		CEAC67F71FCFAA7B00AB0212 /* TaskTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTableViewController.swift; sourceTree = "<group>"; };
+		CEAC67F91FCFAAB600AB0212 /* TaskTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTableViewCell.swift; sourceTree = "<group>"; };
+		CEAC67FB1FCFADF700AB0212 /* PlanTasks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanTasks.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -186,19 +186,19 @@
 				220838D11FCD0434003CD62A /* ProjectData */,
 				220838D21FCD0454003CD62A /* UITimeline */,
 				220838C71FCC63D7003CD62A /* InitialTabController.swift */,
-				CEAC67F61FCFAA4100AB0212 /* UI Sprint Planning */,
+				CEAC67F61FCFAA4100AB0212 /* UIAllTasks */,
 			);
 			path = IndomitableProject;
 			sourceTree = "<group>";
 		};
-		CEAC67F61FCFAA4100AB0212 /* UI Sprint Planning */ = {
+		CEAC67F61FCFAA4100AB0212 /* UIAllTasks */ = {
 			isa = PBXGroup;
 			children = (
-				CEAC67F71FCFAA7B00AB0212 /* SprintPlanningTableViewController.swift */,
-				CEAC67F91FCFAAB600AB0212 /* SprintPlanningTableViewCell.swift */,
-				CEAC67FB1FCFADF700AB0212 /* SprintPlanning.swift */,
+				CEAC67F71FCFAA7B00AB0212 /* TaskTableViewController.swift */,
+				CEAC67F91FCFAAB600AB0212 /* TaskTableViewCell.swift */,
+				CEAC67FB1FCFADF700AB0212 /* PlanTasks.swift */,
 			);
-			name = "UI Sprint Planning";
+			name = UIAllTasks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -287,10 +287,10 @@
 				220838BA1FCC5B83003CD62A /* Task.swift in Sources */,
 				220838B21FCC0190003CD62A /* TaskLine.swift in Sources */,
 				2208390E1FCDC993003CD62A /* PlanBubble.swift in Sources */,
-				CEAC67FA1FCFAAB600AB0212 /* SprintPlanningTableViewCell.swift in Sources */,
+				CEAC67FA1FCFAAB600AB0212 /* TaskTableViewCell.swift in Sources */,
 				220838C01FCC6021003CD62A /* Schedule.swift in Sources */,
 				220838C81FCC63D7003CD62A /* InitialTabController.swift in Sources */,
-				CEAC67FC1FCFADF700AB0212 /* SprintPlanning.swift in Sources */,
+				CEAC67FC1FCFADF700AB0212 /* PlanTasks.swift in Sources */,
 				220838C61FCC6170003CD62A /* Tip.swift in Sources */,
 				220838AE1FCBF951003CD62A /* TaskButton.swift in Sources */,
 				92959A0E1FC6CDB0005B331F /* ViewController.swift in Sources */,
@@ -302,7 +302,7 @@
 				92959A0C1FC6CDB0005B331F /* AppDelegate.swift in Sources */,
 				96CD07791FCDA30D00C0D563 /* TaskPickerView.swift in Sources */,
 				96CD079B1FCE89F700C0D563 /* TaskActivitiesView.swift in Sources */,
-				CEAC67F81FCFAA7B00AB0212 /* SprintPlanningTableViewController.swift in Sources */,
+				CEAC67F81FCFAA7B00AB0212 /* TaskTableViewController.swift in Sources */,
 				220838B81FCC2629003CD62A /* TaskBundle.swift in Sources */,
 				220838C21FCC608E003CD62A /* User.swift in Sources */,
 				220838BC1FCC5C5A003CD62A /* Time.swift in Sources */,

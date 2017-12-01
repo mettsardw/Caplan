@@ -8,8 +8,8 @@
 
 import UIKit
 
-class SprintPlanningTableViewCell: UITableViewCell {
+class TaskTableViewCell: UITableViewCell {
     @IBOutlet weak var dayLabel: UILabel!
     @IBOutlet weak var descLabel: UILabel!
-    @IBOutlet weak var detailSprintPlanningButton: UIButton!
+    @IBOutlet weak var detailTaskButton: UIButton!
 }
