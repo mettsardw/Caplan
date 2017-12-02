@@ -41,7 +41,7 @@ class TaskTableViewController: UIViewController, UITableViewDataSource, UITableV
     
    func updateSearchResults(for searchController: UISearchController) {
         filteredArray = tempArray.filter({ (array:String) -> Bool in
-            if array.contains(searchController.searchBar.text!){
+            if array.containsIgnoringCase(find: searchController.searchBar.text!){
                 print("asdasdasdasdasdasdasd")
                 return true
             }else{
@@ -62,7 +62,7 @@ class TaskTableViewController: UIViewController, UITableViewDataSource, UITableV
     
     func numberOfSections(in tableView: UITableView) -> Int {
         if tableView == resultController.tableView {
-            return filteredArray.count
+            return 1
         }
         else{
             return self.section.count
@@ -81,9 +81,8 @@ class TaskTableViewController: UIViewController, UITableViewDataSource, UITableV
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = taskTable.dequeueReusableCell(withIdentifier: "tasksCell", for: indexPath) as! TaskTableViewCell
         
-        if tableView == resultController.tableView {
+        if tableView == resultController.tableView && searchController.isActive{
             //cell.dayLabel.text = self.data[indexPath.section][indexPath.row].day
-            print(filteredArray[indexPath.row])
             cell.descLabel.text = filteredArray[indexPath.row]
         }else{
             cell.dayLabel.text = self.data[indexPath.section][indexPath.row].day
@@ -96,3 +95,10 @@ class TaskTableViewController: UIViewController, UITableViewDataSource, UITableV
         tableView.deselectRow(at: indexPath, animated: true)
     }
 }
+
+extension String {
+    func containsIgnoringCase(find: String) -> Bool{
+        return self.range(of: find, options: .caseInsensitive) != nil
+    }
+}
+

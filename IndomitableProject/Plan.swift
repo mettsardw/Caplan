@@ -30,15 +30,15 @@ class Plan{
         duration += task.time.duration
     }
     
-//    func getTask(named: String) -> Task {
-//        for task in tasks{
-//            if(task.name.contains(named)){
-//                return task
-//            }
-//        }
-//
-//        return Task(name: "No Match Found", memberCount: 0, time: Time(duration: 0, unit: .days))
-//    }
+    func getTask(named: String) -> Task {
+        for task in tasks{
+            if task.name.rawValue == named{
+                return task
+            }
+        }
+
+        return Task(name: .noMatchFound, memberCount: 0, time: Time(duration: 0, unit: .days))
+    }
     
     func getUrgentTask() -> Task {
         return tasks[0]
