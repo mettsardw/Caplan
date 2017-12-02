@@ -42,6 +42,7 @@ class TaskTableViewController: UIViewController, UITableViewDataSource, UITableV
    func updateSearchResults(for searchController: UISearchController) {
         filteredArray = tempArray.filter({ (array:String) -> Bool in
             if array.contains(searchController.searchBar.text!){
+                print("asdasdasdasdasdasdasd")
                 return true
             }else{
                 return false
@@ -82,6 +83,7 @@ class TaskTableViewController: UIViewController, UITableViewDataSource, UITableV
         
         if tableView == resultController.tableView {
             //cell.dayLabel.text = self.data[indexPath.section][indexPath.row].day
+            print(filteredArray[indexPath.row])
             cell.descLabel.text = filteredArray[indexPath.row]
         }else{
             cell.dayLabel.text = self.data[indexPath.section][indexPath.row].day
