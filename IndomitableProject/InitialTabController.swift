@@ -11,14 +11,11 @@ import CoreData
 
 class InitialTabController: UITabBarController {
     
-    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         //print("first")
-        let container = appDelegate.persistentContainer.viewContext
-        let taskEntity = NSEntityDescription.entity(forEntityName: "TaskCore", in: container)
-        let eventEntity = NSEntityDescription.entity(forEntityName: "EventCore", in: container)
-        let timeEntity = NSEntityDescription.entity(forEntityName: "TimeCore", in: container)
+        
         //let newTask = NSManagedObject(entity: taskEntity!, insertInto: container)
         //let newEvent = NSManagedObject(entity: eventEntity!, insertInto: container)
 //        let newTime = TimeCore(entity: timeEntity!, insertInto: container)
@@ -76,6 +73,11 @@ var project: Project = Project()
 
 func manageProject(){
     //initialize project, tasks.
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    let container = appDelegate.persistentContainer.viewContext
+//    let taskEntity = NSEntityDescription.entity(forEntityName: "TaskCore", in: container)
+//    let eventEntity = NSEntityDescription.entity(forEntityName: "EventCore", in: container)
+//    let timeEntity = NSEntityDescription.entity(forEntityName: "TimeCore", in: container)
     let plan: Plan = Plan(name: "Planning")
     //var plan2: Plan = Plan(name: "Sprinting")
     //plan.addTask(task: Task(name: .Requirement, memberCount: 1, time: Time(duration: 10, unit: .days)))
