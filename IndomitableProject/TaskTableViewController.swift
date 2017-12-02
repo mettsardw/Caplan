@@ -15,9 +15,8 @@ class TaskTableViewController: UIViewController, UITableViewDataSource, UITableV
     let section: [String] = ["Plan", "Code"]
     var data: [[PlanTasks]] = [PlanTasks.fetchData(), PlanTasks.fetchData()]
     
-    var tempDesc = [String]()
-    var tempDay = [String]()
-    var filteredDesc = [String]()
+    var tempArray = [String]()
+    var filteredArray = [String]()
     var searchController = UISearchController()
     var resultController = UITableViewController()
     
@@ -35,13 +34,13 @@ class TaskTableViewController: UIViewController, UITableViewDataSource, UITableV
         
         for index in 0..<data.count {
             for ind in 0..<data[index].count{
-                tempDesc.append(data[index][ind].desc)
+                tempArray.append(data[index][ind].desc)
             }
         }
     }
     
    func updateSearchResults(for searchController: UISearchController) {
-        filteredDesc = tempDesc.filter({ (array:String) -> Bool in
+        filteredArray = tempArray.filter({ (array:String) -> Bool in
             if array.contains(searchController.searchBar.text!){
                 return true
             }else{
@@ -62,7 +61,7 @@ class TaskTableViewController: UIViewController, UITableViewDataSource, UITableV
     
     func numberOfSections(in tableView: UITableView) -> Int {
         if tableView == resultController.tableView {
-            return filteredDesc.count
+            return filteredArray.count
         }
         else{
             return self.section.count
@@ -73,8 +72,8 @@ class TaskTableViewController: UIViewController, UITableViewDataSource, UITableV
         if !(searchController.isActive){
             return data[section].count
         }else{
-            print(filteredDesc.count)
-            return filteredDesc.count
+            print(filteredArray.count)
+            return filteredArray.count
         }
     }
     
@@ -83,7 +82,7 @@ class TaskTableViewController: UIViewController, UITableViewDataSource, UITableV
         
         if tableView == resultController.tableView {
             //cell.dayLabel.text = self.data[indexPath.section][indexPath.row].day
-            cell.descLabel.text = filteredDesc[indexPath.row]
+            cell.descLabel.text = filteredArray[indexPath.row]
         }else{
             cell.dayLabel.text = self.data[indexPath.section][indexPath.row].day
             cell.descLabel.text = self.data[indexPath.section][indexPath.row].desc
