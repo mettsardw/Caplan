@@ -61,6 +61,7 @@ class TaskBundle: UIView {
         //add to view
         addSubview(btn!)
         addSubview(line!)
+        
         addSubview(taskName!)
         addSubview(days!)
         
