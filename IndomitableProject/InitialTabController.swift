@@ -57,8 +57,8 @@ class InitialTabController: UITabBarController {
                 //
                 let taskEventDataValue = getStringFromNSSet(data: taskEvent)
                 print(taskEventDataValue[0])
-                print(taskEventDataValue[1])
-                print(taskEventDataValue[2])
+                //print(taskEventDataValue[1])
+                //print(taskEventDataValue[2])
                
                 
             }

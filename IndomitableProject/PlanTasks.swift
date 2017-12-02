@@ -17,7 +17,7 @@ struct PlanTasks{
         var planTasks: [PlanTasks] = []
         
         planTasks.append(PlanTasks(day: "7", desc: "This is the first task"))
-        planTasks.append(PlanTasks(day: "8", desc: "This is the second task"))
+        planTasks.append(PlanTasks(day: "8", desc: "That is the second task"))
         planTasks.append(PlanTasks(day: "9", desc: "This is the third task"))
         
         return planTasks
