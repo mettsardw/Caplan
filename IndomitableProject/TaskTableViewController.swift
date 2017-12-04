@@ -14,6 +14,7 @@ class TaskTableViewController: UIViewController, UITableViewDataSource, UITableV
     
     let section: [String] = ["Plan", "Code"]
     var data: [[PlanTasks]] = [PlanTasks.fetchData(), PlanTasks.fetchData()]
+    var data2: [[DesignTasks]] = [DesignTasks.fetchData()]
     
     var tempDesc = [String]()
     var tempDay = [String]()
@@ -37,7 +38,7 @@ class TaskTableViewController: UIViewController, UITableViewDataSource, UITableV
         for index in 0..<data.count {
             for ind in 0..<data[index].count{
                 tempDesc.append(data[index][ind].desc)
-                //tempDay.append(data[index][ind].day)
+                tempDay.append(data[index][ind].day)
             }
         }
     }
@@ -45,10 +46,6 @@ class TaskTableViewController: UIViewController, UITableViewDataSource, UITableV
    func updateSearchResults(for searchController: UISearchController) {
         filteredDesc = tempDesc.filter({ (array:String) -> Bool in
             if array.containsIgnoringCase(find: searchController.searchBar.text!){
-                //let index = tempDesc.index(of: searchController.searchBar.text!)
-                //print(index)
-                //print("ini: \(tempDesc.index(of: searchController.searchBar.text!))")
-                //filteredDay.append(tempDay[index!])
                 return true
             }else{
                 return false
@@ -85,7 +82,6 @@ class TaskTableViewController: UIViewController, UITableViewDataSource, UITableV
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = taskTable.dequeueReusableCell(withIdentifier: "tasksCell", for: indexPath) as! TaskTableViewCell
-        
         if tableView == resultController.tableView && searchController.isActive{
             //cell.dayLabel.text = filteredDay[indexPath.row]
             cell.descLabel.text = filteredDesc[indexPath.row]

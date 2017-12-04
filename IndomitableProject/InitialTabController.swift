@@ -35,45 +35,46 @@ func manageProject(){
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     let container = appDelegate.persistentContainer.viewContext
     
-//    let taskEntity = NSEntityDescription.entity(forEntityName: "TaskCore", in: container)
-//    let eventEntity = NSEntityDescription.entity(forEntityName: "EventCore", in: container)
-//    let timeEntity = NSEntityDescription.entity(forEntityName: "TimeCore", in: container)
-//
-//    let newTime = TimeCore(entity: timeEntity!, insertInto: container)
-//    let newTask = TaskCore(entity: taskEntity!, insertInto: container)
-//    let newEvent = EventCore(entity: eventEntity!, insertInto: container)
-//    let newEvent1 = EventCore(entity: eventEntity!, insertInto: container)
-//    let newEvent2 = EventCore(entity: eventEntity!, insertInto: container)
-//    newTask.setValue("Testing", forKey: "name")
-//    newTask.setValue(10, forKey: "memberCount")
-//    newTask.setValue(50, forKey: "point")
-//    newTask.setValue(1, forKey: "priority")
-//    newTask.setValue("ini Design: lorem ipsum dolor sit amet", forKey: "notes")
-//    newTime.setValue(15, forKey: "duration")
-//    newTime.setValue("days", forKey: "unit")
-//    newTask.time = newTime
-//    //print(newTask.time as Any)
-//    //        newTask.setValue("Design", forKey: "name")
-//    //        newTask.setValue("Coding", forKey: "name")
-//    //        newTask.setValue("Testing", forKey: "name")
-//    //        newTask.setValue("Requirement", forKey: "name")
-//    newEvent.setValue("Unit Testing", forKey: "type")
-//    newEvent1.setValue("Integration Testing", forKey: "type")
-//    newEvent2.setValue("System Testing", forKey: "type")
-//    //tipe data Int Masih bug kalo angkany sama.. wtf menn..
-//    newEvent.setValue(6, forKey: "memberCount")
-//    newEvent1.setValue(Int("9"), forKey: "memberCount")
-//    newEvent2.setValue(Int("7"), forKey: "memberCount")
-//    newTime.setValue(5, forKey: "duration")
-//    newTime.setValue("days", forKey: "unit")
-//    newEvent.time = newTime
-//    newEvent1.time = newTime
-//    newEvent2.time = newTime
-//
-//
-//    newTask.addToEvent(newEvent)
-//    newTask.addToEvent(newEvent2)
-//    newTask.addToEvent(newEvent1)
+    let taskEntity = NSEntityDescription.entity(forEntityName: "TaskCore", in: container)
+    let eventEntity = NSEntityDescription.entity(forEntityName: "EventCore", in: container)
+    let timeEntity = NSEntityDescription.entity(forEntityName: "TimeCore", in: container)
+
+    let newTime = TimeCore(entity: timeEntity!, insertInto: container)
+    let newTime2 = TimeCore(entity: timeEntity!, insertInto: container)
+    let newTask = TaskCore(entity: taskEntity!, insertInto: container)
+    let newEvent = EventCore(entity: eventEntity!, insertInto: container)
+    let newEvent1 = EventCore(entity: eventEntity!, insertInto: container)
+    let newEvent2 = EventCore(entity: eventEntity!, insertInto: container)
+    newTask.setValue("Testing", forKey: "name")
+    newTask.setValue(10, forKey: "memberCount")
+    newTask.setValue(50, forKey: "point")
+    newTask.setValue(1, forKey: "priority")
+    newTask.setValue("ini Design: lorem ipsum dolor sit amet", forKey: "notes")
+    newTime.setValue(15, forKey: "duration")
+    newTime.setValue("days", forKey: "unit")
+    newTask.time = newTime
+    //print(newTask.time as Any)
+    //        newTask.setValue("Design", forKey: "name")
+    //        newTask.setValue("Coding", forKey: "name")
+    //        newTask.setValue("Testing", forKey: "name")
+    //        newTask.setValue("Requirement", forKey: "name")
+    newEvent.setValue("Unit Testing", forKey: "type")
+    newEvent1.setValue("Integration Testing", forKey: "type")
+    newEvent2.setValue("System Testing", forKey: "type")
+    //tipe data Int Masih bug kalo angkany sama.. wtf menn..
+    newEvent.setValue(6, forKey: "memberCount")
+    newEvent1.setValue(Int("9"), forKey: "memberCount")
+    newEvent2.setValue(Int("7"), forKey: "memberCount")
+    newTime2.setValue(5, forKey: "duration")
+    newTime2.setValue("days", forKey: "unit")
+    newEvent.time = newTime2
+    newEvent1.time = newTime2
+    newEvent2.time = newTime2
+
+
+    newTask.addToEvent(newEvent)
+    newTask.addToEvent(newEvent2)
+    newTask.addToEvent(newEvent1)
 //    saveData(targetContainer: container)
 
     
@@ -94,7 +95,7 @@ func manageProject(){
 //            guard let taskTimeUnit = task.time?.unit else{print("no unit");return}
 //            print("time: \(String(describing: task.time!.duration)) \(taskTimeUnit)")
             
-            plan.addTask(task: Task(name: Tasks(rawValue: task.value(forKey: "name") as! String)!, memberCount: Int(task.memberCount), time: Time(duration: Int(task.time!.duration), unit: Unit(rawValue: task.time!.unit!)!)))
+//            plan.addTask(task: Task(name: Tasks(rawValue: task.value(forKey: "name") as! String)!, memberCount: Int(task.memberCount), time: Time(duration: Int(task.time!.duration), unit: Unit(rawValue: task.time!.unit!)!)))
             //delete data di Core data
 //            if i == 1{
 //            deleteData(targetContainer: container, task: task)
@@ -102,10 +103,10 @@ func manageProject(){
 //            i += 1
             //print("task value:\n\(String(describing: task.value(forKey: "event")!))")
             //get NSSet to String
-            // guard let taskEvent = task.event?.value(forKeyPath: "memberCount") else {print("no event");return}
-            //                print(taskEvent)
-            //
-            //let taskEventDataValue = getStringFromNSSet(data: taskEvent)
+//             guard let taskEvent = task.event?.value(forKeyPath: "time") else {print("no event");return}
+//            task.event.
+//            print(taskEvent)
+//            let taskEventDataValue = getStringFromNSSet(data: taskEvent)
             //print(taskEventDataValue[0])
             //print(taskEventDataValue[1])
             //print(taskEventDataValue[2])

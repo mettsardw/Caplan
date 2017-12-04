@@ -56,6 +56,7 @@
 		CEAC67F81FCFAA7B00AB0212 /* TaskTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAC67F71FCFAA7B00AB0212 /* TaskTableViewController.swift */; };
 		CEAC67FA1FCFAAB600AB0212 /* TaskTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAC67F91FCFAAB600AB0212 /* TaskTableViewCell.swift */; };
 		CEAC67FC1FCFADF700AB0212 /* PlanTasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAC67FB1FCFADF700AB0212 /* PlanTasks.swift */; };
+		CEAC68001FD53D6500AB0212 /* DesignTasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAC67FF1FD53D6500AB0212 /* DesignTasks.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -110,6 +111,7 @@
 		CEAC67F71FCFAA7B00AB0212 /* TaskTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTableViewController.swift; sourceTree = "<group>"; };
 		CEAC67F91FCFAAB600AB0212 /* TaskTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTableViewCell.swift; sourceTree = "<group>"; };
 		CEAC67FB1FCFADF700AB0212 /* PlanTasks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanTasks.swift; sourceTree = "<group>"; };
+		CEAC67FF1FD53D6500AB0212 /* DesignTasks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignTasks.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -232,6 +234,7 @@
 				CEAC67F71FCFAA7B00AB0212 /* TaskTableViewController.swift */,
 				CEAC67F91FCFAAB600AB0212 /* TaskTableViewCell.swift */,
 				CEAC67FB1FCFADF700AB0212 /* PlanTasks.swift */,
+				CEAC67FF1FD53D6500AB0212 /* DesignTasks.swift */,
 			);
 			name = UIAllTasks;
 			sourceTree = "<group>";
@@ -343,6 +346,7 @@
 				92959A0C1FC6CDB0005B331F /* AppDelegate.swift in Sources */,
 				96CD07791FCDA30D00C0D563 /* TaskPickerView.swift in Sources */,
 				92C4BACE1FCFC95700B7C2DB /* TaskSprintSetView.swift in Sources */,
+				CEAC68001FD53D6500AB0212 /* DesignTasks.swift in Sources */,
 				96BEBBFD1FD0EC4000F854E8 /* EventCore+CoreDataClass.swift in Sources */,
 				96CD079B1FCE89F700C0D563 /* TaskActivitiesView.swift in Sources */,
 				CEAC67F81FCFAA7B00AB0212 /* TaskTableViewController.swift in Sources */,
