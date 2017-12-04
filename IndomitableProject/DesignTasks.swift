@@ -20,16 +20,17 @@ struct DesignTasks {
         let container = appDelegate.persistentContainer.viewContext
         
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "TaskCore")
-        fetchRequest.predicate = NSPredicate(format: "name: Design")
+        fetchRequest.predicate = NSPredicate(format: "name == %@", "Design")
         
-        //let taskFetch = NSFetchRequest<NSManagedObject>(entityName: "TaskCore")
         do{
-            let tasks: [TaskCore] = try container.fetch(fetchRequest) as! [TaskCore]
-            //var i=0
-            for task in tasks {
-                print(task.value(forKey: "name") as! String)
-                //let taskEvents: [EventCore] = task.event?.allObjects as! [EventCore]
-        
+            let designs: [TaskCore] = try container.fetch(fetchRequest) as! [TaskCore]
+           
+            for design in designs {
+                let taskEvents: [EventCore] = design.event?.allObjects as! [EventCore]
+                
+                for index in 0..<taskEvents.count{
+                    designTasks.append(DesignTasks(day: String(describing: taskEvents[index].time?.duration), event: taskEvents[index].type!))
+                }
             }
         }catch _ as NSError {
             print("error")

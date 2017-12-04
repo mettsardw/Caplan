@@ -13,8 +13,7 @@ class TaskTableViewController: UIViewController, UITableViewDataSource, UITableV
     @IBOutlet weak var taskTable: UITableView!
     
     let section: [String] = ["Plan", "Code"]
-    var data: [[PlanTasks]] = [PlanTasks.fetchData(), PlanTasks.fetchData()]
-    var data2: [[DesignTasks]] = [DesignTasks.fetchData()]
+    var data: [Any] = [PlanTasks.fetchData(), DesignTasks.fetchData()]
     
     var tempDesc = [String]()
     var tempDay = [String]()
@@ -35,12 +34,13 @@ class TaskTableViewController: UIViewController, UITableViewDataSource, UITableV
         resultController.tableView.delegate = self
         resultController.tableView.dataSource = self
         
-        for index in 0..<data.count {
-            for ind in 0..<data[index].count{
-                tempDesc.append(data[index][ind].desc)
-                tempDay.append(data[index][ind].day)
-            }
-        }
+//        for index in 0..<data.count {
+//            for ind in 0..<data[index].count{
+//                tempDesc.append(data[index][ind].desc)
+//                tempDay.append(data[index][ind].day)
+//            }
+//        }
+        print(data)
     }
     
    func updateSearchResults(for searchController: UISearchController) {
@@ -72,23 +72,24 @@ class TaskTableViewController: UIViewController, UITableViewDataSource, UITableV
         }
     }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if !(searchController.isActive){
-            return data[section].count
-        }else{
-            return filteredDesc.count
-        }
+   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//        if !(searchController.isActive){
+//            return data[section].count
+//        }else{
+//            return filteredDesc.count
+//        }
+        return data.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = taskTable.dequeueReusableCell(withIdentifier: "tasksCell", for: indexPath) as! TaskTableViewCell
-        if tableView == resultController.tableView && searchController.isActive{
-            //cell.dayLabel.text = filteredDay[indexPath.row]
-            cell.descLabel.text = filteredDesc[indexPath.row]
-        }else{
-            cell.dayLabel.text = self.data[indexPath.section][indexPath.row].day
-            cell.descLabel.text = self.data[indexPath.section][indexPath.row].desc
-        }
+//        if tableView == resultController.tableView && searchController.isActive{
+//            //cell.dayLabel.text = filteredDay[indexPath.row]
+//            cell.descLabel.text = filteredDesc[indexPath.row]
+//        }else{
+//            cell.dayLabel.text = self.data[indexPath.section][indexPath.row].day
+//            cell.descLabel.text = self.data[indexPath.section][indexPath.row].desc
+//        }
         return cell
     }
     

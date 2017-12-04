@@ -13,5 +13,4 @@ class TaskTableViewCell: UITableViewCell {
     @IBOutlet weak var descLabel: UILabel!
     @IBOutlet weak var detailTaskButton: UIButton!
     
-    var index:Int?
 }
