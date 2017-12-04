@@ -14,6 +14,9 @@ class InitialTabController: UITabBarController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+       
+        
         //print("first")
         
         //let newTask = NSManagedObject(entity: taskEntity!, insertInto: container)
@@ -36,45 +39,42 @@ func manageProject(){
     let container = appDelegate.persistentContainer.viewContext
     
 //    let taskEntity = NSEntityDescription.entity(forEntityName: "TaskCore", in: container)
-//    let eventEntity = NSEntityDescription.entity(forEntityName: "EventCore", in: container)
-//    let timeEntity = NSEntityDescription.entity(forEntityName: "TimeCore", in: container)
-//
-//    let newTime = TimeCore(entity: timeEntity!, insertInto: container)
+ 
 //    let newTask = TaskCore(entity: taskEntity!, insertInto: container)
-//    let newEvent = EventCore(entity: eventEntity!, insertInto: container)
-//    let newEvent1 = EventCore(entity: eventEntity!, insertInto: container)
-//    let newEvent2 = EventCore(entity: eventEntity!, insertInto: container)
+//    let newEvent = NSEntityDescription.insertNewObject(forEntityName: "EventCore", into: container) as! EventCore
+//    let newEvent1 = NSEntityDescription.insertNewObject(forEntityName: "EventCore", into: container) as! EventCore
+//    let newEvent2 = NSEntityDescription.insertNewObject(forEntityName: "EventCore", into: container) as! EventCore
+    //set data Task
 //    newTask.setValue("Testing", forKey: "name")
-//    newTask.setValue(10, forKey: "memberCount")
-//    newTask.setValue(50, forKey: "point")
+//    newTask.setValue(20, forKey: "memberCount")
+//    newTask.setValue(40, forKey: "point")
 //    newTask.setValue(1, forKey: "priority")
 //    newTask.setValue("ini Design: lorem ipsum dolor sit amet", forKey: "notes")
-//    newTime.setValue(15, forKey: "duration")
-//    newTime.setValue("days", forKey: "unit")
-//    newTask.time = newTime
-//    //print(newTask.time as Any)
-//    //        newTask.setValue("Design", forKey: "name")
-//    //        newTask.setValue("Coding", forKey: "name")
-//    //        newTask.setValue("Testing", forKey: "name")
-//    //        newTask.setValue("Requirement", forKey: "name")
+//    newTask.setValue(10, forKey: "duration")
+//    newTask.setValue("days", forKey: "durationUnit")
+//    //set Event
 //    newEvent.setValue("Unit Testing", forKey: "type")
 //    newEvent1.setValue("Integration Testing", forKey: "type")
 //    newEvent2.setValue("System Testing", forKey: "type")
-//    //tipe data Int Masih bug kalo angkany sama.. wtf menn..
-//    newEvent.setValue(6, forKey: "memberCount")
-//    newEvent1.setValue(Int("9"), forKey: "memberCount")
-//    newEvent2.setValue(Int("7"), forKey: "memberCount")
-//    newTime.setValue(5, forKey: "duration")
-//    newTime.setValue("days", forKey: "unit")
-//    newEvent.time = newTime
-//    newEvent1.time = newTime
-//    newEvent2.time = newTime
 //
+//    newEvent.setValue(2, forKey: "duration")
+//    newEvent1.setValue(3, forKey: "duration")
+//    newEvent2.setValue(5, forKey: "duration")
+//
+//    newEvent.setValue("days", forKey: "durationUnit")
+//    newEvent1.setValue("days", forKey: "durationUnit")
+//    newEvent2.setValue("days", forKey: "durationUnit")
+//
+//    newEvent.setValue(6, forKey: "memberCount")
+//    newEvent1.setValue(6, forKey: "memberCount")
+//    newEvent2.setValue(8, forKey: "memberCount")
 //
 //    newTask.addToEvent(newEvent)
 //    newTask.addToEvent(newEvent2)
 //    newTask.addToEvent(newEvent1)
-//    saveData(targetContainer: container)
+    
+
+    //saveData(targetContainer: container)
 
     
     let plan: Plan = Plan(name: "Planning")
@@ -88,28 +88,33 @@ func manageProject(){
         let tasks: [TaskCore] = try container.fetch(taskFetch) as! [TaskCore]
         //var i=0
         for task in tasks {
-//            print("name: \(task.value(forKey: "name") as! String)")
+            print("name: \(task.value(forKey: "name") as! String)")
 //            print("member Count: \(task.value(forKey: "memberCount")!)")
 //            print("point: \(task.value(forKey: "point")!)")
 //            guard let taskTimeUnit = task.time?.unit else{print("no unit");return}
 //            print("time: \(String(describing: task.time!.duration)) \(taskTimeUnit)")
             
-            plan.addTask(task: Task(name: Tasks(rawValue: task.value(forKey: "name") as! String)!, memberCount: Int(task.memberCount), time: Time(duration: Int(task.time!.duration), unit: Unit(rawValue: task.time!.unit!)!)))
+            plan.addTask(task: Task(name: Tasks(rawValue: task.value(forKey: "name") as! String)!, memberCount: Int(task.memberCount), time: Time(duration: Int(task.duration), unit: Unit(rawValue: task.durationUnit!)!)))
             //delete data di Core data
 //            if i == 1{
-//            deleteData(targetContainer: container, task: task)
+//              deleteData(targetContainer: container, task: task)
 //            }
 //            i += 1
             //print("task value:\n\(String(describing: task.value(forKey: "event")!))")
             //get NSSet to String
-            // guard let taskEvent = task.event?.value(forKeyPath: "memberCount") else {print("no event");return}
-            //                print(taskEvent)
-            //
+            //guard let taskEvent = task.event?.value(forKey: "duration") else{print("error");return}
+            //print(taskEvent)
             //let taskEventDataValue = getStringFromNSSet(data: taskEvent)
             //print(taskEventDataValue[0])
-            //print(taskEventDataValue[1])
-            //print(taskEventDataValue[2])
-            //
+//            print(taskEventDataValue[1])
+//            print(taskEventDataValue[2])
+            
+            //access member of NSset in NsManagedObject
+            let taskEvents: [EventCore] = task.event?.allObjects as! [EventCore]
+//            print(taskEvents[0].time!.duration as Any)
+//            print(taskEvents[0].duration)
+//            print(taskEvents[1].duration)
+//            print(taskEvents[2].duration)
             
         }
     }catch _ as NSError {
