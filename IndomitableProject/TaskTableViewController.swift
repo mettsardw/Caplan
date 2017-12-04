@@ -15,8 +15,10 @@ class TaskTableViewController: UIViewController, UITableViewDataSource, UITableV
     let section: [String] = ["Plan", "Code"]
     var data: [[PlanTasks]] = [PlanTasks.fetchData(), PlanTasks.fetchData()]
     
-    var tempArray = [String]()
-    var filteredArray = [String]()
+    var tempDesc = [String]()
+    var tempDay = [String]()
+    var filteredDesc = [String]()
+    var filteredDay = [String]()
     var searchController = UISearchController()
     var resultController = UITableViewController()
     
@@ -34,15 +36,19 @@ class TaskTableViewController: UIViewController, UITableViewDataSource, UITableV
         
         for index in 0..<data.count {
             for ind in 0..<data[index].count{
-                tempArray.append(data[index][ind].desc)
+                tempDesc.append(data[index][ind].desc)
+                //tempDay.append(data[index][ind].day)
             }
         }
     }
     
    func updateSearchResults(for searchController: UISearchController) {
-        filteredArray = tempArray.filter({ (array:String) -> Bool in
+        filteredDesc = tempDesc.filter({ (array:String) -> Bool in
             if array.containsIgnoringCase(find: searchController.searchBar.text!){
-                print("asdasdasdasdasdasdasd")
+                //let index = tempDesc.index(of: searchController.searchBar.text!)
+                //print(index)
+                //print("ini: \(tempDesc.index(of: searchController.searchBar.text!))")
+                //filteredDay.append(tempDay[index!])
                 return true
             }else{
                 return false
@@ -73,8 +79,7 @@ class TaskTableViewController: UIViewController, UITableViewDataSource, UITableV
         if !(searchController.isActive){
             return data[section].count
         }else{
-            print(filteredArray.count)
-            return filteredArray.count
+            return filteredDesc.count
         }
     }
     
@@ -82,8 +87,8 @@ class TaskTableViewController: UIViewController, UITableViewDataSource, UITableV
         let cell = taskTable.dequeueReusableCell(withIdentifier: "tasksCell", for: indexPath) as! TaskTableViewCell
         
         if tableView == resultController.tableView && searchController.isActive{
-            //cell.dayLabel.text = self.data[indexPath.section][indexPath.row].day
-            cell.descLabel.text = filteredArray[indexPath.row]
+            //cell.dayLabel.text = filteredDay[indexPath.row]
+            cell.descLabel.text = filteredDesc[indexPath.row]
         }else{
             cell.dayLabel.text = self.data[indexPath.section][indexPath.row].day
             cell.descLabel.text = self.data[indexPath.section][indexPath.row].desc
