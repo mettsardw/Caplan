@@ -8,6 +8,11 @@
 
 import Foundation
 
+enum Unit: String{
+    case days
+    case month
+}
+
 struct Time {
     var duration: Int
     var unit: Unit
@@ -17,8 +22,4 @@ struct Time {
         self.unit = unit
     }
     
-    enum Unit {
-        case days
-        case month
-    }
 }
