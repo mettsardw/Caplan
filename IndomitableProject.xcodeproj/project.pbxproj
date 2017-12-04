@@ -37,6 +37,7 @@
 		22FB98791FCE9538000DD7F2 /* TestTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FB98781FCE9538000DD7F2 /* TestTableViewController.swift */; };
 		22FB987D1FCEAB3E000DD7F2 /* Plan.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22FB987C1FCEAB3E000DD7F2 /* Plan.storyboard */; };
 		4758D5891FCFC9E1004F1427 /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4758D5881FCFC9E1004F1427 /* HelpViewController.swift */; };
+		4758D58D1FD53817004F1427 /* HelpNextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4758D58C1FD53817004F1427 /* HelpNextViewController.swift */; };
 		92959A0C1FC6CDB0005B331F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92959A0B1FC6CDB0005B331F /* AppDelegate.swift */; };
 		92959A0E1FC6CDB0005B331F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92959A0D1FC6CDB0005B331F /* ViewController.swift */; };
 		92959A111FC6CDB0005B331F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92959A0F1FC6CDB0005B331F /* Main.storyboard */; };
@@ -78,6 +79,7 @@
 		22FB98781FCE9538000DD7F2 /* TestTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTableViewController.swift; sourceTree = "<group>"; };
 		22FB987C1FCEAB3E000DD7F2 /* Plan.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Plan.storyboard; sourceTree = "<group>"; };
 		4758D5881FCFC9E1004F1427 /* HelpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
+		4758D58C1FD53817004F1427 /* HelpNextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpNextViewController.swift; sourceTree = "<group>"; };
 		92959A081FC6CDAF005B331F /* IndomitableProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IndomitableProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92959A0B1FC6CDB0005B331F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		92959A0D1FC6CDB0005B331F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -165,6 +167,7 @@
 				92959A0B1FC6CDB0005B331F /* AppDelegate.swift */,
 				92959A0D1FC6CDB0005B331F /* ViewController.swift */,
 				220838E21FCD1ACB003CD62A /* Help.storyboard */,
+				4758D58C1FD53817004F1427 /* HelpNextViewController.swift */,
 				4758D5881FCFC9E1004F1427 /* HelpViewController.swift */,
 				220838E91FCD1BA5003CD62A /* AddTask.storyboard */,
 				220838E41FCD1AEB003CD62A /* Settings.storyboard */,
@@ -284,6 +287,7 @@
 				220838BE1FCC5D54003CD62A /* Plan.swift in Sources */,
 				22FB98791FCE9538000DD7F2 /* TestTableViewController.swift in Sources */,
 				92959A0C1FC6CDB0005B331F /* AppDelegate.swift in Sources */,
+				4758D58D1FD53817004F1427 /* HelpNextViewController.swift in Sources */,
 				96CD07791FCDA30D00C0D563 /* TaskPickerView.swift in Sources */,
 				96CD079B1FCE89F700C0D563 /* TaskActivitiesView.swift in Sources */,
 				220838B81FCC2629003CD62A /* TaskBundle.swift in Sources */,
