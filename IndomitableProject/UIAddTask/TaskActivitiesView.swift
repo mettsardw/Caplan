@@ -44,5 +44,6 @@ class TaskActivitesView: UIViewController, UIPickerViewDataSource, UIPickerViewD
         activitiesPicker.dataSource = self
         activitiesPicker.delegate = self
         self.title = sourceTask
+        
     }
 }
