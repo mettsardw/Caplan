@@ -2,7 +2,7 @@
 //  TaskCore+CoreDataClass.swift
 //  IndomitableProject
 //
-//  Created by Davin Reinaldo Gozali on 30/11/17.
+//  Created by Davin Reinaldo Gozali on 04/12/17.
 //  Copyright © 2017 RagingWind. All rights reserved.
 //
 //
