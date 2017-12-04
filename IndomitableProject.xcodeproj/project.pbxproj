@@ -26,7 +26,6 @@
 		220838DC1FCD1510003CD62A /* Project.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 220838DB1FCD1510003CD62A /* Project.storyboard */; };
 		220838DF1FCD162C003CD62A /* SideMenu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 220838DD1FCD162C003CD62A /* SideMenu.storyboard */; };
 		220838E11FCD1AA9003CD62A /* DetailTask.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 220838E01FCD1AA9003CD62A /* DetailTask.storyboard */; };
-		220838E31FCD1ACB003CD62A /* Help.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 220838E21FCD1ACB003CD62A /* Help.storyboard */; };
 		220838E51FCD1AEB003CD62A /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 220838E41FCD1AEB003CD62A /* Settings.storyboard */; };
 		220838E81FCD1B77003CD62A /* Tips.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 220838E61FCD1B77003CD62A /* Tips.storyboard */; };
 		220838EA1FCD1BA5003CD62A /* AddTask.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 220838E91FCD1BA5003CD62A /* AddTask.storyboard */; };
@@ -36,6 +35,9 @@
 		220839141FCDD2CB003CD62A /* PlanLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 220839131FCDD2CB003CD62A /* PlanLine.swift */; };
 		22FB98791FCE9538000DD7F2 /* TestTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FB98781FCE9538000DD7F2 /* TestTableViewController.swift */; };
 		22FB987D1FCEAB3E000DD7F2 /* Plan.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22FB987C1FCEAB3E000DD7F2 /* Plan.storyboard */; };
+		4758D5931FD59160004F1427 /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4758D5901FD5915F004F1427 /* HelpViewController.swift */; };
+		4758D5941FD59160004F1427 /* Help.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4758D5911FD5915F004F1427 /* Help.storyboard */; };
+		4758D5951FD59160004F1427 /* HelpNextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4758D5921FD5915F004F1427 /* HelpNextViewController.swift */; };
 		92959A0C1FC6CDB0005B331F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92959A0B1FC6CDB0005B331F /* AppDelegate.swift */; };
 		92959A0E1FC6CDB0005B331F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92959A0D1FC6CDB0005B331F /* ViewController.swift */; };
 		92959A111FC6CDB0005B331F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92959A0F1FC6CDB0005B331F /* Main.storyboard */; };
@@ -76,7 +78,6 @@
 		220838DB1FCD1510003CD62A /* Project.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Project.storyboard; sourceTree = "<group>"; };
 		220838DE1FCD162C003CD62A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = IndomitableProject/Base.lproj/SideMenu.storyboard; sourceTree = "<group>"; };
 		220838E01FCD1AA9003CD62A /* DetailTask.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetailTask.storyboard; sourceTree = "<group>"; };
-		220838E21FCD1ACB003CD62A /* Help.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Help.storyboard; sourceTree = "<group>"; };
 		220838E41FCD1AEB003CD62A /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
 		220838E71FCD1B77003CD62A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = IndomitableProject/Base.lproj/Tips.storyboard; sourceTree = "<group>"; };
 		220838E91FCD1BA5003CD62A /* AddTask.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddTask.storyboard; sourceTree = "<group>"; };
@@ -86,6 +87,9 @@
 		220839131FCDD2CB003CD62A /* PlanLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanLine.swift; sourceTree = "<group>"; };
 		22FB98781FCE9538000DD7F2 /* TestTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTableViewController.swift; sourceTree = "<group>"; };
 		22FB987C1FCEAB3E000DD7F2 /* Plan.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Plan.storyboard; sourceTree = "<group>"; };
+		4758D5901FD5915F004F1427 /* HelpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HelpViewController.swift; path = ../../../GitKraken/Caplan/IndomitableProject/HelpViewController.swift; sourceTree = "<group>"; };
+		4758D5911FD5915F004F1427 /* Help.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Help.storyboard; path = ../../../GitKraken/Caplan/IndomitableProject/Help.storyboard; sourceTree = "<group>"; };
+		4758D5921FD5915F004F1427 /* HelpNextViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HelpNextViewController.swift; path = ../../../GitKraken/Caplan/IndomitableProject/HelpNextViewController.swift; sourceTree = "<group>"; };
 		92959A081FC6CDAF005B331F /* IndomitableProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IndomitableProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92959A0B1FC6CDB0005B331F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		92959A0D1FC6CDB0005B331F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -177,6 +181,9 @@
 		92959A0A1FC6CDB0005B331F /* IndomitableProject */ = {
 			isa = PBXGroup;
 			children = (
+				4758D5911FD5915F004F1427 /* Help.storyboard */,
+				4758D5921FD5915F004F1427 /* HelpNextViewController.swift */,
+				4758D5901FD5915F004F1427 /* HelpViewController.swift */,
 				96D81E231FD54D8E004DF9E3 /* TaskCore+CoreDataClass.swift */,
 				96D81E241FD54D8E004DF9E3 /* TaskCore+CoreDataProperties.swift */,
 				96D81E251FD54D8E004DF9E3 /* EventCore+CoreDataClass.swift */,
@@ -184,7 +191,6 @@
 				22FB987C1FCEAB3E000DD7F2 /* Plan.storyboard */,
 				92959A0B1FC6CDB0005B331F /* AppDelegate.swift */,
 				92959A0D1FC6CDB0005B331F /* ViewController.swift */,
-				220838E21FCD1ACB003CD62A /* Help.storyboard */,
 				220838E91FCD1BA5003CD62A /* AddTask.storyboard */,
 				220838E41FCD1AEB003CD62A /* Settings.storyboard */,
 				220838DD1FCD162C003CD62A /* SideMenu.storyboard */,
@@ -293,9 +299,9 @@
 				220838CF1FCD0417003CD62A /* .gitignore in Resources */,
 				92959A161FC6CDB0005B331F /* LaunchScreen.storyboard in Resources */,
 				220838E51FCD1AEB003CD62A /* Settings.storyboard in Resources */,
-				220838E31FCD1ACB003CD62A /* Help.storyboard in Resources */,
 				220838DF1FCD162C003CD62A /* SideMenu.storyboard in Resources */,
 				220838D51FCD0FEE003CD62A /* Timeline.storyboard in Resources */,
+				4758D5941FD59160004F1427 /* Help.storyboard in Resources */,
 				220838EA1FCD1BA5003CD62A /* AddTask.storyboard in Resources */,
 				220838E81FCD1B77003CD62A /* Tips.storyboard in Resources */,
 				22FB987D1FCEAB3E000DD7F2 /* Plan.storyboard in Resources */,
@@ -317,6 +323,7 @@
 				220838B21FCC0190003CD62A /* TaskLine.swift in Sources */,
 				2208390E1FCDC993003CD62A /* PlanBubble.swift in Sources */,
 				CEAC67FA1FCFAAB600AB0212 /* TaskTableViewCell.swift in Sources */,
+				4758D5951FD59160004F1427 /* HelpNextViewController.swift in Sources */,
 				220838C01FCC6021003CD62A /* Schedule.swift in Sources */,
 				220838C81FCC63D7003CD62A /* InitialTabController.swift in Sources */,
 				CEAC67FC1FCFADF700AB0212 /* PlanTasks.swift in Sources */,
@@ -324,6 +331,7 @@
 				220838C61FCC6170003CD62A /* Tip.swift in Sources */,
 				220838AE1FCBF951003CD62A /* TaskButton.swift in Sources */,
 				92959A0E1FC6CDB0005B331F /* ViewController.swift in Sources */,
+				4758D5931FD59160004F1427 /* HelpViewController.swift in Sources */,
 				96D81E2A1FD54D8E004DF9E3 /* EventCore+CoreDataProperties.swift in Sources */,
 				220839141FCDD2CB003CD62A /* PlanLine.swift in Sources */,
 				220838C41FCC60DF003CD62A /* Project.swift in Sources */,
