@@ -10,8 +10,15 @@ import UIKit
 
 class TaskPickerView: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
     
+    @IBOutlet weak var alert: UILabel!
     @IBAction func showActDetail(_ sender: UIButton) {
-        performSegue(withIdentifier: "taskDetail", sender: nil)
+        if (numberMember.text?.isEmpty)! || numberMember.text == "0" {
+            alert.text = "set your member first!"
+        
+        }else{
+            alert.text = ""
+            performSegue(withIdentifier: "taskDetail", sender: nil)
+        }
     }
     @IBOutlet weak var dataPicker: UIPickerView!
     var taskData: [String] = ["Requirement","Design","Coding","Testing","Review"]
@@ -40,7 +47,7 @@ class TaskPickerView: UIViewController, UIPickerViewDataSource, UIPickerViewDele
             let destination = segue.destination as! TaskActivitesView
             let selectedData: String = taskData[dataPicker.selectedRow(inComponent: 0)]
             
-            destination.sourceTitle = selectedData
+            destination.sourceTask = selectedData
             if selectedData == "Requirement" {
                 destination.dataActivites.append("Requirement Ghatering")
                 destination.dataActivites.append("Requirement Analysis")
@@ -74,6 +81,7 @@ class TaskPickerView: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         super.viewDidLoad()
         dataPicker.dataSource = self
         dataPicker.delegate = self
+        alert.text = ""
         // Do any additional setup after loading the view.
     }
 

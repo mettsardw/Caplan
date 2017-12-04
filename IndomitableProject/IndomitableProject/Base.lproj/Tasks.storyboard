@@ -12,7 +12,7 @@
         <!--Tasks-->
         <scene sceneID="QDp-wt-xfT">
             <objects>
-                <viewController title="Tasks" id="4hm-ou-LkT" sceneMemberID="viewController">
+                <viewController title="Tasks" id="4hm-ou-LkT" customClass="TaskTableViewController" customModule="IndomitableProject" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="N0c-of-0GW"/>
                         <viewControllerLayoutGuide type="bottom" id="jKA-Jj-D4M"/>
@@ -20,13 +20,88 @@
                     <view key="view" contentMode="scaleToFill" id="kHH-pn-ef2">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ViV-Xa-Pvz">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="tasksCell" rowHeight="50" id="n4F-Vr-N3F" customClass="TaskTableViewCell" customModule="IndomitableProject" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="50"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="n4F-Vr-N3F" id="lKL-7C-C9m">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="49.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Day" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="55E-I0-55i">
+                                                    <rect key="frame" x="15" y="8" width="54" height="34"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rR1-dw-h1F">
+                                                    <rect key="frame" x="85" y="8" width="236" height="34"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ELD-Ma-K6y">
+                                                    <rect key="frame" x="336" y="13" width="24" height="24"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <state key="normal" title="Button" image="nextIcon"/>
+                                                </button>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="dayLabel" destination="55E-I0-55i" id="nHS-so-mlW"/>
+                                            <outlet property="descLabel" destination="rR1-dw-h1F" id="UwY-U7-hW7"/>
+                                            <outlet property="detailTaskButton" destination="ELD-Ma-K6y" id="Ua6-hm-vnM"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="4hm-ou-LkT" id="WA9-Fz-hjH"/>
+                                    <outlet property="delegate" destination="4hm-ou-LkT" id="3bR-Fx-733"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <navigationItem key="navigationItem" id="dCD-Ot-PAr"/>
+                    <connections>
+                        <outlet property="searchDisplayController" destination="uNr-OB-i19" id="Do8-1Q-x2B"/>
+                        <outlet property="taskTable" destination="ViV-Xa-Pvz" id="QEA-zq-6Bh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pEw-Yt-EP7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="fJX-ml-Bii">
+                    <connections>
+                        <outlet property="delegate" destination="4hm-ou-LkT" id="uwQ-MQ-HLc"/>
+                        <outlet property="searchContentsController" destination="4hm-ou-LkT" id="kLT-cN-bcd"/>
+                        <outlet property="searchResultsDataSource" destination="4hm-ou-LkT" id="r56-26-dWt"/>
+                        <outlet property="searchResultsDelegate" destination="4hm-ou-LkT" id="qsO-Fm-cF8"/>
+                    </connections>
+                </searchDisplayController>
+                <searchDisplayController id="7hF-rm-CVs">
+                    <connections>
+                        <outlet property="delegate" destination="4hm-ou-LkT" id="HgH-PL-iJG"/>
+                        <outlet property="searchContentsController" destination="4hm-ou-LkT" id="3oO-VM-hqT"/>
+                        <outlet property="searchResultsDataSource" destination="4hm-ou-LkT" id="JXD-As-RZp"/>
+                        <outlet property="searchResultsDelegate" destination="4hm-ou-LkT" id="VdZ-5W-2OZ"/>
+                    </connections>
+                </searchDisplayController>
+                <searchDisplayController id="uNr-OB-i19">
+                    <connections>
+                        <outlet property="delegate" destination="4hm-ou-LkT" id="cqb-nR-cvY"/>
+                        <outlet property="searchContentsController" destination="4hm-ou-LkT" id="DXl-eT-Ht4"/>
+                        <outlet property="searchResultsDataSource" destination="4hm-ou-LkT" id="88F-Ej-3OA"/>
+                        <outlet property="searchResultsDelegate" destination="4hm-ou-LkT" id="ufe-oT-xaI"/>
+                    </connections>
+                </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="1018" y="1318"/>
+            <point key="canvasLocation" x="1072.8" y="1317.3913043478262"/>
         </scene>
         <!--Tasks-->
         <scene sceneID="cYC-um-YU4">
@@ -48,4 +123,7 @@
             <point key="canvasLocation" x="363.19999999999999" y="1318.7406296851575"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="nextIcon" width="50" height="50"/>
+    </resources>
 </document>
