@@ -14,7 +14,7 @@ class ProjectTableViewControlelr: UIViewController, UITableViewDelegate, UITable
     @IBOutlet weak var daysLabel: UILabel!
     @IBOutlet weak var projectLabel: UILabel!
     
-    var projectName: String = "My Project"
+    var projectName: String = "MyProject"
     var projectDays: Int = 100
     var projectIcon: UIImage?
     var labels: [String] = ["edit project name","edit time limit","reset"]
@@ -45,16 +45,16 @@ class ProjectTableViewControlelr: UIViewController, UITableViewDelegate, UITable
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        switch indexPath.row {
-        case 0:
-            performSegue(withIdentifier: "editNameSegue", sender: tableView.cellForRow(at: indexPath))
-        case 1:
-            performSegue(withIdentifier: "editTimeSegue", sender: tableView.cellForRow(at: indexPath))
-        case 2:
-            performSegue(withIdentifier: "resetSegue", sender: tableView.cellForRow(at: indexPath))
-        default:
-            print("error")
-        }
+//        switch indexPath.row {
+//        case 0:
+//            performSegue(withIdentifier: "editNameSegue", sender: tableView.cellForRow(at: indexPath))
+//        case 1:
+//            performSegue(withIdentifier: "editTimeSegue", sender: tableView.cellForRow(at: indexPath))
+//        case 2:
+//            performSegue(withIdentifier: "resetSegue", sender: tableView.cellForRow(at: indexPath))
+//        default:
+//            print("error")
+//        }
         tableView.deselectRow(at: indexPath, animated: true)
     }
     

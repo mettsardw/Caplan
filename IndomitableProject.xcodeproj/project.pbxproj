@@ -35,6 +35,7 @@
 		220839121FCDCDFC003CD62A /* PlanTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 220839111FCDCDFC003CD62A /* PlanTableViewCell.swift */; };
 		220839141FCDD2CB003CD62A /* PlanLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 220839131FCDD2CB003CD62A /* PlanLine.swift */; };
 		22200D441FD5A9590090E4D3 /* EditNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22200D431FD5A9590090E4D3 /* EditNameViewController.swift */; };
+		22200D461FD655FF0090E4D3 /* EditTimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22200D451FD655FF0090E4D3 /* EditTimeViewController.swift */; };
 		22FB98791FCE9538000DD7F2 /* TestTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FB98781FCE9538000DD7F2 /* TestTableViewController.swift */; };
 		22FB987D1FCEAB3E000DD7F2 /* Plan.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22FB987C1FCEAB3E000DD7F2 /* Plan.storyboard */; };
 		22FB98E11FCFC18E000DD7F2 /* ProjectTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FB98E01FCFC18E000DD7F2 /* ProjectTableViewController.swift */; };
@@ -89,6 +90,7 @@
 		220839111FCDCDFC003CD62A /* PlanTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanTableViewCell.swift; sourceTree = "<group>"; };
 		220839131FCDD2CB003CD62A /* PlanLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanLine.swift; sourceTree = "<group>"; };
 		22200D431FD5A9590090E4D3 /* EditNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditNameViewController.swift; sourceTree = "<group>"; };
+		22200D451FD655FF0090E4D3 /* EditTimeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTimeViewController.swift; sourceTree = "<group>"; };
 		22FB98781FCE9538000DD7F2 /* TestTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTableViewController.swift; sourceTree = "<group>"; };
 		22FB987C1FCEAB3E000DD7F2 /* Plan.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Plan.storyboard; sourceTree = "<group>"; };
 		22FB98E01FCFC18E000DD7F2 /* ProjectTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectTableViewController.swift; sourceTree = "<group>"; };
@@ -171,6 +173,7 @@
 			children = (
 				22FB98E01FCFC18E000DD7F2 /* ProjectTableViewController.swift */,
 				22200D431FD5A9590090E4D3 /* EditNameViewController.swift */,
+				22200D451FD655FF0090E4D3 /* EditTimeViewController.swift */,
 			);
 			name = UIProject;
 			sourceTree = "<group>";
@@ -334,6 +337,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				220838BA1FCC5B83003CD62A /* Task.swift in Sources */,
+				22200D461FD655FF0090E4D3 /* EditTimeViewController.swift in Sources */,
 				220838B21FCC0190003CD62A /* TaskLine.swift in Sources */,
 				2208390E1FCDC993003CD62A /* PlanBubble.swift in Sources */,
 				CEAC67FA1FCFAAB600AB0212 /* TaskTableViewCell.swift in Sources */,
