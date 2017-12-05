@@ -221,16 +221,8 @@
 		92959A0A1FC6CDB0005B331F /* IndomitableProject */ = {
 			isa = PBXGroup;
 			children = (
-				961198001FD6E58F00678BF2 /* ProjectCore+CoreDataClass.swift */,
-				961198011FD6E58F00678BF2 /* ProjectCore+CoreDataProperties.swift */,
-				961198021FD6E58F00678BF2 /* UserCore+CoreDataClass.swift */,
-				961198031FD6E58F00678BF2 /* UserCore+CoreDataProperties.swift */,
-				961198041FD6E58F00678BF2 /* EventCore+CoreDataClass.swift */,
-				961198051FD6E58F00678BF2 /* EventCore+CoreDataProperties.swift */,
-				961198061FD6E58F00678BF2 /* TaskCore+CoreDataClass.swift */,
-				961198071FD6E58F00678BF2 /* TaskCore+CoreDataProperties.swift */,
-				961198081FD6E58F00678BF2 /* TipsCore+CoreDataClass.swift */,
-				961198091FD6E58F00678BF2 /* TipsCore+CoreDataProperties.swift */,
+				961198141FD70E6700678BF2 /* CoreDataClass+Properties */,
+				929682AD1FCFAF4500BBF591 /* coreDataCaplan.xcdatamodeld */,
 				961197FD1FD6A26F00678BF2 /* SWRevealViewController.h */,
 				961197FE1FD6A26F00678BF2 /* SWRevealViewController.m */,
 				92959A0B1FC6CDB0005B331F /* AppDelegate.swift */,
@@ -244,7 +236,6 @@
 				220838DB1FCD1510003CD62A /* Project.storyboard */,
 				22FB98DF1FCFBF54000DD7F2 /* UIProject */,
 				220838D81FCD1039003CD62A /* Tasks.storyboard */,
-				929682AD1FCFAF4500BBF591 /* coreDataCaplan.xcdatamodeld */,
 				22FB987C1FCEAB3E000DD7F2 /* Plan.storyboard */,
 				2208390C1FCDC946003CD62A /* UIPlan */,
 				220838D31FCD0FEE003CD62A /* Timeline.storyboard */,
@@ -273,6 +264,23 @@
 				968AFD5C1FCFE8A000722C97 /* TaskAddedInfoView.swift */,
 			);
 			path = UIAddTask;
+			sourceTree = "<group>";
+		};
+		961198141FD70E6700678BF2 /* CoreDataClass+Properties */ = {
+			isa = PBXGroup;
+			children = (
+				961198001FD6E58F00678BF2 /* ProjectCore+CoreDataClass.swift */,
+				961198011FD6E58F00678BF2 /* ProjectCore+CoreDataProperties.swift */,
+				961198021FD6E58F00678BF2 /* UserCore+CoreDataClass.swift */,
+				961198031FD6E58F00678BF2 /* UserCore+CoreDataProperties.swift */,
+				961198041FD6E58F00678BF2 /* EventCore+CoreDataClass.swift */,
+				961198051FD6E58F00678BF2 /* EventCore+CoreDataProperties.swift */,
+				961198061FD6E58F00678BF2 /* TaskCore+CoreDataClass.swift */,
+				961198071FD6E58F00678BF2 /* TaskCore+CoreDataProperties.swift */,
+				961198081FD6E58F00678BF2 /* TipsCore+CoreDataClass.swift */,
+				961198091FD6E58F00678BF2 /* TipsCore+CoreDataProperties.swift */,
+			);
+			path = "CoreDataClass+Properties";
 			sourceTree = "<group>";
 		};
 		CE02E5281FD68DBF002BF59D /* SideMenu */ = {
