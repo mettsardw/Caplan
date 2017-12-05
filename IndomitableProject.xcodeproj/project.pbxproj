@@ -34,8 +34,11 @@
 		220839101FCDCD29003CD62A /* PlanTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2208390F1FCDCD29003CD62A /* PlanTableViewController.swift */; };
 		220839121FCDCDFC003CD62A /* PlanTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 220839111FCDCDFC003CD62A /* PlanTableViewCell.swift */; };
 		220839141FCDD2CB003CD62A /* PlanLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 220839131FCDD2CB003CD62A /* PlanLine.swift */; };
+		22200D441FD5A9590090E4D3 /* EditNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22200D431FD5A9590090E4D3 /* EditNameViewController.swift */; };
+		22200D461FD655FF0090E4D3 /* EditTimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22200D451FD655FF0090E4D3 /* EditTimeViewController.swift */; };
 		22FB98791FCE9538000DD7F2 /* TestTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FB98781FCE9538000DD7F2 /* TestTableViewController.swift */; };
 		22FB987D1FCEAB3E000DD7F2 /* Plan.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22FB987C1FCEAB3E000DD7F2 /* Plan.storyboard */; };
+		22FB98E11FCFC18E000DD7F2 /* ProjectTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FB98E01FCFC18E000DD7F2 /* ProjectTableViewController.swift */; };
 		4758D5891FCFC9E1004F1427 /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4758D5881FCFC9E1004F1427 /* HelpViewController.swift */; };
 		4758D58D1FD53817004F1427 /* HelpNextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4758D58C1FD53817004F1427 /* HelpNextViewController.swift */; };
 		92959A0C1FC6CDB0005B331F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92959A0B1FC6CDB0005B331F /* AppDelegate.swift */; };
@@ -86,8 +89,11 @@
 		2208390F1FCDCD29003CD62A /* PlanTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanTableViewController.swift; sourceTree = "<group>"; };
 		220839111FCDCDFC003CD62A /* PlanTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanTableViewCell.swift; sourceTree = "<group>"; };
 		220839131FCDD2CB003CD62A /* PlanLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanLine.swift; sourceTree = "<group>"; };
+		22200D431FD5A9590090E4D3 /* EditNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditNameViewController.swift; sourceTree = "<group>"; };
+		22200D451FD655FF0090E4D3 /* EditTimeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTimeViewController.swift; sourceTree = "<group>"; };
 		22FB98781FCE9538000DD7F2 /* TestTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTableViewController.swift; sourceTree = "<group>"; };
 		22FB987C1FCEAB3E000DD7F2 /* Plan.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Plan.storyboard; sourceTree = "<group>"; };
+		22FB98E01FCFC18E000DD7F2 /* ProjectTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectTableViewController.swift; sourceTree = "<group>"; };
 		4758D5881FCFC9E1004F1427 /* HelpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
 		4758D58C1FD53817004F1427 /* HelpNextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpNextViewController.swift; sourceTree = "<group>"; };
 		92959A081FC6CDAF005B331F /* IndomitableProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IndomitableProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -162,6 +168,16 @@
 			name = UIPlan;
 			sourceTree = "<group>";
 		};
+		22FB98DF1FCFBF54000DD7F2 /* UIProject */ = {
+			isa = PBXGroup;
+			children = (
+				22FB98E01FCFC18E000DD7F2 /* ProjectTableViewController.swift */,
+				22200D431FD5A9590090E4D3 /* EditNameViewController.swift */,
+				22200D451FD655FF0090E4D3 /* EditTimeViewController.swift */,
+			);
+			name = UIProject;
+			sourceTree = "<group>";
+		};
 		929599FF1FC6CDAF005B331F = {
 			isa = PBXGroup;
 			children = (
@@ -196,8 +212,10 @@
 				220838DD1FCD162C003CD62A /* SideMenu.storyboard */,
 				220838E01FCD1AA9003CD62A /* DetailTask.storyboard */,
 				220838DB1FCD1510003CD62A /* Project.storyboard */,
+				22FB98DF1FCFBF54000DD7F2 /* UIProject */,
 				220838D81FCD1039003CD62A /* Tasks.storyboard */,
 				929682AD1FCFAF4500BBF591 /* coreDataCaplan.xcdatamodeld */,
+				22FB987C1FCEAB3E000DD7F2 /* Plan.storyboard */,
 				2208390C1FCDC946003CD62A /* UIPlan */,
 				220838D31FCD0FEE003CD62A /* Timeline.storyboard */,
 				220838E61FCD1B77003CD62A /* Tips.storyboard */,
@@ -320,6 +338,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				220838BA1FCC5B83003CD62A /* Task.swift in Sources */,
+				22200D461FD655FF0090E4D3 /* EditTimeViewController.swift in Sources */,
 				220838B21FCC0190003CD62A /* TaskLine.swift in Sources */,
 				2208390E1FCDC993003CD62A /* PlanBubble.swift in Sources */,
 				CEAC67FA1FCFAAB600AB0212 /* TaskTableViewCell.swift in Sources */,
@@ -339,6 +358,7 @@
 				22FB98791FCE9538000DD7F2 /* TestTableViewController.swift in Sources */,
 				929682AF1FCFAF4600BBF591 /* coreDataCaplan.xcdatamodeld in Sources */,
 				92959A0C1FC6CDB0005B331F /* AppDelegate.swift in Sources */,
+				22200D441FD5A9590090E4D3 /* EditNameViewController.swift in Sources */,
 				4758D58D1FD53817004F1427 /* HelpNextViewController.swift in Sources */,
 				96CD07791FCDA30D00C0D563 /* TaskPickerView.swift in Sources */,
 				92C4BACE1FCFC95700B7C2DB /* TaskSprintSetView.swift in Sources */,
@@ -346,6 +366,7 @@
 				CEAC67F81FCFAA7B00AB0212 /* TaskTableViewController.swift in Sources */,
 				220838B81FCC2629003CD62A /* TaskBundle.swift in Sources */,
 				220838C21FCC608E003CD62A /* User.swift in Sources */,
+				22FB98E11FCFC18E000DD7F2 /* ProjectTableViewController.swift in Sources */,
 				220838BC1FCC5C5A003CD62A /* Time.swift in Sources */,
 				96D81E271FD54D8E004DF9E3 /* TaskCore+CoreDataClass.swift in Sources */,
 				4758D5891FCFC9E1004F1427 /* HelpViewController.swift in Sources */,
