@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import CoreData
 
 class Project {
     var user: User
@@ -16,10 +17,20 @@ class Project {
     var image: UIImage?
     
     init() {
-        //set with default values
+        //set with default value
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let container = appDelegate.persistentContainer.viewContext
+        let projectFetch = NSFetchRequest<NSManagedObject>(entityName: "ProjectCore")
         user = User()
         schedule = Schedule()
-        name = "MyProject"
+        name = ""
+        do {
+            let projects: [ProjectCore] = try container.fetch(projectFetch) as! [ProjectCore]
+            name = projects[0].name!
+        } catch _ as NSError {
+            print("error")
+        }
+        
         //image is optional
     }
     

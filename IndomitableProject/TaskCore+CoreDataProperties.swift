@@ -2,7 +2,7 @@
 //  TaskCore+CoreDataProperties.swift
 //  IndomitableProject
 //
-//  Created by Davin Reinaldo Gozali on 04/12/17.
+//  Created by Davin Reinaldo Gozali on 05/12/17.
 //  Copyright © 2017 RagingWind. All rights reserved.
 //
 //
@@ -17,14 +17,15 @@ extension TaskCore {
         return NSFetchRequest<TaskCore>(entityName: "TaskCore")
     }
 
+    @NSManaged public var duration: Int64
+    @NSManaged public var durationUnit: String?
     @NSManaged public var memberCount: Int64
     @NSManaged public var name: String?
     @NSManaged public var notes: String?
     @NSManaged public var point: Int64
     @NSManaged public var priority: Int64
-    @NSManaged public var duration: Int64
-    @NSManaged public var durationUnit: String?
     @NSManaged public var event: NSSet?
+    @NSManaged public var project: ProjectCore?
 
 }
 

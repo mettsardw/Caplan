@@ -7,7 +7,11 @@
         <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="taskEvent" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="TaskCore" inverseName="event" inverseEntity="TaskCore" syncable="YES"/>
     </entity>
-    <entity name="ProjectCore" representedClassName="ProjectCore" syncable="YES" codeGenerationType="class"/>
+    <entity name="ProjectCore" representedClassName="ProjectCore" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="taskCore" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="TaskCore" inverseName="project" inverseEntity="TaskCore" syncable="YES"/>
+        <relationship name="userCore" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="UserCore" inverseName="project" inverseEntity="UserCore" syncable="YES"/>
+    </entity>
     <entity name="TaskCore" representedClassName="TaskCore" syncable="YES">
         <attribute name="duration" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="durationUnit" optional="YES" attributeType="String" syncable="YES"/>
@@ -17,6 +21,7 @@
         <attribute name="point" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="priority" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <relationship name="event" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="EventCore" inverseName="taskEvent" inverseEntity="EventCore" syncable="YES"/>
+        <relationship name="project" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ProjectCore" inverseName="taskCore" inverseEntity="ProjectCore" syncable="YES"/>
     </entity>
     <entity name="TipsCore" representedClassName="TipsCore" syncable="YES">
         <attribute name="content" optional="YES" attributeType="String" syncable="YES"/>
@@ -24,10 +29,16 @@
         <relationship name="event" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="EventCore" syncable="YES"/>
         <relationship name="task" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="TaskCore" syncable="YES"/>
     </entity>
+    <entity name="UserCore" representedClassName="UserCore" syncable="YES">
+        <attribute name="account" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="project" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ProjectCore" inverseName="userCore" inverseEntity="ProjectCore" syncable="YES"/>
+    </entity>
     <elements>
-        <element name="EventCore" positionX="-1577" positionY="-414" width="128" height="118"/>
-        <element name="ProjectCore" positionX="-1917" positionY="-540" width="128" height="43"/>
-        <element name="TaskCore" positionX="-2340" positionY="-481" width="128" height="163"/>
+        <element name="EventCore" positionX="-2135" positionY="-558" width="128" height="118"/>
+        <element name="ProjectCore" positionX="-1962" positionY="-486" width="128" height="88"/>
+        <element name="TaskCore" positionX="-2340" positionY="-481" width="128" height="178"/>
         <element name="TipsCore" positionX="-2099" positionY="-765" width="128" height="105"/>
+        <element name="UserCore" positionX="-1955" positionY="-646" width="128" height="88"/>
     </elements>
 </model>

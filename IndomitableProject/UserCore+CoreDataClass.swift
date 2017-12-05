@@ -1,5 +1,5 @@
 //
-//  EventCore+CoreDataClass.swift
+//  UserCore+CoreDataClass.swift
 //  IndomitableProject
 //
 //  Created by Davin Reinaldo Gozali on 05/12/17.
@@ -10,7 +10,7 @@
 import Foundation
 import CoreData
 
-
-public class EventCore: NSManagedObject {
+@objc(UserCore)
+public class UserCore: NSManagedObject {
 
 }

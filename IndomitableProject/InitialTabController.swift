@@ -38,20 +38,69 @@ func manageProject(){
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     let container = appDelegate.persistentContainer.viewContext
     
-//    let taskEntity = NSEntityDescription.entity(forEntityName: "TaskCore", in: container)
-//
-//    let newTask = TaskCore(entity: taskEntity!, insertInto: container)
+
+//    let newTask = NSEntityDescription.insertNewObject(forEntityName: "TaskCore", into: container) as! TaskCore
+//    let newTask2 = NSEntityDescription.insertNewObject(forEntityName: "TaskCore", into: container) as! TaskCore
+//    let newTask3 = NSEntityDescription.insertNewObject(forEntityName: "TaskCore", into: container) as! TaskCore
+//    let newTask4 = NSEntityDescription.insertNewObject(forEntityName: "TaskCore", into: container) as! TaskCore
+//    let newProject = NSEntityDescription.insertNewObject(forEntityName: "ProjectCore", into: container) as! ProjectCore
+//    let newUser =  NSEntityDescription.insertNewObject(forEntityName: "UserCore", into: container) as! UserCore
 //    let newEvent = NSEntityDescription.insertNewObject(forEntityName: "EventCore", into: container) as! EventCore
 //    let newEvent1 = NSEntityDescription.insertNewObject(forEntityName: "EventCore", into: container) as! EventCore
 //    let newEvent2 = NSEntityDescription.insertNewObject(forEntityName: "EventCore", into: container) as! EventCore
-//    //set data Task
-//    newTask.setValue("Testing", forKey: "name")
+    
+// ---> //set data Task
+//    newProject.setValue("MyProject", forKey: "name")
+    //--- USER ---//
+//    newUser.setValue("Sardew", forKey: "name")
+//    newUser.setValue("mettasaridewi.w@gmail.com", forKey: "account")
+//    newUser.project = newProject
+    //--- PROJECT ---//
+//    newProject.userCore = newUser
+    // --- TASK ---//
+//    newTask.setValue("Requirement", forKey: "name")
 //    newTask.setValue(10, forKey: "memberCount")
-//    newTask.setValue(40, forKey: "point")
+//    newTask.setValue(30, forKey: "point")
 //    newTask.setValue(1, forKey: "priority")
-//    newTask.setValue("ini Design: lorem ipsum dolor sit amet", forKey: "notes")
-//    newTask.setValue(10, forKey: "duration")
+//    newTask.setValue("ini: lorem ipsum dolor sit amet", forKey: "notes")
+//    newTask.setValue(5, forKey: "duration")
 //    newTask.setValue("days", forKey: "durationUnit")
+
+//
+////---------------------------------------------//
+//    newTask2.setValue("Design", forKey: "name")
+//    newTask2.setValue(10, forKey: "memberCount")
+//    newTask2.setValue(50, forKey: "point")
+//    newTask2.setValue(1, forKey: "priority")
+//    newTask2.setValue("ini Design: lorem ipsum dolor sit amet", forKey: "notes")
+//    newTask2.setValue(7, forKey: "duration")
+//    newTask2.setValue("days", forKey: "durationUnit")
+
+//
+////---------------------------------------------//
+//    newTask3.setValue("Coding", forKey: "name")
+//    newTask3.setValue(10, forKey: "memberCount")
+//    newTask3.setValue(80, forKey: "point")
+//    newTask3.setValue(1, forKey: "priority")
+//    newTask3.setValue("ini Design: lorem ipsum dolor sit amet", forKey: "notes")
+//    newTask3.setValue(7, forKey: "duration")
+//    newTask3.setValue("days", forKey: "durationUnit")
+//
+////---------------------------------------------//
+//    newTask4.setValue("Testing", forKey: "name")
+//    newTask4.setValue(10, forKey: "memberCount")
+//    newTask4.setValue(40, forKey: "point")
+//    newTask4.setValue(1, forKey: "priority")
+//    newTask4.setValue("ini Design: lorem ipsum dolor sit amet", forKey: "notes")
+//    newTask4.setValue(7, forKey: "duration")
+//    newTask4.setValue("days", forKey: "durationUnit")
+
+//--------------------------------------------//
+
+    //print(newProject)
+   // print("User :")
+   // print(newUser)
+    
 //    //set Event
 //    newEvent.setValue("Beta Testing", forKey: "type")
 //    newEvent1.setValue("Alpha Testing", forKey: "type")
@@ -74,29 +123,47 @@ func manageProject(){
 //    newTask.addToEvent(newEvent1)
 //
 //
-//    saveData(targetContainer: container)
+  //saveData(targetContainer: container)
 
     
     let plan: Plan = Plan(name: "Planning")
     //var plan2: Plan = Plan(name: "Sprinting")
-    //plan.addTask(task: Task(name: .Requirement, memberCount: 1, time: Time(duration: 10, unit: .days)))
-    //plan.addTask(task: Task(name: .Design, memberCount: 1, time: Time(duration: 5, unit: .days)))
-    //plan.addTask(task: Task(name: .Coding, memberCount: 1, time: Time(duration: 7, unit: .days)))
-  
+    let userFetch = NSFetchRequest<NSManagedObject>(entityName: "UserCore")
+    let projectFetch = NSFetchRequest<NSManagedObject>(entityName: "ProjectCore")
     let taskFetch = NSFetchRequest<NSManagedObject>(entityName: "TaskCore")
     do{
-        let tasks: [TaskCore] = try container.fetch(taskFetch) as! [TaskCore]
+        let projects: [ProjectCore] = try container.fetch(projectFetch) as! [ProjectCore]
+            print("Project : \(projects.count)")
+//              projects[0].addToTaskCore(newTask)
+//              projects[0].addToTaskCore(newTask2)
+//              projects[0].addToTaskCore(newTask3)
+//              projects[0].addToTaskCore(newTask4)
+        //saveData(targetContainer: container)
+        for project in projects{
+            print("name \(String(describing: project.name))")
+        }
+        //let tasks: [TaskCore] = projects[0].taskCore?.allObjects as! [TaskCore]
+        let users: [UserCore] = try container.fetch(userFetch) as! [UserCore]
+        print("\nUsers : \(users.count)")
+        for user in users {
+            print("name \(String(describing: user.name))")
+        }
+   
+        let projectTask: [TaskCore] = projects[0].taskCore?.allObjects as! [TaskCore]
         //var i=0
-        for task in tasks {
-           // print("name: \(task.value(forKey: "name") as! String)")
+        let tasks: [TaskCore] = try container.fetch(taskFetch) as! [TaskCore]
+        print("\nTasks : \(tasks.count)")
+   
+        //print(projectTask)
+        for task in projectTask {
+            print("name: \(String(describing: task.name))")
 //            print("member Count: \(task.value(forKey: "memberCount")!)")
 //            print("point: \(task.value(forKey: "point")!)")
-//            guard let taskTimeUnit = task.time?.unit else{print("no unit");return}
 //            print(task)
             plan.addTask(task: Task(name: Tasks(rawValue: task.value(forKey: "name") as! String)!, memberCount: Int(task.memberCount), time: Time(duration: Int(task.duration), unit: Unit(rawValue: task.durationUnit!)!)))
             //delete data di Core data
 //            if i == 1{
-              //deleteData(targetContainer: container, task: task)
+              //deleteData(targetContainer: container, object: task)
 //            }
 //            i += 1
             //print("task value:\n\(String(describing: task.value(forKey: "event")!))")
@@ -104,9 +171,7 @@ func manageProject(){
             //guard let taskEvent = task.event?.value(forKey: "duration") else{print("error");return}
             //print(taskEvent)
             //let taskEventDataValue = getStringFromNSSet(data: taskEvent)
-            //print(taskEventDataValue[0])
-//            print(taskEventDataValue[1])
-//            print(taskEventDataValue[2])
+
             
             //access member of NSset in NsManagedObject
             //let taskEvents: [EventCore] = task.event?.allObjects as! [EventCore]
@@ -130,35 +195,6 @@ func taskToIndicateEndOfProject() -> Task{
 
 
 //created by Dargoz
-func getStringFromNSSet(data:Any) -> [String] {
-    var dataSet = String(describing: data)
-    var dataSetString: [String] = []
-    var condition = 0
-    for char in dataSet {
-        if char == "\""{
-            condition = 1
-        }
-    }
-    if condition == 1 {
-        for i in 1...8 {
-            dataSet.remove(at: dataSet.startIndex)
-            if i<5{
-                dataSet.remove(at: dataSet.index(before: dataSet.endIndex))
-            }
-        }
-        
-        dataSetString = dataSet.components(separatedBy: "\",\n    \"")
-    }else{
-        for i in 1...7 {
-            dataSet.remove(at: dataSet.startIndex)
-            if i<4{
-                dataSet.remove(at: dataSet.index(before: dataSet.endIndex))
-            }
-        dataSetString = dataSet.components(separatedBy: ",\n    ")
-        }
-    }
-    return dataSetString
-}
 
 func saveData(targetContainer: NSManagedObjectContext) {
     do {
@@ -170,8 +206,8 @@ func saveData(targetContainer: NSManagedObjectContext) {
 
 }
 
-func deleteData(targetContainer: NSManagedObjectContext, task: NSManagedObject) {
-    targetContainer.delete(task)
+func deleteData(targetContainer: NSManagedObjectContext, object: NSManagedObject) {
+    targetContainer.delete(object)
     do {
         try targetContainer.save()
         print("delete success")
