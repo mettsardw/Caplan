@@ -12,8 +12,8 @@ class TaskTableViewController: UIViewController, UITableViewDataSource, UITableV
     
     @IBOutlet weak var taskTable: UITableView!
     
-    let section: [String] = ["Plan", "Code"]
-    var data: [Any] = [PlanTasks.fetchData(), DesignTasks.fetchData()]
+    let section: [String] = ["Requirement", "Design", "Coding", "Testing"]
+    var data: [[Any]] = [RequirementTasks.fetchData(), DesignTasks.fetchData(), CodingTasks.fetchData(), TestingTasks.fetchData()]
     
     var tempDesc = [String]()
     var tempDay = [String]()
@@ -34,13 +34,30 @@ class TaskTableViewController: UIViewController, UITableViewDataSource, UITableV
         resultController.tableView.delegate = self
         resultController.tableView.dataSource = self
         
-//        for index in 0..<data.count {
-//            for ind in 0..<data[index].count{
-//                tempDesc.append(data[index][ind].desc)
-//                tempDay.append(data[index][ind].day)
-//            }
-//        }
-        print(data)
+        for index in 0..<data.count {
+            for ind in 0..<data[index].count{
+                if index == 0{
+                    let dataString: RequirementTasks = self.data[index][ind] as! RequirementTasks
+                    tempDesc.append(dataString.event)
+                    tempDay.append(dataString.day)
+                }
+                else if index == 1{
+                    let dataString: DesignTasks = self.data[index][ind] as! DesignTasks
+                    tempDesc.append(dataString.event)
+                    tempDay.append(dataString.day)
+                }
+                else if index == 2{
+                    let dataString: CodingTasks = self.data[index][ind] as! CodingTasks
+                    tempDesc.append(dataString.event)
+                    tempDay.append(dataString.day)
+                }
+                else if index == 3{
+                    let dataString: TestingTasks = self.data[index][ind] as! TestingTasks
+                    tempDesc.append(dataString.event)
+                    tempDay.append(dataString.day)
+                }
+            }
+        }
     }
     
    func updateSearchResults(for searchController: UISearchController) {
@@ -51,8 +68,15 @@ class TaskTableViewController: UIViewController, UITableViewDataSource, UITableV
                 return false
             }
         })
+        for ind in 0..<filteredDesc.count{
+            filteredDay.append(getDayAfterSearch(string: filteredDesc[ind]))
+        }
         resultController.tableView.reloadData()
    }
+    
+    func getDayAfterSearch(string: String) -> String{
+        return tempDay[tempDesc.index(of: string)!]
+    }
     
     // declaration section's name
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
@@ -73,23 +97,40 @@ class TaskTableViewController: UIViewController, UITableViewDataSource, UITableV
     }
     
    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        if !(searchController.isActive){
-//            return data[section].count
-//        }else{
-//            return filteredDesc.count
-//        }
-        return data.count
+        if !(searchController.isActive){
+            return data[section].count
+        }else{
+            return filteredDesc.count
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = taskTable.dequeueReusableCell(withIdentifier: "tasksCell", for: indexPath) as! TaskTableViewCell
-//        if tableView == resultController.tableView && searchController.isActive{
-//            //cell.dayLabel.text = filteredDay[indexPath.row]
-//            cell.descLabel.text = filteredDesc[indexPath.row]
-//        }else{
-//            cell.dayLabel.text = self.data[indexPath.section][indexPath.row].day
-//            cell.descLabel.text = self.data[indexPath.section][indexPath.row].desc
-//        }
+        if tableView == resultController.tableView && searchController.isActive{
+            cell.dayLabel.text = filteredDay[indexPath.row]
+            cell.descLabel.text = filteredDesc[indexPath.row]
+        }else{
+            if indexPath.section == 0{
+                let dataString: RequirementTasks = self.data[indexPath.section][indexPath.row] as! RequirementTasks
+                cell.dayLabel.text = dataString.day
+                cell.descLabel.text = dataString.event
+            }
+            else if indexPath.section == 1{
+                let dataString: DesignTasks = self.data[indexPath.section][indexPath.row] as! DesignTasks
+                cell.dayLabel.text = dataString.day
+                cell.descLabel.text = dataString.event
+            }
+            else if indexPath.section == 2{
+                let dataString: CodingTasks = self.data[indexPath.section][indexPath.row] as! CodingTasks
+                cell.dayLabel.text = dataString.day
+                cell.descLabel.text = dataString.event
+            }
+            else if indexPath.section == 3{
+                let dataString: TestingTasks = self.data[indexPath.section][indexPath.row] as! TestingTasks
+                cell.dayLabel.text = dataString.day
+                cell.descLabel.text = dataString.event
+            }
+        }
         return cell
     }
     

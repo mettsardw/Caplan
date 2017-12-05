@@ -39,42 +39,42 @@ func manageProject(){
     let container = appDelegate.persistentContainer.viewContext
     
 //    let taskEntity = NSEntityDescription.entity(forEntityName: "TaskCore", in: container)
- 
+//
 //    let newTask = TaskCore(entity: taskEntity!, insertInto: container)
 //    let newEvent = NSEntityDescription.insertNewObject(forEntityName: "EventCore", into: container) as! EventCore
 //    let newEvent1 = NSEntityDescription.insertNewObject(forEntityName: "EventCore", into: container) as! EventCore
 //    let newEvent2 = NSEntityDescription.insertNewObject(forEntityName: "EventCore", into: container) as! EventCore
-    //set data Task
+//    //set data Task
 //    newTask.setValue("Testing", forKey: "name")
-//    newTask.setValue(20, forKey: "memberCount")
+//    newTask.setValue(10, forKey: "memberCount")
 //    newTask.setValue(40, forKey: "point")
 //    newTask.setValue(1, forKey: "priority")
 //    newTask.setValue("ini Design: lorem ipsum dolor sit amet", forKey: "notes")
 //    newTask.setValue(10, forKey: "duration")
 //    newTask.setValue("days", forKey: "durationUnit")
 //    //set Event
-//    newEvent.setValue("Unit Testing", forKey: "type")
-//    newEvent1.setValue("Integration Testing", forKey: "type")
-//    newEvent2.setValue("System Testing", forKey: "type")
+//    newEvent.setValue("Beta Testing", forKey: "type")
+//    newEvent1.setValue("Alpha Testing", forKey: "type")
+//    newEvent2.setValue("Design UX", forKey: "type")
 //
 //    newEvent.setValue(2, forKey: "duration")
-//    newEvent1.setValue(3, forKey: "duration")
-//    newEvent2.setValue(5, forKey: "duration")
+//    newEvent1.setValue(1, forKey: "duration")
+//    newEvent2.setValue(4, forKey: "duration")
 //
 //    newEvent.setValue("days", forKey: "durationUnit")
 //    newEvent1.setValue("days", forKey: "durationUnit")
 //    newEvent2.setValue("days", forKey: "durationUnit")
 //
-//    newEvent.setValue(6, forKey: "memberCount")
-//    newEvent1.setValue(6, forKey: "memberCount")
-//    newEvent2.setValue(8, forKey: "memberCount")
+//    newEvent.setValue(3, forKey: "memberCount")
+//    newEvent1.setValue(5, forKey: "memberCount")
+//    newEvent2.setValue(2, forKey: "memberCount")
 //
 //    newTask.addToEvent(newEvent)
 //    newTask.addToEvent(newEvent2)
 //    newTask.addToEvent(newEvent1)
-    
-
-    //saveData(targetContainer: container)
+//
+//
+//    saveData(targetContainer: container)
 
     
     let plan: Plan = Plan(name: "Planning")
@@ -88,16 +88,15 @@ func manageProject(){
         let tasks: [TaskCore] = try container.fetch(taskFetch) as! [TaskCore]
         //var i=0
         for task in tasks {
-            print("name: \(task.value(forKey: "name") as! String)")
+           // print("name: \(task.value(forKey: "name") as! String)")
 //            print("member Count: \(task.value(forKey: "memberCount")!)")
 //            print("point: \(task.value(forKey: "point")!)")
 //            guard let taskTimeUnit = task.time?.unit else{print("no unit");return}
-//            print("time: \(String(describing: task.time!.duration)) \(taskTimeUnit)")
-            
+//            print(task)
             plan.addTask(task: Task(name: Tasks(rawValue: task.value(forKey: "name") as! String)!, memberCount: Int(task.memberCount), time: Time(duration: Int(task.duration), unit: Unit(rawValue: task.durationUnit!)!)))
             //delete data di Core data
 //            if i == 1{
-//              deleteData(targetContainer: container, task: task)
+              //deleteData(targetContainer: container, task: task)
 //            }
 //            i += 1
             //print("task value:\n\(String(describing: task.value(forKey: "event")!))")
@@ -110,7 +109,7 @@ func manageProject(){
 //            print(taskEventDataValue[2])
             
             //access member of NSset in NsManagedObject
-            let taskEvents: [EventCore] = task.event?.allObjects as! [EventCore]
+            //let taskEvents: [EventCore] = task.event?.allObjects as! [EventCore]
 //            print(taskEvents[0].time!.duration as Any)
 //            print(taskEvents[0].duration)
 //            print(taskEvents[1].duration)
