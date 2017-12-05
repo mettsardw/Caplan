@@ -110,6 +110,7 @@ func manageProject(){
             
             //access member of NSset in NsManagedObject
             //let taskEvents: [EventCore] = task.event?.allObjects as! [EventCore]
+            
 //            print(taskEvents[0].time!.duration as Any)
 //            print(taskEvents[0].duration)
 //            print(taskEvents[1].duration)
@@ -178,4 +179,22 @@ func deleteData(targetContainer: NSManagedObjectContext, task: NSManagedObject) 
         print("save error")
     }
 
+}
+
+func getTotalDuration() -> Int {
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    let container = appDelegate.persistentContainer.viewContext
+    let taskFetch = NSFetchRequest<NSManagedObject>(entityName: "TaskCore")
+    var totalDuration = 0
+    do{
+        
+        let tasks: [TaskCore] = try container.fetch(taskFetch) as! [TaskCore]
+        for task in tasks {
+            totalDuration += Int(task.duration)
+        }
+        
+    }catch _ as NSError {
+        print("error")
+    }
+    return totalDuration
 }
