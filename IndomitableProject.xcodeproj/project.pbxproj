@@ -24,7 +24,6 @@
 		220838D51FCD0FEE003CD62A /* Timeline.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 220838D31FCD0FEE003CD62A /* Timeline.storyboard */; };
 		220838DA1FCD1039003CD62A /* Tasks.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 220838D81FCD1039003CD62A /* Tasks.storyboard */; };
 		220838DC1FCD1510003CD62A /* Project.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 220838DB1FCD1510003CD62A /* Project.storyboard */; };
-		220838DF1FCD162C003CD62A /* SideMenu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 220838DD1FCD162C003CD62A /* SideMenu.storyboard */; };
 		220838E11FCD1AA9003CD62A /* DetailTask.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 220838E01FCD1AA9003CD62A /* DetailTask.storyboard */; };
 		220838E31FCD1ACB003CD62A /* Help.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 220838E21FCD1ACB003CD62A /* Help.storyboard */; };
 		220838E51FCD1AEB003CD62A /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 220838E41FCD1AEB003CD62A /* Settings.storyboard */; };
@@ -51,6 +50,9 @@
 		96D81E281FD54D8E004DF9E3 /* TaskCore+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D81E241FD54D8E004DF9E3 /* TaskCore+CoreDataProperties.swift */; };
 		96D81E291FD54D8E004DF9E3 /* EventCore+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D81E251FD54D8E004DF9E3 /* EventCore+CoreDataClass.swift */; };
 		96D81E2A1FD54D8E004DF9E3 /* EventCore+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D81E261FD54D8E004DF9E3 /* EventCore+CoreDataProperties.swift */; };
+		CE02E5271FD68CC7002BF59D /* sideMenuFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE02E5261FD68CC7002BF59D /* sideMenuFunction.swift */; };
+		CE02E52D1FD68E16002BF59D /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE02E52B1FD68E15002BF59D /* SWRevealViewController.m */; };
+		CE02E52F1FD68E47002BF59D /* SideMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE02E52E1FD68E47002BF59D /* SideMenuTableViewController.swift */; };
 		CE8ED6521FD64ACA00D4D446 /* CodingTasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8ED6511FD64ACA00D4D446 /* CodingTasks.swift */; };
 		CE8ED6541FD64ADC00D4D446 /* RequirementTasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8ED6531FD64ADC00D4D446 /* RequirementTasks.swift */; };
 		CE8ED6561FD64AF100D4D446 /* TestingTasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8ED6551FD64AF100D4D446 /* TestingTasks.swift */; };
@@ -77,7 +79,6 @@
 		220838D41FCD0FEE003CD62A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = IndomitableProject/Base.lproj/Timeline.storyboard; sourceTree = "<group>"; };
 		220838D91FCD1039003CD62A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = IndomitableProject/Base.lproj/Tasks.storyboard; sourceTree = "<group>"; };
 		220838DB1FCD1510003CD62A /* Project.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Project.storyboard; sourceTree = "<group>"; };
-		220838DE1FCD162C003CD62A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = IndomitableProject/Base.lproj/SideMenu.storyboard; sourceTree = "<group>"; };
 		220838E01FCD1AA9003CD62A /* DetailTask.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetailTask.storyboard; sourceTree = "<group>"; };
 		220838E21FCD1ACB003CD62A /* Help.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Help.storyboard; sourceTree = "<group>"; };
 		220838E41FCD1AEB003CD62A /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
@@ -106,6 +107,11 @@
 		96D81E241FD54D8E004DF9E3 /* TaskCore+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TaskCore+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		96D81E251FD54D8E004DF9E3 /* EventCore+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EventCore+CoreDataClass.swift"; sourceTree = "<group>"; };
 		96D81E261FD54D8E004DF9E3 /* EventCore+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EventCore+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		CE02E5221FD68C93002BF59D /* IndomitableProject-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "IndomitableProject-Bridging-Header.h"; sourceTree = "<group>"; };
+		CE02E5261FD68CC7002BF59D /* sideMenuFunction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sideMenuFunction.swift; sourceTree = "<group>"; };
+		CE02E52B1FD68E15002BF59D /* SWRevealViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = SWRevealViewController.m; path = ../../../../Downloads/SWRevealViewControllers/SWRevealViewController.m; sourceTree = "<group>"; };
+		CE02E52C1FD68E15002BF59D /* SWRevealViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SWRevealViewController.h; path = ../../../../Downloads/SWRevealViewControllers/SWRevealViewController.h; sourceTree = "<group>"; };
+		CE02E52E1FD68E47002BF59D /* SideMenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuTableViewController.swift; sourceTree = "<group>"; };
 		CE8ED6511FD64ACA00D4D446 /* CodingTasks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodingTasks.swift; sourceTree = "<group>"; };
 		CE8ED6531FD64ADC00D4D446 /* RequirementTasks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequirementTasks.swift; sourceTree = "<group>"; };
 		CE8ED6551FD64AF100D4D446 /* TestingTasks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingTasks.swift; sourceTree = "<group>"; };
@@ -193,7 +199,6 @@
 				220838E21FCD1ACB003CD62A /* Help.storyboard */,
 				220838E91FCD1BA5003CD62A /* AddTask.storyboard */,
 				220838E41FCD1AEB003CD62A /* Settings.storyboard */,
-				220838DD1FCD162C003CD62A /* SideMenu.storyboard */,
 				220838E01FCD1AA9003CD62A /* DetailTask.storyboard */,
 				220838DB1FCD1510003CD62A /* Project.storyboard */,
 				220838D81FCD1039003CD62A /* Tasks.storyboard */,
@@ -202,6 +207,8 @@
 				220838D31FCD0FEE003CD62A /* Timeline.storyboard */,
 				220838E61FCD1B77003CD62A /* Tips.storyboard */,
 				92959A0F1FC6CDB0005B331F /* Main.storyboard */,
+				CE02E52C1FD68E15002BF59D /* SWRevealViewController.h */,
+				CE02E52B1FD68E15002BF59D /* SWRevealViewController.m */,
 				220838CE1FCD0417003CD62A /* .gitignore */,
 				92959A121FC6CDB0005B331F /* Assets.xcassets */,
 				92959A141FC6CDB0005B331F /* LaunchScreen.storyboard */,
@@ -211,6 +218,7 @@
 				220838D21FCD0454003CD62A /* UITimeline */,
 				220838C71FCC63D7003CD62A /* InitialTabController.swift */,
 				CEAC67F61FCFAA4100AB0212 /* UIAllTasks */,
+				CE02E5281FD68DBF002BF59D /* SideMenu */,
 			);
 			path = IndomitableProject;
 			sourceTree = "<group>";
@@ -226,6 +234,15 @@
 			path = UIAddTask;
 			sourceTree = "<group>";
 		};
+		CE02E5281FD68DBF002BF59D /* SideMenu */ = {
+			isa = PBXGroup;
+			children = (
+				CE02E5221FD68C93002BF59D /* IndomitableProject-Bridging-Header.h */,
+				CE02E52E1FD68E47002BF59D /* SideMenuTableViewController.swift */,
+			);
+			name = SideMenu;
+			sourceTree = "<group>";
+		};
 		CEAC67F61FCFAA4100AB0212 /* UIAllTasks */ = {
 			isa = PBXGroup;
 			children = (
@@ -235,6 +252,7 @@
 				CE8ED6511FD64ACA00D4D446 /* CodingTasks.swift */,
 				CE8ED6531FD64ADC00D4D446 /* RequirementTasks.swift */,
 				CE8ED6551FD64AF100D4D446 /* TestingTasks.swift */,
+				CE02E5261FD68CC7002BF59D /* sideMenuFunction.swift */,
 			);
 			name = UIAllTasks;
 			sourceTree = "<group>";
@@ -271,6 +289,7 @@
 				TargetAttributes = {
 					92959A071FC6CDAF005B331F = {
 						CreatedOnToolsVersion = 8.3.3;
+						LastSwiftMigration = 0910;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -303,7 +322,6 @@
 				92959A161FC6CDB0005B331F /* LaunchScreen.storyboard in Resources */,
 				220838E51FCD1AEB003CD62A /* Settings.storyboard in Resources */,
 				220838E31FCD1ACB003CD62A /* Help.storyboard in Resources */,
-				220838DF1FCD162C003CD62A /* SideMenu.storyboard in Resources */,
 				220838D51FCD0FEE003CD62A /* Timeline.storyboard in Resources */,
 				220838EA1FCD1BA5003CD62A /* AddTask.storyboard in Resources */,
 				220838E81FCD1B77003CD62A /* Tips.storyboard in Resources */,
@@ -323,6 +341,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				220838BA1FCC5B83003CD62A /* Task.swift in Sources */,
+				CE02E52F1FD68E47002BF59D /* SideMenuTableViewController.swift in Sources */,
+				CE02E52D1FD68E16002BF59D /* SWRevealViewController.m in Sources */,
+				CE02E5271FD68CC7002BF59D /* sideMenuFunction.swift in Sources */,
 				220838B21FCC0190003CD62A /* TaskLine.swift in Sources */,
 				2208390E1FCDC993003CD62A /* PlanBubble.swift in Sources */,
 				CEAC67FA1FCFAAB600AB0212 /* TaskTableViewCell.swift in Sources */,
@@ -378,14 +399,6 @@
 				220838D91FCD1039003CD62A /* Base */,
 			);
 			name = Tasks.storyboard;
-			sourceTree = "<group>";
-		};
-		220838DD1FCD162C003CD62A /* SideMenu.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				220838DE1FCD162C003CD62A /* Base */,
-			);
-			name = SideMenu.storyboard;
 			sourceTree = "<group>";
 		};
 		220838E61FCD1B77003CD62A /* Tips.storyboard */ = {
@@ -514,10 +527,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = IndomitableProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.RagingWind.IndomitableProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "IndomitableProject/IndomitableProject-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -526,10 +542,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = IndomitableProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.RagingWind.IndomitableProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "IndomitableProject/IndomitableProject-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

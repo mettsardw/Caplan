@@ -69,9 +69,12 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
-                    <navigationItem key="navigationItem" id="dCD-Ot-PAr"/>
+                    <navigationItem key="navigationItem" id="dCD-Ot-PAr">
+                        <barButtonItem key="leftBarButtonItem" title="Menu" id="vLG-oP-mNi"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="searchDisplayController" destination="uNr-OB-i19" id="Do8-1Q-x2B"/>
+                        <outlet property="sideMenu" destination="vLG-oP-mNi" id="d8S-Av-6VO"/>
                         <outlet property="taskTable" destination="ViV-Xa-Pvz" id="QEA-zq-6Bh"/>
                     </connections>
                 </viewController>

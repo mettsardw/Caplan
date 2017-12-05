@@ -11,6 +11,7 @@ import UIKit
 class TaskTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UISearchResultsUpdating {
     
     @IBOutlet weak var taskTable: UITableView!
+    @IBOutlet weak var sideMenu: UIBarButtonItem!
     
     let section: [String] = ["Requirement", "Design", "Coding", "Testing"]
     var data: [[Any]] = [RequirementTasks.fetchData(), DesignTasks.fetchData(), CodingTasks.fetchData(), TestingTasks.fetchData()]
@@ -58,6 +59,8 @@ class TaskTableViewController: UIViewController, UITableViewDataSource, UITableV
                 }
             }
         }
+        //sideMeu
+        self.sideMenuView(sideMenu: sideMenu)
     }
     
    func updateSearchResults(for searchController: UISearchController) {
