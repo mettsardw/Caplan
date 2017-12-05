@@ -26,7 +26,6 @@
 		220838DC1FCD1510003CD62A /* Project.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 220838DB1FCD1510003CD62A /* Project.storyboard */; };
 		220838DF1FCD162C003CD62A /* SideMenu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 220838DD1FCD162C003CD62A /* SideMenu.storyboard */; };
 		220838E11FCD1AA9003CD62A /* DetailTask.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 220838E01FCD1AA9003CD62A /* DetailTask.storyboard */; };
-		220838E51FCD1AEB003CD62A /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 220838E41FCD1AEB003CD62A /* Settings.storyboard */; };
 		220838E81FCD1B77003CD62A /* Tips.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 220838E61FCD1B77003CD62A /* Tips.storyboard */; };
 		220838EA1FCD1BA5003CD62A /* AddTask.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 220838E91FCD1BA5003CD62A /* AddTask.storyboard */; };
 		2208390E1FCDC993003CD62A /* PlanBubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2208390D1FCDC993003CD62A /* PlanBubble.swift */; };
@@ -38,6 +37,7 @@
 		4758D5931FD59160004F1427 /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4758D5901FD5915F004F1427 /* HelpViewController.swift */; };
 		4758D5941FD59160004F1427 /* Help.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4758D5911FD5915F004F1427 /* Help.storyboard */; };
 		4758D5951FD59160004F1427 /* HelpNextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4758D5921FD5915F004F1427 /* HelpNextViewController.swift */; };
+		4758D5971FD5A690004F1427 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4758D5961FD5A690004F1427 /* Settings.storyboard */; };
 		92959A0C1FC6CDB0005B331F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92959A0B1FC6CDB0005B331F /* AppDelegate.swift */; };
 		92959A0E1FC6CDB0005B331F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92959A0D1FC6CDB0005B331F /* ViewController.swift */; };
 		92959A111FC6CDB0005B331F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92959A0F1FC6CDB0005B331F /* Main.storyboard */; };
@@ -78,7 +78,6 @@
 		220838DB1FCD1510003CD62A /* Project.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Project.storyboard; sourceTree = "<group>"; };
 		220838DE1FCD162C003CD62A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = IndomitableProject/Base.lproj/SideMenu.storyboard; sourceTree = "<group>"; };
 		220838E01FCD1AA9003CD62A /* DetailTask.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetailTask.storyboard; sourceTree = "<group>"; };
-		220838E41FCD1AEB003CD62A /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
 		220838E71FCD1B77003CD62A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = IndomitableProject/Base.lproj/Tips.storyboard; sourceTree = "<group>"; };
 		220838E91FCD1BA5003CD62A /* AddTask.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddTask.storyboard; sourceTree = "<group>"; };
 		2208390D1FCDC993003CD62A /* PlanBubble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanBubble.swift; sourceTree = "<group>"; };
@@ -90,6 +89,7 @@
 		4758D5901FD5915F004F1427 /* HelpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HelpViewController.swift; path = ../../../GitKraken/Caplan/IndomitableProject/HelpViewController.swift; sourceTree = "<group>"; };
 		4758D5911FD5915F004F1427 /* Help.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Help.storyboard; path = ../../../GitKraken/Caplan/IndomitableProject/Help.storyboard; sourceTree = "<group>"; };
 		4758D5921FD5915F004F1427 /* HelpNextViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HelpNextViewController.swift; path = ../../../GitKraken/Caplan/IndomitableProject/HelpNextViewController.swift; sourceTree = "<group>"; };
+		4758D5961FD5A690004F1427 /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
 		92959A081FC6CDAF005B331F /* IndomitableProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IndomitableProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92959A0B1FC6CDB0005B331F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		92959A0D1FC6CDB0005B331F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -189,10 +189,10 @@
 				96D81E251FD54D8E004DF9E3 /* EventCore+CoreDataClass.swift */,
 				96D81E261FD54D8E004DF9E3 /* EventCore+CoreDataProperties.swift */,
 				22FB987C1FCEAB3E000DD7F2 /* Plan.storyboard */,
+				4758D5961FD5A690004F1427 /* Settings.storyboard */,
 				92959A0B1FC6CDB0005B331F /* AppDelegate.swift */,
 				92959A0D1FC6CDB0005B331F /* ViewController.swift */,
 				220838E91FCD1BA5003CD62A /* AddTask.storyboard */,
-				220838E41FCD1AEB003CD62A /* Settings.storyboard */,
 				220838DD1FCD162C003CD62A /* SideMenu.storyboard */,
 				220838E01FCD1AA9003CD62A /* DetailTask.storyboard */,
 				220838DB1FCD1510003CD62A /* Project.storyboard */,
@@ -298,7 +298,6 @@
 				220838DC1FCD1510003CD62A /* Project.storyboard in Resources */,
 				220838CF1FCD0417003CD62A /* .gitignore in Resources */,
 				92959A161FC6CDB0005B331F /* LaunchScreen.storyboard in Resources */,
-				220838E51FCD1AEB003CD62A /* Settings.storyboard in Resources */,
 				220838DF1FCD162C003CD62A /* SideMenu.storyboard in Resources */,
 				220838D51FCD0FEE003CD62A /* Timeline.storyboard in Resources */,
 				4758D5941FD59160004F1427 /* Help.storyboard in Resources */,
@@ -309,6 +308,7 @@
 				92959A131FC6CDB0005B331F /* Assets.xcassets in Resources */,
 				220838DA1FCD1039003CD62A /* Tasks.storyboard in Resources */,
 				92959A111FC6CDB0005B331F /* Main.storyboard in Resources */,
+				4758D5971FD5A690004F1427 /* Settings.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
