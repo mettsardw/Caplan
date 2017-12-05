@@ -22,7 +22,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
-                    <navigationItem key="navigationItem" id="dHh-z8-t58"/>
+                    <navigationItem key="navigationItem" id="dHh-z8-t58">
+                        <barButtonItem key="leftBarButtonItem" title="Menu" id="9Jh-Tv-QGd"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="sideMenu" destination="9Jh-Tv-QGd" id="xpj-tx-De8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xin-WT-aio" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
