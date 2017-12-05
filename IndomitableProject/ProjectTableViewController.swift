@@ -44,18 +44,23 @@ class ProjectTableViewControlelr: UIViewController, UITableViewDelegate, UITable
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
-        if (indexPath.row == 0) {
-            
-        }
-        else if (indexPath.row == 0) {
-            //do something else
-        }
         
+        switch indexPath.row {
+        case 0:
+            performSegue(withIdentifier: "editNameSegue", sender: tableView.cellForRow(at: indexPath))
+        case 1:
+            performSegue(withIdentifier: "editTimeSegue", sender: tableView.cellForRow(at: indexPath))
+        case 2:
+            performSegue(withIdentifier: "resetSegue", sender: tableView.cellForRow(at: indexPath))
+        default:
+            print("error")
+        }
+        tableView.deselectRow(at: indexPath, animated: true)
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = projectTableView.dequeueReusableCell(withIdentifier: "projectCell", for: indexPath)
+        let idenName = "projectCell\(indexPath.row)"
+        let cell = projectTableView.dequeueReusableCell(withIdentifier: idenName, for: indexPath)
         cell.textLabel?.text = labels[indexPath.row]
         
         if indexPath.row == 2 {
@@ -66,18 +71,19 @@ class ProjectTableViewControlelr: UIViewController, UITableViewDelegate, UITable
         return cell
     }
     
-    //    func manageProject() -> [Plan] {
-    //        //initialize project, tasks.
-    //        var plan: Plan = Plan(name: "Planning")
-    //        //var plan2: Plan = Plan(name: "Sprinting")
-    //        plan.addTask(task: Task(name: "Design", memberCount: 1, time: Time(duration: 10, unit: .days)))
-    //        plan.addTask(task: Task(name: "Code", memberCount: 1, time: Time(duration: 5, unit: .days)))
-    //        plan.addTask(task: Task(name: "Testing", memberCount: 1, time: Time(duration: 7, unit: .days)))
-    //
-    //        project.schedule.plans.append(plan)
-    //        return project.schedule.plans
-    //    }
+    @IBAction func showEditNameSegue(_ sender: UITableViewCell) {
+        if sender.textLabel?.text == labels[0] {
+            performSegue(withIdentifier: "editNameSegue", sender: nil)
+        }
+        
+    }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "editNameSegue" {
+            let destination = segue.destination as! EditNameViewController
+            destination.descText = "edit project name..."
+        }
+    }
     
 }
 
