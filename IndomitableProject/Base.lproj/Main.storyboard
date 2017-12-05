@@ -31,7 +31,7 @@
             </objects>
             <point key="canvasLocation" x="-1297" y="-469"/>
         </scene>
-        <!--Initial Tab Controller-->
+        <!--Initial Tab-->
         <scene sceneID="n3F-ci-a7I">
             <objects>
                 <tabBarController title="Initial Tab" id="1ma-8l-ZtK" customClass="InitialTabController" customModule="IndomitableProject" customModuleProvider="target" sceneMemberID="viewController">
@@ -48,6 +48,7 @@
                         <segue destination="QsK-ZV-zv7" kind="custom" identifier="sw_right" customClass="SWRevealViewControllerSegueSetController" id="s5p-Ys-cB9"/>
                         <segue destination="PoD-C1-CbM" kind="custom" identifier="sw_right" customClass="SWRevealViewControllerSegueSetController" id="J9S-nU-azb"/>
                         <segue destination="Q5w-ep-DTO" kind="custom" identifier="sw_right" customClass="SWRevealViewControllerSegueSetController" id="grs-D1-EbK"/>
+                        <segue destination="PoD-C1-CbM" kind="relationship" relationship="viewControllers" id="CNB-GT-fLa"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Slv-8G-Yka" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -232,7 +233,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="grs-D1-EbK"/>
         <segue reference="J9S-nU-azb"/>
-        <segue reference="s5p-Ys-cB9"/>
+        <segue reference="0et-Lk-PLG"/>
         <segue reference="4G7-Ht-SMh"/>
     </inferredMetricsTieBreakers>
 </document>
