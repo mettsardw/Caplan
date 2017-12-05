@@ -36,6 +36,8 @@
 		220839141FCDD2CB003CD62A /* PlanLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 220839131FCDD2CB003CD62A /* PlanLine.swift */; };
 		22FB98791FCE9538000DD7F2 /* TestTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FB98781FCE9538000DD7F2 /* TestTableViewController.swift */; };
 		22FB987D1FCEAB3E000DD7F2 /* Plan.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22FB987C1FCEAB3E000DD7F2 /* Plan.storyboard */; };
+		4758D5891FCFC9E1004F1427 /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4758D5881FCFC9E1004F1427 /* HelpViewController.swift */; };
+		4758D58D1FD53817004F1427 /* HelpNextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4758D58C1FD53817004F1427 /* HelpNextViewController.swift */; };
 		92959A0C1FC6CDB0005B331F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92959A0B1FC6CDB0005B331F /* AppDelegate.swift */; };
 		92959A0E1FC6CDB0005B331F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92959A0D1FC6CDB0005B331F /* ViewController.swift */; };
 		92959A111FC6CDB0005B331F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92959A0F1FC6CDB0005B331F /* Main.storyboard */; };
@@ -86,6 +88,8 @@
 		220839131FCDD2CB003CD62A /* PlanLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanLine.swift; sourceTree = "<group>"; };
 		22FB98781FCE9538000DD7F2 /* TestTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTableViewController.swift; sourceTree = "<group>"; };
 		22FB987C1FCEAB3E000DD7F2 /* Plan.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Plan.storyboard; sourceTree = "<group>"; };
+		4758D5881FCFC9E1004F1427 /* HelpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
+		4758D58C1FD53817004F1427 /* HelpNextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpNextViewController.swift; sourceTree = "<group>"; };
 		92959A081FC6CDAF005B331F /* IndomitableProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IndomitableProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92959A0B1FC6CDB0005B331F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		92959A0D1FC6CDB0005B331F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -185,6 +189,8 @@
 				92959A0B1FC6CDB0005B331F /* AppDelegate.swift */,
 				92959A0D1FC6CDB0005B331F /* ViewController.swift */,
 				220838E21FCD1ACB003CD62A /* Help.storyboard */,
+				4758D58C1FD53817004F1427 /* HelpNextViewController.swift */,
+				4758D5881FCFC9E1004F1427 /* HelpViewController.swift */,
 				220838E91FCD1BA5003CD62A /* AddTask.storyboard */,
 				220838E41FCD1AEB003CD62A /* Settings.storyboard */,
 				220838DD1FCD162C003CD62A /* SideMenu.storyboard */,
@@ -333,6 +339,7 @@
 				22FB98791FCE9538000DD7F2 /* TestTableViewController.swift in Sources */,
 				929682AF1FCFAF4600BBF591 /* coreDataCaplan.xcdatamodeld in Sources */,
 				92959A0C1FC6CDB0005B331F /* AppDelegate.swift in Sources */,
+				4758D58D1FD53817004F1427 /* HelpNextViewController.swift in Sources */,
 				96CD07791FCDA30D00C0D563 /* TaskPickerView.swift in Sources */,
 				92C4BACE1FCFC95700B7C2DB /* TaskSprintSetView.swift in Sources */,
 				96CD079B1FCE89F700C0D563 /* TaskActivitiesView.swift in Sources */,
@@ -341,6 +348,7 @@
 				220838C21FCC608E003CD62A /* User.swift in Sources */,
 				220838BC1FCC5C5A003CD62A /* Time.swift in Sources */,
 				96D81E271FD54D8E004DF9E3 /* TaskCore+CoreDataClass.swift in Sources */,
+				4758D5891FCFC9E1004F1427 /* HelpViewController.swift in Sources */,
 				220838B41FCC0861003CD62A /* TimelineController.swift in Sources */,
 				96D81E281FD54D8E004DF9E3 /* TaskCore+CoreDataProperties.swift in Sources */,
 				220838B61FCC0983003CD62A /* TimelineTable.swift in Sources */,
