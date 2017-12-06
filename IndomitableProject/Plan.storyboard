@@ -101,7 +101,7 @@
             </objects>
             <point key="canvasLocation" x="2414" y="258"/>
         </scene>
-        <!--Plan Table View Controller-->
+        <!--Plan-->
         <scene sceneID="f6e-dp-KPL">
             <objects>
                 <tableViewController id="uJg-tO-sof" customClass="PlanTableViewController" customModule="IndomitableProject" customModuleProvider="target" sceneMemberID="viewController">
@@ -182,7 +182,9 @@
                             <outlet property="delegate" destination="uJg-tO-sof" id="RLY-Fx-NxW"/>
                         </connections>
                     </tableView>
+                    <tabBarItem key="tabBarItem" title="Plan" image="list" id="TNX-VT-6yd"/>
                     <navigationItem key="navigationItem" id="JBj-mJ-C2S"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="planTableView" destination="P0v-NW-roP" id="3cw-AZ-4ac"/>
                     </connections>
@@ -211,4 +213,7 @@
             <point key="canvasLocation" x="363.19999999999999" y="610.79460269865069"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="list" width="32" height="32"/>
+    </resources>
 </document>
