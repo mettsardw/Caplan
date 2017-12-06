@@ -142,7 +142,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Project" id="tAa-51-4pA"/>
-                    <navigationItem key="navigationItem" id="9hN-MM-r4z"/>
+                    <navigationItem key="navigationItem" id="9hN-MM-r4z">
+                        <barButtonItem key="rightBarButtonItem" title="+" id="v6M-nN-ISW">
+                            <connections>
+                                <segue destination="d3V-H4-Eib" kind="show" id="h7i-Yn-udA"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="daysLabel" destination="9Pl-iu-fDI" id="TZd-TY-sOx"/>
@@ -154,6 +160,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zzZ-bq-Cc4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="919.20000000000005" y="568.06596701649175"/>
+        </scene>
+        <!--AddTask-->
+        <scene sceneID="VHc-XM-zvs">
+            <objects>
+                <viewControllerPlaceholder storyboardName="AddTask" id="d3V-H4-Eib" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iFv-OV-i36" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1486" y="351"/>
         </scene>
         <!--Edit Project Name-->
         <scene sceneID="Ug5-Sf-Wwv">

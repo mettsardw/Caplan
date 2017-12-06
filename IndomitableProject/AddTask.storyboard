@@ -71,7 +71,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="D14-QJ-Lvn"/>
                     </view>
-                    <navigationItem key="navigationItem" id="PjC-tk-LDc"/>
+                    <navigationItem key="navigationItem" id="PjC-tk-LDc">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="n0T-0h-jjG">
+                            <connections>
+                                <action selector="backDIdTap:" destination="bW6-vc-PYe" id="IwX-xp-XbJ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="alert" destination="jlM-e1-ufK" id="cwh-tr-RnH"/>
                         <outlet property="dataPicker" destination="cQb-DM-DvW" id="aza-GS-AyW"/>

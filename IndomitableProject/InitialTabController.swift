@@ -48,16 +48,16 @@ func manageProject(){
 //    let newEvent = NSEntityDescription.insertNewObject(forEntityName: "EventCore", into: container) as! EventCore
 //    let newEvent1 = NSEntityDescription.insertNewObject(forEntityName: "EventCore", into: container) as! EventCore
 //    let newEvent2 = NSEntityDescription.insertNewObject(forEntityName: "EventCore", into: container) as! EventCore
-    
+//
 // ---> //set data Task
 //    newProject.setValue("MyProject", forKey: "name")
-    //--- USER ---//
+////    --- USER ---//
 //    newUser.setValue("Sardew", forKey: "name")
 //    newUser.setValue("mettasaridewi.w@gmail.com", forKey: "account")
 //    newUser.project = newProject
-    //--- PROJECT ---//
+////    --- PROJECT ---//
 //    newProject.userCore = newUser
-    // --- TASK ---//
+////     --- TASK ---//
 //    newTask.setValue("Requirement", forKey: "name")
 //    newTask.setValue(10, forKey: "memberCount")
 //    newTask.setValue(30, forKey: "point")
@@ -66,8 +66,8 @@ func manageProject(){
 //    newTask.setValue(5, forKey: "duration")
 //    newTask.setValue("days", forKey: "durationUnit")
 
-//
-////---------------------------------------------//
+
+//---------------------------------------------//
 //    newTask2.setValue("Design", forKey: "name")
 //    newTask2.setValue(10, forKey: "memberCount")
 //    newTask2.setValue(50, forKey: "point")
@@ -76,8 +76,8 @@ func manageProject(){
 //    newTask2.setValue(7, forKey: "duration")
 //    newTask2.setValue("days", forKey: "durationUnit")
 
-//
-////---------------------------------------------//
+
+//---------------------------------------------//
 //    newTask3.setValue("Coding", forKey: "name")
 //    newTask3.setValue(10, forKey: "memberCount")
 //    newTask3.setValue(80, forKey: "point")
@@ -85,8 +85,8 @@ func manageProject(){
 //    newTask3.setValue("ini Design: lorem ipsum dolor sit amet", forKey: "notes")
 //    newTask3.setValue(7, forKey: "duration")
 //    newTask3.setValue("days", forKey: "durationUnit")
-//
-////---------------------------------------------//
+
+//---------------------------------------------//
 //    newTask4.setValue("Testing", forKey: "name")
 //    newTask4.setValue(10, forKey: "memberCount")
 //    newTask4.setValue(40, forKey: "point")
@@ -97,11 +97,11 @@ func manageProject(){
 
 //--------------------------------------------//
 
-    //print(newProject)
-   // print("User :")
-   // print(newUser)
+//    print(newProject)
+//    print("User :")
+//    print(newUser)
     
-//    //set Event
+    //set Event
 //    newEvent.setValue("Beta Testing", forKey: "type")
 //    newEvent1.setValue("Alpha Testing", forKey: "type")
 //    newEvent2.setValue("Design UX", forKey: "type")
@@ -121,11 +121,14 @@ func manageProject(){
 //    newTask.addToEvent(newEvent)
 //    newTask.addToEvent(newEvent2)
 //    newTask.addToEvent(newEvent1)
-//
-//
-  //saveData(targetContainer: container)
 
-    
+
+
+//    newProject.addToTaskCore(newTask)
+//    newProject.addToTaskCore(newTask2)
+//    newProject.addToTaskCore(newTask3)
+//    newProject.addToTaskCore(newTask4)
+//    saveData(targetContainer: container)
     let plan: Plan = Plan(name: "Planning")
     //var plan2: Plan = Plan(name: "Sprinting")
     let userFetch = NSFetchRequest<NSManagedObject>(entityName: "UserCore")
@@ -149,13 +152,13 @@ func manageProject(){
             print("name \(String(describing: user.name))")
         }
    
-        let projectTask: [TaskCore] = projects[0].taskCore?.allObjects as! [TaskCore]
+        //let projectTask: [TaskCore] = projects[0].taskCore?.allObjects as! [TaskCore]
         //var i=0
         let tasks: [TaskCore] = try container.fetch(taskFetch) as! [TaskCore]
         print("\nTasks : \(tasks.count)")
    
         //print(projectTask)
-        for task in projectTask {
+        for task in tasks {
             print("name: \(String(describing: task.name))")
 //            print("member Count: \(task.value(forKey: "memberCount")!)")
 //            print("point: \(task.value(forKey: "point")!)")

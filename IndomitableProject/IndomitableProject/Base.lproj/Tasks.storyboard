@@ -71,6 +71,11 @@
                     </view>
                     <navigationItem key="navigationItem" id="dCD-Ot-PAr">
                         <barButtonItem key="leftBarButtonItem" title="Menu" id="vLG-oP-mNi"/>
+                        <barButtonItem key="rightBarButtonItem" title="+" id="EwI-DG-OPf">
+                            <connections>
+                                <segue destination="qdi-ka-p9n" kind="show" id="8da-gg-iGE"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="searchDisplayController" destination="uNr-OB-i19" id="Do8-1Q-x2B"/>
@@ -105,6 +110,14 @@
                 </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="1072.8" y="1317.3913043478262"/>
+        </scene>
+        <!--AddTask-->
+        <scene sceneID="oAD-2a-fDd">
+            <objects>
+                <viewControllerPlaceholder storyboardName="AddTask" id="qdi-ka-p9n" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0AU-Fx-U8f" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1666" y="1220"/>
         </scene>
         <!--Tasks-->
         <scene sceneID="cYC-um-YU4">

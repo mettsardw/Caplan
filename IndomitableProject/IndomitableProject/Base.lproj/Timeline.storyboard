@@ -24,6 +24,11 @@
                     </view>
                     <navigationItem key="navigationItem" id="dHh-z8-t58">
                         <barButtonItem key="leftBarButtonItem" title="Menu" id="9Jh-Tv-QGd"/>
+                        <barButtonItem key="rightBarButtonItem" title="+" id="VSR-ji-Qbr">
+                            <connections>
+                                <segue destination="UaY-Co-p3r" kind="show" id="Fpt-AG-q4w"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="sideMenu" destination="9Jh-Tv-QGd" id="xpj-tx-De8"/>
@@ -32,6 +37,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xin-WT-aio" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1104.8" y="-61.619190404797607"/>
+        </scene>
+        <!--AddTask-->
+        <scene sceneID="i2R-IS-eEs">
+            <objects>
+                <viewControllerPlaceholder storyboardName="AddTask" id="UaY-Co-p3r" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Hv-1a-KuH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1454" y="-451"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="nfu-FJ-Pf6">
