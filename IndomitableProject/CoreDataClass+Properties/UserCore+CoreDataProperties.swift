@@ -2,7 +2,7 @@
 //  UserCore+CoreDataProperties.swift
 //  IndomitableProject
 //
-//  Created by Davin Reinaldo Gozali on 05/12/17.
+//  Created by Davin Reinaldo Gozali on 06/12/17.
 //  Copyright © 2017 RagingWind. All rights reserved.
 //
 //
@@ -17,8 +17,8 @@ extension UserCore {
         return NSFetchRequest<UserCore>(entityName: "UserCore")
     }
 
-    @NSManaged public var name: String?
     @NSManaged public var account: String?
+    @NSManaged public var name: String?
     @NSManaged public var project: ProjectCore?
 
 }

@@ -1,5 +1,5 @@
 //
-//  TaskCore+CoreDataClass.swift
+//  SprintCore+CoreDataClass.swift
 //  IndomitableProject
 //
 //  Created by Davin Reinaldo Gozali on 06/12/17.
@@ -10,7 +10,7 @@
 import Foundation
 import CoreData
 
-@objc(TaskCore)
-public class TaskCore: NSManagedObject {
+@objc(SprintCore)
+public class SprintCore: NSManagedObject {
 
 }

@@ -43,21 +43,28 @@ func manageProject(){
 //    let newTask2 = NSEntityDescription.insertNewObject(forEntityName: "TaskCore", into: container) as! TaskCore
 //    let newTask3 = NSEntityDescription.insertNewObject(forEntityName: "TaskCore", into: container) as! TaskCore
 //    let newTask4 = NSEntityDescription.insertNewObject(forEntityName: "TaskCore", into: container) as! TaskCore
-//    let newProject = NSEntityDescription.insertNewObject(forEntityName: "ProjectCore", into: container) as! ProjectCore
-//    let newUser =  NSEntityDescription.insertNewObject(forEntityName: "UserCore", into: container) as! UserCore
+      let newSprint = NSEntityDescription.insertNewObject(forEntityName: "SprintCore", into: container) as! SprintCore
+    let newProject = NSEntityDescription.insertNewObject(forEntityName: "ProjectCore", into: container) as! ProjectCore
+    let newUser =  NSEntityDescription.insertNewObject(forEntityName: "UserCore", into: container) as! UserCore
 //    let newEvent = NSEntityDescription.insertNewObject(forEntityName: "EventCore", into: container) as! EventCore
 //    let newEvent1 = NSEntityDescription.insertNewObject(forEntityName: "EventCore", into: container) as! EventCore
 //    let newEvent2 = NSEntityDescription.insertNewObject(forEntityName: "EventCore", into: container) as! EventCore
 //
 // ---> //set data Task
-//    newProject.setValue("MyProject", forKey: "name")
-////    --- USER ---//
-//    newUser.setValue("Sardew", forKey: "name")
-//    newUser.setValue("mettasaridewi.w@gmail.com", forKey: "account")
-//    newUser.project = newProject
-////    --- PROJECT ---//
-//    newProject.userCore = newUser
-////     --- TASK ---//
+      newProject.setValue("MyProject", forKey: "name")
+//    --- USER ---//
+    newUser.setValue("Sardew", forKey: "name")
+    newUser.setValue("mettasaridewi.w@gmail.com", forKey: "account")
+    newUser.project = newProject
+//    --- PROJECT ---//
+    newProject.userCore = newUser
+    
+// //---- SPRINT ----//
+      newSprint.setValue("Sprint 1", forKey: "name")
+      newSprint.setValue(5, forKey: "duration")
+      newSprint.setValue("days", forKey: "durationUnit")
+      
+//     --- TASK ---//
 //    newTask.setValue("Requirement", forKey: "name")
 //    newTask.setValue(10, forKey: "memberCount")
 //    newTask.setValue(30, forKey: "point")
@@ -122,43 +129,50 @@ func manageProject(){
 //    newTask.addToEvent(newEvent2)
 //    newTask.addToEvent(newEvent1)
 
+    newProject.addToSprintCore(newSprint)
+    
 
-
-//    newProject.addToTaskCore(newTask)
-//    newProject.addToTaskCore(newTask2)
-//    newProject.addToTaskCore(newTask3)
-//    newProject.addToTaskCore(newTask4)
 //    saveData(targetContainer: container)
     let plan: Plan = Plan(name: "Planning")
     //var plan2: Plan = Plan(name: "Sprinting")
+    let sprintFecth = NSFetchRequest<NSManagedObject>(entityName: "SprintCore")
     let userFetch = NSFetchRequest<NSManagedObject>(entityName: "UserCore")
     let projectFetch = NSFetchRequest<NSManagedObject>(entityName: "ProjectCore")
     let taskFetch = NSFetchRequest<NSManagedObject>(entityName: "TaskCore")
     do{
-        let projects: [ProjectCore] = try container.fetch(projectFetch) as! [ProjectCore]
-            print("Project : \(projects.count)")
-//              projects[0].addToTaskCore(newTask)
-//              projects[0].addToTaskCore(newTask2)
-//              projects[0].addToTaskCore(newTask3)
-//              projects[0].addToTaskCore(newTask4)
-        //saveData(targetContainer: container)
-        for project in projects{
-            print("name \(String(describing: project.name))")
-        }
-        //let tasks: [TaskCore] = projects[0].taskCore?.allObjects as! [TaskCore]
+        
         let users: [UserCore] = try container.fetch(userFetch) as! [UserCore]
+        //deleteData(targetContainer: container, object: users[0])
         print("\nUsers : \(users.count)")
         for user in users {
             print("name \(String(describing: user.name))")
         }
-   
-        //let projectTask: [TaskCore] = projects[0].taskCore?.allObjects as! [TaskCore]
+        
+        
+        let projects: [ProjectCore] = try container.fetch(projectFetch) as! [ProjectCore]
+        //deleteData(targetContainer: container, object: projects[0])
+            print("Project : \(projects.count)")
+//              projects[0].addToTaskCore(newSprint)
+
+        //saveData(targetContainer: container)
+        for project in projects{
+            print("name \(String(describing: project.name))")
+        }
+        let projectSprints: [SprintCore] = projects[0].sprintCore?.allObjects as![SprintCore]
+        
+        let sprintTasks: [TaskCore] = projectSprints[0].tasks?.allObjects as! [TaskCore]
+        
+        let sprints: [SprintCore] = try container.fetch(sprintFecth) as! [SprintCore]
+        print("Sprint: \(sprints.count)")
+        for sprint in sprints {
+            print("name \(String(describing: sprint.name)) ")
+        }
         //var i=0
         let tasks: [TaskCore] = try container.fetch(taskFetch) as! [TaskCore]
         print("\nTasks : \(tasks.count)")
    
         //print(projectTask)
-        for task in tasks {
+        for task in sprintTasks {
             print("name: \(String(describing: task.name))")
 //            print("member Count: \(task.value(forKey: "memberCount")!)")
 //            print("point: \(task.value(forKey: "point")!)")
