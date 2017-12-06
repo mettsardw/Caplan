@@ -74,7 +74,7 @@
                     <navigationItem key="navigationItem" id="PjC-tk-LDc">
                         <barButtonItem key="leftBarButtonItem" title="Back" id="n0T-0h-jjG">
                             <connections>
-                                <action selector="backDIdTap:" destination="bW6-vc-PYe" id="IwX-xp-XbJ"/>
+                                <action selector="backButtonDidTap:" destination="bW6-vc-PYe" id="flk-ur-8pe"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

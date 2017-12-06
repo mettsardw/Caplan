@@ -10,6 +10,10 @@ import UIKit
 
 class TaskPickerView: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
     
+    @IBAction func backButtonDidTap(_ sender: Any) {
+        
+        self.presentingViewController?.dismiss(animated: true, completion: nil)
+    }
     @IBOutlet weak var alert: UILabel!
     @IBAction func showActDetail(_ sender: UIButton) {
         if (numberMember.text?.isEmpty)! || numberMember.text == "0" {

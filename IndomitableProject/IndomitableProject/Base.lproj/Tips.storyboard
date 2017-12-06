@@ -12,7 +12,7 @@
         <!--Tips-->
         <scene sceneID="qFN-Cx-AcK">
             <objects>
-                <viewController title="Tips" id="Oh9-ps-vRW" sceneMemberID="viewController">
+                <viewController title="Tips" id="Oh9-ps-vRW" customClass="TipsViewController" customModule="IndomitableProject" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ALY-yI-so6"/>
                         <viewControllerLayoutGuide type="bottom" id="iKw-1d-vMv"/>
@@ -22,7 +22,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Nd0-w4-8Fv"/>
+                    <navigationItem key="navigationItem" id="Nd0-w4-8Fv">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="fzu-IO-ds8">
+                            <connections>
+                                <action selector="backButtonDidTap:" destination="Oh9-ps-vRW" id="udc-qy-Ocw"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aha-ME-S1f" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

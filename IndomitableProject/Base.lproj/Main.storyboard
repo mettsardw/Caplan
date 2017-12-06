@@ -176,6 +176,9 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                        <connections>
+                                            <segue destination="cjT-jr-IBa" kind="show" id="zHE-lh-LNB"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="cDv-Oa-RTO">
                                         <rect key="frame" x="0.0" y="161" width="375" height="44"/>
@@ -195,6 +198,9 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
                                         <color key="tintColor" cocoaTouchSystemColor="lightTextColor"/>
+                                        <connections>
+                                            <segue destination="5na-cB-hzJ" kind="show" id="dcL-Oa-Rgf"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="xri-qc-kfG">
                                         <rect key="frame" x="0.0" y="205" width="375" height="44"/>
@@ -212,6 +218,9 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                        <connections>
+                                            <segue destination="Y88-aw-WWT" kind="show" id="VfJ-sZ-9lM"/>
+                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -228,6 +237,30 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EEA-Ex-1ke" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2170" y="271"/>
+        </scene>
+        <!--Tips-->
+        <scene sceneID="f5w-Qb-8yW">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Tips" id="5na-cB-hzJ" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kLm-qO-mmu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1582" y="113"/>
+        </scene>
+        <!--Help-->
+        <scene sceneID="9BI-qc-QRW">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Help" id="cjT-jr-IBa" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hB1-ep-FHh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1582" y="250"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="CVH-YB-mNs">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Settings" id="Y88-aw-WWT" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YDS-95-WvP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1582" y="368"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>

@@ -36,7 +36,13 @@
                             <outlet property="delegate" destination="AMk-cZ-f4Y" id="pxJ-Mb-oD8"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="yyW-KZ-7el"/>
+                    <navigationItem key="navigationItem" id="yyW-KZ-7el">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="KlX-V6-JIO">
+                            <connections>
+                                <action selector="backButtonDidTap:" destination="AMk-cZ-f4Y" id="SJU-no-M3h"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KcT-xt-L2I" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

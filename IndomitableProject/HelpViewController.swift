@@ -18,6 +18,10 @@ class HelpViewController: UITableViewController{
         // Do any additional setup after loading the view, typically from a nib.
     }
     
+    @IBAction func backButtonDidTap(_ sender: Any) {
+        
+        self.presentingViewController?.dismiss(animated: true, completion: nil)
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
