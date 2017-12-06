@@ -76,7 +76,11 @@ class TaskPickerView: UIViewController, UIPickerViewDataSource, UIPickerViewDele
             
         }
     }
-
+    
+    @IBAction func backBut(_ sender: Any) {
+            self.presentingViewController?.dismiss(animated: true, completion: nil)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         dataPicker.dataSource = self
@@ -91,6 +95,8 @@ class TaskPickerView: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     }
     
 
+    
+    
     /*
     // MARK: - Navigation
 

@@ -38,6 +38,8 @@
 		22FB987D1FCEAB3E000DD7F2 /* Plan.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22FB987C1FCEAB3E000DD7F2 /* Plan.storyboard */; };
 		4758D5891FCFC9E1004F1427 /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4758D5881FCFC9E1004F1427 /* HelpViewController.swift */; };
 		4758D58D1FD53817004F1427 /* HelpNextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4758D58C1FD53817004F1427 /* HelpNextViewController.swift */; };
+		479484331FD65AD7005585C4 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479484321FD65AD7005585C4 /* SettingsTableViewController.swift */; };
+		479484351FD67F2D005585C4 /* ColorSettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479484341FD67F2D005585C4 /* ColorSettingsTableViewController.swift */; };
 		92959A0C1FC6CDB0005B331F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92959A0B1FC6CDB0005B331F /* AppDelegate.swift */; };
 		92959A0E1FC6CDB0005B331F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92959A0D1FC6CDB0005B331F /* ViewController.swift */; };
 		92959A111FC6CDB0005B331F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92959A0F1FC6CDB0005B331F /* Main.storyboard */; };
@@ -90,6 +92,8 @@
 		22FB987C1FCEAB3E000DD7F2 /* Plan.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Plan.storyboard; sourceTree = "<group>"; };
 		4758D5881FCFC9E1004F1427 /* HelpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
 		4758D58C1FD53817004F1427 /* HelpNextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpNextViewController.swift; sourceTree = "<group>"; };
+		479484321FD65AD7005585C4 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
+		479484341FD67F2D005585C4 /* ColorSettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSettingsTableViewController.swift; sourceTree = "<group>"; };
 		92959A081FC6CDAF005B331F /* IndomitableProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IndomitableProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92959A0B1FC6CDB0005B331F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		92959A0D1FC6CDB0005B331F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -191,8 +195,9 @@
 				220838E21FCD1ACB003CD62A /* Help.storyboard */,
 				4758D58C1FD53817004F1427 /* HelpNextViewController.swift */,
 				4758D5881FCFC9E1004F1427 /* HelpViewController.swift */,
-				220838E91FCD1BA5003CD62A /* AddTask.storyboard */,
 				220838E41FCD1AEB003CD62A /* Settings.storyboard */,
+				479484341FD67F2D005585C4 /* ColorSettingsTableViewController.swift */,
+				479484321FD65AD7005585C4 /* SettingsTableViewController.swift */,
 				220838DD1FCD162C003CD62A /* SideMenu.storyboard */,
 				220838E01FCD1AA9003CD62A /* DetailTask.storyboard */,
 				220838DB1FCD1510003CD62A /* Project.storyboard */,
@@ -206,6 +211,7 @@
 				92959A121FC6CDB0005B331F /* Assets.xcassets */,
 				92959A141FC6CDB0005B331F /* LaunchScreen.storyboard */,
 				92959A171FC6CDB0005B331F /* Info.plist */,
+				220838E91FCD1BA5003CD62A /* AddTask.storyboard */,
 				220838D11FCD0434003CD62A /* ProjectData */,
 				92C4BACC1FCFBB0400B7C2DB /* UIAddTask */,
 				220838D21FCD0454003CD62A /* UITimeline */,
@@ -327,6 +333,7 @@
 				220838C81FCC63D7003CD62A /* InitialTabController.swift in Sources */,
 				CEAC67FC1FCFADF700AB0212 /* PlanTasks.swift in Sources */,
 				96D81E291FD54D8E004DF9E3 /* EventCore+CoreDataClass.swift in Sources */,
+				479484331FD65AD7005585C4 /* SettingsTableViewController.swift in Sources */,
 				220838C61FCC6170003CD62A /* Tip.swift in Sources */,
 				220838AE1FCBF951003CD62A /* TaskButton.swift in Sources */,
 				92959A0E1FC6CDB0005B331F /* ViewController.swift in Sources */,
@@ -341,6 +348,7 @@
 				92959A0C1FC6CDB0005B331F /* AppDelegate.swift in Sources */,
 				4758D58D1FD53817004F1427 /* HelpNextViewController.swift in Sources */,
 				96CD07791FCDA30D00C0D563 /* TaskPickerView.swift in Sources */,
+				479484351FD67F2D005585C4 /* ColorSettingsTableViewController.swift in Sources */,
 				92C4BACE1FCFC95700B7C2DB /* TaskSprintSetView.swift in Sources */,
 				96CD079B1FCE89F700C0D563 /* TaskActivitiesView.swift in Sources */,
 				CEAC67F81FCFAA7B00AB0212 /* TaskTableViewController.swift in Sources */,

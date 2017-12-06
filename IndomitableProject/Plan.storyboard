@@ -174,7 +174,13 @@
                             <outlet property="delegate" destination="uJg-tO-sof" id="RLY-Fx-NxW"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="JBj-mJ-C2S"/>
+                    <navigationItem key="navigationItem" id="JBj-mJ-C2S">
+                        <barButtonItem key="rightBarButtonItem" title="+" id="xj9-aa-kZU">
+                            <connections>
+                                <segue destination="wOT-Da-c1H" kind="show" id="eeB-c5-S0N"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="planTableView" destination="P0v-NW-roP" id="3cw-AZ-4ac"/>
                     </connections>
@@ -182,6 +188,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e3N-oP-Fy8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1240.8" y="609.44527736131943"/>
+        </scene>
+        <!--AddTask-->
+        <scene sceneID="7Bg-oK-3Sj">
+            <objects>
+                <viewControllerPlaceholder storyboardName="AddTask" id="wOT-Da-c1H" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YIs-9T-Gd5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1641" y="318"/>
         </scene>
         <!--Plan-->
         <scene sceneID="6BA-HS-K3Z">

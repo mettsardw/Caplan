@@ -69,7 +69,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
-                    <navigationItem key="navigationItem" id="dCD-Ot-PAr"/>
+                    <navigationItem key="navigationItem" id="dCD-Ot-PAr">
+                        <barButtonItem key="rightBarButtonItem" title="+" id="pK6-SH-C95">
+                            <connections>
+                                <segue destination="aKG-q5-XLu" kind="show" id="ZR4-Nv-HMB"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="searchDisplayController" destination="uNr-OB-i19" id="Do8-1Q-x2B"/>
                         <outlet property="taskTable" destination="ViV-Xa-Pvz" id="QEA-zq-6Bh"/>
@@ -102,6 +108,14 @@
                 </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="1072.8" y="1317.3913043478262"/>
+        </scene>
+        <!--AddTask-->
+        <scene sceneID="8o2-Wg-BvE">
+            <objects>
+                <viewControllerPlaceholder storyboardName="AddTask" id="aKG-q5-XLu" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jze-0d-Wpb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1408" y="1042"/>
         </scene>
         <!--Tasks-->
         <scene sceneID="cYC-um-YU4">
