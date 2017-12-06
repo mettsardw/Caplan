@@ -43,28 +43,30 @@ func manageProject(){
 //    let newTask2 = NSEntityDescription.insertNewObject(forEntityName: "TaskCore", into: container) as! TaskCore
 //    let newTask3 = NSEntityDescription.insertNewObject(forEntityName: "TaskCore", into: container) as! TaskCore
 //    let newTask4 = NSEntityDescription.insertNewObject(forEntityName: "TaskCore", into: container) as! TaskCore
-      let newSprint = NSEntityDescription.insertNewObject(forEntityName: "SprintCore", into: container) as! SprintCore
-    let newProject = NSEntityDescription.insertNewObject(forEntityName: "ProjectCore", into: container) as! ProjectCore
-    let newUser =  NSEntityDescription.insertNewObject(forEntityName: "UserCore", into: container) as! UserCore
+//    let newSprint = NSEntityDescription.insertNewObject(forEntityName: "SprintCore", into: container) as! SprintCore
+//      let newProject = NSEntityDescription.insertNewObject(forEntityName: "ProjectCore", into: container) as! ProjectCore
+//    let newUser =  NSEntityDescription.insertNewObject(forEntityName: "UserCore", into: container) as! UserCore
 //    let newEvent = NSEntityDescription.insertNewObject(forEntityName: "EventCore", into: container) as! EventCore
 //    let newEvent1 = NSEntityDescription.insertNewObject(forEntityName: "EventCore", into: container) as! EventCore
 //    let newEvent2 = NSEntityDescription.insertNewObject(forEntityName: "EventCore", into: container) as! EventCore
 //
 // ---> //set data Task
-      newProject.setValue("MyProject", forKey: "name")
-//    --- USER ---//
-    newUser.setValue("Sardew", forKey: "name")
-    newUser.setValue("mettasaridewi.w@gmail.com", forKey: "account")
-    newUser.project = newProject
-//    --- PROJECT ---//
-    newProject.userCore = newUser
-    
-// //---- SPRINT ----//
-      newSprint.setValue("Sprint 1", forKey: "name")
-      newSprint.setValue(5, forKey: "duration")
-      newSprint.setValue("days", forKey: "durationUnit")
-      
-//     --- TASK ---//
+//        newProject.setValue("MyProject", forKey: "name")
+//        newProject.setValue(30, forKey: "duration")
+//        newProject.setValue("days", forKey: "durationUnit")
+//////    --- USER ---//
+//        newUser.setValue("Sardew", forKey: "name")
+//        newUser.setValue("mettasaridewi.w@gmail.com", forKey: "account")
+//        newUser.project = newProject
+//////    --- PROJECT ---//
+//    newProject.userCore = newUser
+////
+////// //---- SPRINT ----//
+//      newSprint.setValue("Sprint 1", forKey: "name")
+//      newSprint.setValue(20, forKey: "duration")
+//      newSprint.setValue("days", forKey: "durationUnit")
+//
+////     --- TASK ---//
 //    newTask.setValue("Requirement", forKey: "name")
 //    newTask.setValue(10, forKey: "memberCount")
 //    newTask.setValue(30, forKey: "point")
@@ -129,11 +131,13 @@ func manageProject(){
 //    newTask.addToEvent(newEvent2)
 //    newTask.addToEvent(newEvent1)
 
-    newProject.addToSprintCore(newSprint)
+//    newProject.addToSprintCore(newSprint)
+//    newSprint.addToTasks(newTask)
+    
     
 
 //    saveData(targetContainer: container)
-    let plan: Plan = Plan(name: "Planning")
+    let sprint: Sprint = Sprint(name: "Planning")
     //var plan2: Plan = Plan(name: "Sprinting")
     let sprintFecth = NSFetchRequest<NSManagedObject>(entityName: "SprintCore")
     let userFetch = NSFetchRequest<NSManagedObject>(entityName: "UserCore")
@@ -177,33 +181,15 @@ func manageProject(){
 //            print("member Count: \(task.value(forKey: "memberCount")!)")
 //            print("point: \(task.value(forKey: "point")!)")
 //            print(task)
-            plan.addTask(task: Task(name: Tasks(rawValue: task.value(forKey: "name") as! String)!, memberCount: Int(task.memberCount), time: Time(duration: Int(task.duration), unit: Unit(rawValue: task.durationUnit!)!)))
-            //delete data di Core data
-//            if i == 1{
-              //deleteData(targetContainer: container, object: task)
-//            }
-//            i += 1
-            //print("task value:\n\(String(describing: task.value(forKey: "event")!))")
-            //get NSSet to String
-            //guard let taskEvent = task.event?.value(forKey: "duration") else{print("error");return}
-            //print(taskEvent)
-            //let taskEventDataValue = getStringFromNSSet(data: taskEvent)
+            sprint.addTask(task: Task(name: Tasks(rawValue: task.value(forKey: "name") as! String)!, memberCount: Int(task.memberCount), time: Time(duration: Int(task.duration), unit: Unit(rawValue: task.durationUnit!)!)))
 
-            
-            //access member of NSset in NsManagedObject
-            //let taskEvents: [EventCore] = task.event?.allObjects as! [EventCore]
-            
-//            print(taskEvents[0].time!.duration as Any)
-//            print(taskEvents[0].duration)
-//            print(taskEvents[1].duration)
-//            print(taskEvents[2].duration)
             
         }
     }catch _ as NSError {
         print("error")
     }
     
-    project.schedule.plans.append(plan)
+    project.sprints.append(sprint)
 }
 
 func taskToIndicateEndOfProject() -> Task{

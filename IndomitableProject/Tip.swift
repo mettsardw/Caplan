@@ -9,13 +9,13 @@
 import Foundation
 
 class Tip {
-    var plan: Plan
+    var sprint: Sprint
     var category: Task
     var contents: String
     var frequency: Int
     
-    init(plan: Plan, category: Task, contents: String) {
-        self.plan = plan
+    init(sprint: Sprint, category: Task, contents: String) {
+        self.sprint = sprint
         self.category = category
         self.contents = contents // fetch content from core data etc
         frequency = 1 //set for interval or priority
