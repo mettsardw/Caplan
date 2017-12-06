@@ -41,10 +41,8 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="OJF-KS-mOD" kind="relationship" relationship="viewControllers" id="haf-L0-vGR"/>
                         <segue destination="QsK-ZV-zv7" kind="relationship" relationship="viewControllers" id="0et-Lk-PLG"/>
                         <segue destination="Q5w-ep-DTO" kind="relationship" relationship="viewControllers" id="XNM-z8-3Sc"/>
-                        <segue destination="OJF-KS-mOD" kind="custom" identifier="sw_right" customClass="SWRevealViewControllerSegueSetController" id="4G7-Ht-SMh"/>
                         <segue destination="QsK-ZV-zv7" kind="custom" identifier="sw_right" customClass="SWRevealViewControllerSegueSetController" id="s5p-Ys-cB9"/>
                         <segue destination="PoD-C1-CbM" kind="custom" identifier="sw_right" customClass="SWRevealViewControllerSegueSetController" id="J9S-nU-azb"/>
                         <segue destination="Q5w-ep-DTO" kind="custom" identifier="sw_right" customClass="SWRevealViewControllerSegueSetController" id="grs-D1-EbK"/>
@@ -54,16 +52,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Slv-8G-Yka" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-588" y="272"/>
-        </scene>
-        <!--Timeline-->
-        <scene sceneID="Tqe-9S-dkr">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Timeline" id="OJF-KS-mOD" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="c23-ek-2ii"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="kY8-DO-Ttg" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="365" y="-43"/>
         </scene>
         <!--Tasks-->
         <scene sceneID="9TM-An-RtG">
@@ -267,6 +255,5 @@
         <segue reference="grs-D1-EbK"/>
         <segue reference="J9S-nU-azb"/>
         <segue reference="0et-Lk-PLG"/>
-        <segue reference="4G7-Ht-SMh"/>
     </inferredMetricsTieBreakers>
 </document>

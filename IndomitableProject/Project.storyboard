@@ -142,13 +142,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Project" id="tAa-51-4pA"/>
-                    <navigationItem key="navigationItem" id="9hN-MM-r4z">
-                        <barButtonItem key="rightBarButtonItem" title="+" id="v6M-nN-ISW">
-                            <connections>
-                                <segue destination="d3V-H4-Eib" kind="show" id="h7i-Yn-udA"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="9hN-MM-r4z"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="daysLabel" destination="9Pl-iu-fDI" id="TZd-TY-sOx"/>

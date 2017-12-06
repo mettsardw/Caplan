@@ -44,7 +44,7 @@ func manageProject(){
 //    let newTask3 = NSEntityDescription.insertNewObject(forEntityName: "TaskCore", into: container) as! TaskCore
 //    let newTask4 = NSEntityDescription.insertNewObject(forEntityName: "TaskCore", into: container) as! TaskCore
 //    let newSprint = NSEntityDescription.insertNewObject(forEntityName: "SprintCore", into: container) as! SprintCore
-//      let newProject = NSEntityDescription.insertNewObject(forEntityName: "ProjectCore", into: container) as! ProjectCore
+//    let newProject = NSEntityDescription.insertNewObject(forEntityName: "ProjectCore", into: container) as! ProjectCore
 //    let newUser =  NSEntityDescription.insertNewObject(forEntityName: "UserCore", into: container) as! UserCore
 //    let newEvent = NSEntityDescription.insertNewObject(forEntityName: "EventCore", into: container) as! EventCore
 //    let newEvent1 = NSEntityDescription.insertNewObject(forEntityName: "EventCore", into: container) as! EventCore
@@ -65,7 +65,7 @@ func manageProject(){
 //      newSprint.setValue("Sprint 1", forKey: "name")
 //      newSprint.setValue(20, forKey: "duration")
 //      newSprint.setValue("days", forKey: "durationUnit")
-//
+
 ////     --- TASK ---//
 //    newTask.setValue("Requirement", forKey: "name")
 //    newTask.setValue(10, forKey: "memberCount")
@@ -133,7 +133,7 @@ func manageProject(){
 
 //    newProject.addToSprintCore(newSprint)
 //    newSprint.addToTasks(newTask)
-    
+//
     
 
 //    saveData(targetContainer: container)
@@ -156,14 +156,15 @@ func manageProject(){
         let projects: [ProjectCore] = try container.fetch(projectFetch) as! [ProjectCore]
         //deleteData(targetContainer: container, object: projects[0])
             print("Project : \(projects.count)")
-//              projects[0].addToTaskCore(newSprint)
+//          projects[0].addToSprintCore(newSprint)
 
-        //saveData(targetContainer: container)
+//
         for project in projects{
             print("name \(String(describing: project.name))")
         }
         let projectSprints: [SprintCore] = projects[0].sprintCore?.allObjects as![SprintCore]
-        
+//        projectSprints[0].addToTasks(newTask)
+//        saveData(targetContainer: container)
         let sprintTasks: [TaskCore] = projectSprints[0].tasks?.allObjects as! [TaskCore]
         
         let sprints: [SprintCore] = try container.fetch(sprintFecth) as! [SprintCore]
