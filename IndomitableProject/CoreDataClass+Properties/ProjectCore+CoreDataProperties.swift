@@ -2,7 +2,7 @@
 //  ProjectCore+CoreDataProperties.swift
 //  IndomitableProject
 //
-//  Created by Davin Reinaldo Gozali on 05/12/17.
+//  Created by Davin Reinaldo Gozali on 06/12/17.
 //  Copyright © 2017 RagingWind. All rights reserved.
 //
 //
@@ -18,24 +18,24 @@ extension ProjectCore {
     }
 
     @NSManaged public var name: String?
-    @NSManaged public var taskCore: NSSet?
     @NSManaged public var userCore: UserCore?
+    @NSManaged public var sprintCore: NSSet?
 
 }
 
-// MARK: Generated accessors for taskCore
+// MARK: Generated accessors for sprintCore
 extension ProjectCore {
 
-    @objc(addTaskCoreObject:)
-    @NSManaged public func addToTaskCore(_ value: TaskCore)
+    @objc(addSprintCoreObject:)
+    @NSManaged public func addToSprintCore(_ value: SprintCore)
 
-    @objc(removeTaskCoreObject:)
-    @NSManaged public func removeFromTaskCore(_ value: TaskCore)
+    @objc(removeSprintCoreObject:)
+    @NSManaged public func removeFromSprintCore(_ value: SprintCore)
 
-    @objc(addTaskCore:)
-    @NSManaged public func addToTaskCore(_ values: NSSet)
+    @objc(addSprintCore:)
+    @NSManaged public func addToSprintCore(_ values: NSSet)
 
-    @objc(removeTaskCore:)
-    @NSManaged public func removeFromTaskCore(_ values: NSSet)
+    @objc(removeSprintCore:)
+    @NSManaged public func removeFromSprintCore(_ values: NSSet)
 
 }

@@ -2,7 +2,7 @@
 //  TaskCore+CoreDataProperties.swift
 //  IndomitableProject
 //
-//  Created by Davin Reinaldo Gozali on 05/12/17.
+//  Created by Davin Reinaldo Gozali on 06/12/17.
 //  Copyright © 2017 RagingWind. All rights reserved.
 //
 //
@@ -25,7 +25,7 @@ extension TaskCore {
     @NSManaged public var point: Int64
     @NSManaged public var priority: Int64
     @NSManaged public var event: NSSet?
-    @NSManaged public var project: ProjectCore?
+    @NSManaged public var sprint: SprintCore?
 
 }
 
