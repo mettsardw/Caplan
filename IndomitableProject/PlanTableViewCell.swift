@@ -10,7 +10,8 @@ import UIKit
 
 class PlanTableViewCell: UITableViewCell {
     @IBOutlet weak var bubble: PlanBubble!
-    @IBOutlet weak var line: PlanLine!
+    @IBOutlet weak var upline: PlanLine!
+    @IBOutlet weak var downline: PlanLine!
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var days: UILabel!
 }
