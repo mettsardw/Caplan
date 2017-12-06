@@ -10,18 +10,15 @@ import UIKit
 
 class PlanTableViewController: UITableViewController {
     @IBOutlet weak var planTableView: UITableView!
+    
     var sprintLabel: [String] = ["Sprint 1","Sprint 2","Sprint 3"] // append on making new sprint
     var customLabel: [String] = ["","",""]
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       // plans = manageProject()
-        
-       // print(plans.count)
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        //return plans.count
         return sprintLabel.count
     }
     
@@ -33,11 +30,21 @@ class PlanTableViewController: UITableViewController {
         let cell = planTableView.dequeueReusableCell(withIdentifier: "planCell", for: indexPath) as! PlanTableViewCell
         // Configure the cell...
 //        let cellData = plans[indexPath.row]
-
+        if indexPath.row == 0 {
+            cell.upline.isHidden = true
+        }
+        if indexPath.row == (sprintLabel.count-1) {
+            cell.downline.isHidden = true
+            cell.days.isHidden = true
+        }
         cell.name.text = "\(sprintLabel[indexPath.row])"
         cell.days.text = "\(arc4random_uniform(10))d"
 
         return cell
+    }
+    
+    @IBAction func bubbleDidTap(){
+        //display timeline
     }
     
     /*func manageProject() -> [Plan] {
