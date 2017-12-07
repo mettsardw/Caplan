@@ -68,6 +68,7 @@
 		96CD079B1FCE89F700C0D563 /* TaskActivitiesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CD079A1FCE89F700C0D563 /* TaskActivitiesView.swift */; };
 		CE02E5271FD68CC7002BF59D /* sideMenuFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE02E5261FD68CC7002BF59D /* sideMenuFunction.swift */; };
 		CE02E52F1FD68E47002BF59D /* SideMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE02E52E1FD68E47002BF59D /* SideMenuTableViewController.swift */; };
+		CE470D391FD98DF80000036B /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE470D381FD98DF70000036B /* Notification.swift */; };
 		CE8ED6521FD64ACA00D4D446 /* CodingTasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8ED6511FD64ACA00D4D446 /* CodingTasks.swift */; };
 		CE8ED6541FD64ADC00D4D446 /* RequirementTasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8ED6531FD64ADC00D4D446 /* RequirementTasks.swift */; };
 		CE8ED6561FD64AF100D4D446 /* TestingTasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8ED6551FD64AF100D4D446 /* TestingTasks.swift */; };
@@ -142,6 +143,7 @@
 		CE02E5221FD68C93002BF59D /* IndomitableProject-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "IndomitableProject-Bridging-Header.h"; sourceTree = "<group>"; };
 		CE02E5261FD68CC7002BF59D /* sideMenuFunction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sideMenuFunction.swift; sourceTree = "<group>"; };
 		CE02E52E1FD68E47002BF59D /* SideMenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuTableViewController.swift; sourceTree = "<group>"; };
+		CE470D381FD98DF70000036B /* Notification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
 		CE8ED6511FD64ACA00D4D446 /* CodingTasks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodingTasks.swift; sourceTree = "<group>"; };
 		CE8ED6531FD64ADC00D4D446 /* RequirementTasks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequirementTasks.swift; sourceTree = "<group>"; };
 		CE8ED6551FD64AF100D4D446 /* TestingTasks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingTasks.swift; sourceTree = "<group>"; };
@@ -228,6 +230,7 @@
 		92959A0A1FC6CDB0005B331F /* IndomitableProject */ = {
 			isa = PBXGroup;
 			children = (
+				CE470D381FD98DF70000036B /* Notification.swift */,
 				961198141FD70E6700678BF2 /* CoreDataClass+Properties */,
 				929682AD1FCFAF4500BBF591 /* coreDataCaplan.xcdatamodeld */,
 				961197FD1FD6A26F00678BF2 /* SWRevealViewController.h */,
@@ -260,6 +263,7 @@
 				220838D21FCD0454003CD62A /* UITimeline */,
 				220838C71FCC63D7003CD62A /* InitialTabController.swift */,
 				CEAC67F61FCFAA4100AB0212 /* UIAllTasks */,
+				CE02E5261FD68CC7002BF59D /* sideMenuFunction.swift */,
 				CE02E5281FD68DBF002BF59D /* SideMenu */,
 			);
 			path = IndomitableProject;
@@ -313,7 +317,6 @@
 				CE8ED6511FD64ACA00D4D446 /* CodingTasks.swift */,
 				CE8ED6531FD64ADC00D4D446 /* RequirementTasks.swift */,
 				CE8ED6551FD64AF100D4D446 /* TestingTasks.swift */,
-				CE02E5261FD68CC7002BF59D /* sideMenuFunction.swift */,
 			);
 			name = UIAllTasks;
 			sourceTree = "<group>";
@@ -442,6 +445,7 @@
 				96CD079B1FCE89F700C0D563 /* TaskActivitiesView.swift in Sources */,
 				CEE1AEDF1FD5913500A83A06 /* DesignTasks.swift in Sources */,
 				CEAC67F81FCFAA7B00AB0212 /* TaskTableViewController.swift in Sources */,
+				CE470D391FD98DF80000036B /* Notification.swift in Sources */,
 				220838B81FCC2629003CD62A /* TaskBundle.swift in Sources */,
 				961E033F1FD7C3380069F402 /* UserCore+CoreDataClass.swift in Sources */,
 				220838C21FCC608E003CD62A /* User.swift in Sources */,

@@ -16,20 +16,25 @@ struct RequirementTasks {
     static func fetchData() -> [RequirementTasks]{
         var requirementTasks: [RequirementTasks] = []
         
+        //get data
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let container = appDelegate.persistentContainer.viewContext
         
-        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "TaskCore")
-        fetchRequest.predicate = NSPredicate(format: "name == %@", "Requirement")
-        
+        let projectFetch = NSFetchRequest<NSManagedObject>(entityName: "ProjectCore")
         do{
-            let requirements: [TaskCore] = try container.fetch(fetchRequest) as! [TaskCore]
+            let projects: [ProjectCore] = try container.fetch(projectFetch) as! [ProjectCore]
+            let projectSprints: [SprintCore] = projects[0].sprintCore?.allObjects as![SprintCore]
+            let sprintTasks: [TaskCore] = projectSprints[0].tasks?.allObjects as! [TaskCore]
             
-            for requirement in requirements {
-                let taskEvents: [EventCore] = requirement.event?.allObjects as! [EventCore]
-                
-                for index in 0..<taskEvents.count{
-                    requirementTasks.append(RequirementTasks(day: String(describing: taskEvents[index].duration), event: taskEvents[index].type!))
+            if sprintTasks.count > 0{
+                let taskEvents: [EventCore] = sprintTasks[0].event?.allObjects as! [EventCore]
+            
+                for sprintTask in sprintTasks{
+                    if sprintTask.name == "Requirement"{
+                        for index in 0..<taskEvents.count{
+                            requirementTasks.append(RequirementTasks(day: String(describing: taskEvents[index].duration), event:   taskEvents[index].type!))
+                        }
+                    }
                 }
             }
         }catch _ as NSError {

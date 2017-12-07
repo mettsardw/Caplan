@@ -12,7 +12,7 @@ class TaskTableViewController: UIViewController, UITableViewDataSource, UITableV
     
     @IBOutlet weak var taskTable: UITableView!
     @IBOutlet weak var sideMenu: UIBarButtonItem!
-    
+
     let section: [String] = ["Requirement", "Design", "Coding", "Testing"]
     var data: [[Any]] = [RequirementTasks.fetchData(), DesignTasks.fetchData(), CodingTasks.fetchData(), TestingTasks.fetchData()]
     
