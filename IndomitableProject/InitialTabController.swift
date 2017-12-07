@@ -27,11 +27,11 @@ func manageProject(){
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     let container = appDelegate.persistentContainer.viewContext
 ///////////////////   BARU ///////////////////////////////////////
-    //    let newSprint = NSEntityDescription.insertNewObject(forEntityName: "SprintCore", into: container) as! SprintCore
-    //    let newProject = NSEntityDescription.insertNewObject(forEntityName: "ProjectCore", into: container) as! ProjectCore
+        let newSprint = NSEntityDescription.insertNewObject(forEntityName: "SprintCore", into: container) as! SprintCore
+        let newProject = NSEntityDescription.insertNewObject(forEntityName: "ProjectCore", into: container) as! ProjectCore
         let newUser =  NSEntityDescription.insertNewObject(forEntityName: "UserCore", into: container) as! UserCore
     
-//        let newTask = NSEntityDescription.insertNewObject(forEntityName: "TaskCore", into: container) as! TaskCore
+        let newTask = NSEntityDescription.insertNewObject(forEntityName: "TaskCore", into: container) as! TaskCore
     //    let newTask2 = NSEntityDescription.insertNewObject(forEntityName: "TaskCore", into: container) as! TaskCore
     //    let newTask3 = NSEntityDescription.insertNewObject(forEntityName: "TaskCore", into: container) as! TaskCore
     //    let newTask4 = NSEntityDescription.insertNewObject(forEntityName: "TaskCore", into: container) as! TaskCore
@@ -41,31 +41,31 @@ func manageProject(){
     //    let newEvent2 = NSEntityDescription.insertNewObject(forEntityName: "EventCore", into: container) as! EventCore
     //
     
-    //        newProject.setValue("MyProject", forKey: "name")
-    //        newProject.setValue(30, forKey: "duration")
-    //        newProject.setValue("days", forKey: "durationUnit")
+            newProject.setValue("MyProject", forKey: "name")
+            newProject.setValue(30, forKey: "duration")
+            newProject.setValue("days", forKey: "durationUnit")
     
-    ////////---- USER ----//
-//            newUser.setValue("Sardew", forKey: "name")
-//            newUser.setValue("mettasaridewi.w@gmail.com", forKey: "account")
-//            newUser.project = newProject
+    //////---- USER ----//
+            newUser.setValue("Sardew", forKey: "name")
+            newUser.setValue("mettasaridewi.w@gmail.com", forKey: "account")
+            newUser.project = newProject
     
     ////////---- PROJECT ----//
-    //    newProject.userCore = newUser
-    ////
-    ////////---- SPRINT ----//
-    //      newSprint.setValue("Sprint 1", forKey: "name")
-    //      newSprint.setValue(20, forKey: "duration")
-    //      newSprint.setValue("days", forKey: "durationUnit")
+        newProject.userCore = newUser
+    //
+    //////---- SPRINT ----//
+          newSprint.setValue("Sprint 1", forKey: "name")
+          newSprint.setValue(20, forKey: "duration")
+          newSprint.setValue("days", forKey: "durationUnit")
     
-    /////// ---- TASK ----//
-//        newTask.setValue("Requirement", forKey: "name")
-//        newTask.setValue(10, forKey: "memberCount")
-//        newTask.setValue(30, forKey: "point")
-//        newTask.setValue(1, forKey: "priority")
-//        newTask.setValue("ini: lorem ipsum dolor sit amet", forKey: "notes")
-//        newTask.setValue(5, forKey: "duration")
-//        newTask.setValue("days", forKey: "durationUnit")
+    ///// ---- TASK ----//
+        newTask.setValue("Requirement", forKey: "name")
+        newTask.setValue(10, forKey: "memberCount")
+        newTask.setValue(30, forKey: "point")
+        newTask.setValue(1, forKey: "priority")
+        newTask.setValue("ini: lorem ipsum dolor sit amet", forKey: "notes")
+        newTask.setValue(5, forKey: "duration")
+        newTask.setValue("days", forKey: "durationUnit")
     
     
     //---------------------------------------------//
@@ -121,9 +121,9 @@ func manageProject(){
     //    newTask.addToEvent(newEvent2)
     //    newTask.addToEvent(newEvent1)
     
-//        newProject.addToSprintCore(newSprint)
-    //    newSprint.addToTasks(newTask)
-    //
+        newProject.addToSprintCore(newSprint)
+        newSprint.addToTasks(newTask)
+    
     
     
     //    saveData(targetContainer: container)

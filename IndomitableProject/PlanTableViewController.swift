@@ -37,14 +37,19 @@ class PlanTableViewController: UITableViewController {
             cell.downline.isHidden = true
             cell.days.isHidden = true
         }
+        cell.bubble.tag = indexPath.row
+        cell.bubble.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
         cell.name.text = "\(sprintLabel[indexPath.row])"
         cell.days.text = "\(arc4random_uniform(10))d"
 
         return cell
     }
     
-    @IBAction func bubbleDidTap(){
-        //display timeline
+    func buttonAction(sender: UIButton!) {
+        let btn: UIButton = sender
+        if btn.tag == 0 {
+            dismiss(animated: true, completion: nil)
+        }
     }
     
     /*func manageProject() -> [Plan] {
@@ -58,6 +63,7 @@ class PlanTableViewController: UITableViewController {
         project.schedule.plans.append(plan)
         return project.schedule.plans
     }*/
+    
 }
 
 
