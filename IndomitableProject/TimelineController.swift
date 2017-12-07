@@ -18,6 +18,18 @@ class TimelineController: UIViewController {
     
     @IBOutlet weak var sideMenu: UIBarButtonItem!
     
+    init(ofSprint no: Int)
+    {
+        super.init(nibName: nil, bundle: nil)
+        
+        //initiate the tasks inside the sprint No
+        //task[0]
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
