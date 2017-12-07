@@ -82,6 +82,14 @@ class ProjectTableViewControlelr: UIViewController, UITableViewDelegate, UITable
         if segue.identifier == "editNameSegue" {
             let destination = segue.destination as! EditNameViewController
             destination.descText = "edit project name..."
+            destination.descLabel = projectLabel
+        } else if segue.identifier == "editTimeSegue" {
+            let destination = segue.destination as! EditTimeViewController
+            destination.parentTimeLabel = daysLabel
+        } else if segue.identifier == "resetSegue" {
+            let destination = segue.destination as! ResetViewController
+            destination.parentProjectLabel = projectLabel
+            destination.parentDaysLabel = daysLabel
         }
     }
     
