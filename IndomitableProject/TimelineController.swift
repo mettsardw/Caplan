@@ -18,6 +18,18 @@ class TimelineController: UIViewController {
     
     @IBOutlet weak var sideMenu: UIBarButtonItem!
     
+    init(ofSprint no: Int)
+    {
+        super.init(nibName: nil, bundle: nil)
+        
+        //initiate the tasks inside the sprint No
+        //task[0]
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -30,6 +42,8 @@ class TimelineController: UIViewController {
         for task in project.getTasks(index: 0){
             //print(task.name.rawValue)
             taskBundles.append(TaskBundle(frame: self.view.frame, from: CGFloat(50 + count * 50), length: 100.0, task: task, color: #colorLiteral(red: 0.4666666687, green: 0.7647058964, blue: 0.2666666806, alpha: 1)))
+            taskBundles[taskBundles.endIndex-1].btn?.addTarget(self, action: #selector(buttonAction), for: .touchUpInside) //add action for click
+            taskBundles[taskBundles.endIndex-1].btn?.tag = taskBundles.endIndex-1
             scrollView.addSubview(taskBundles[taskBundles.endIndex-1])
             count += 1
         }
@@ -55,7 +69,7 @@ class TimelineController: UIViewController {
         view.addSubview(scrollView)
         
         //side menu
-        self.sideMenuView(sideMenu: sideMenu)
+        //self.sideMenuView(sideMenu: sideMenu)
     }
     
     override func didReceiveMemoryWarning() {
@@ -63,5 +77,10 @@ class TimelineController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    
+    func buttonAction(sender: UIButton!) {
+        let btn: UIButton = sender
+        if btn.tag == 0 {
+            dismiss(animated: true, completion: nil)
+        }
+    }
 }

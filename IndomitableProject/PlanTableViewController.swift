@@ -37,14 +37,45 @@ class PlanTableViewController: UITableViewController {
             cell.downline.isHidden = true
             cell.days.isHidden = true
         }
+        cell.bubble.tag = indexPath.row
+        cell.bubble.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
         cell.name.text = "\(sprintLabel[indexPath.row])"
         cell.days.text = "\(arc4random_uniform(10))d"
 
         return cell
     }
     
-    @IBAction func bubbleDidTap(){
-        //display timeline
+    func buttonAction(sender: UIButton!) {
+        let btn: UIButton = sender
+        let count: Int = sprintLabel.count
+        for index in 0..<count {
+            if btn.tag == index {
+                //            guard let tlc = UIStoryboard(name: "Plan", bundle: nil).instantiateViewController(withIdentifier: "newTimeline") as? TimelineController else {
+                //                print("Could not instantiate timeline controller")
+                //                return
+                //            }
+                var tlc: TimelineController = TimelineController(ofSprint: index)
+                tlc.view.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+                
+                self.navigationController?.pushViewController(tlc, animated:true)
+                //dismiss(animated: true, completion: nil)
+            }
+        }
+//        if btn.tag == 0 {
+////            guard let tlc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "tlc") as? TimelineController else {
+////                print("Could not instantiate timeline controller")
+////                return
+////            }
+////            guard let tlc = UIStoryboard(name: "Plan", bundle: nil).instantiateViewController(withIdentifier: "newTimeline") as? TimelineController else {
+////                print("Could not instantiate timeline controller")
+////                return
+////            }
+//            var tlc: TimelineController = TimelineController(ofSprint: 0)
+//            tlc.view.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+//
+//            self.navigationController?.pushViewController(tlc, animated:true)
+//            //dismiss(animated: true, completion: nil)
+//        }
     }
     
     /*func manageProject() -> [Plan] {
@@ -58,6 +89,7 @@ class PlanTableViewController: UITableViewController {
         project.schedule.plans.append(plan)
         return project.schedule.plans
     }*/
+    
 }
 
 

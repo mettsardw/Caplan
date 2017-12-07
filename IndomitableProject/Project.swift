@@ -12,7 +12,8 @@ import CoreData
 
 class Project {
     var user: User
-    var schedule: Schedule
+    var sprints: [Sprint]
+
     var name: String
     var image: UIImage?
     
@@ -22,7 +23,7 @@ class Project {
         let container = appDelegate.persistentContainer.viewContext
         let projectFetch = NSFetchRequest<NSManagedObject>(entityName: "ProjectCore")
         user = User()
-        schedule = Schedule()
+        sprints = []
         name = ""
         do {
             let projects: [ProjectCore] = try container.fetch(projectFetch) as! [ProjectCore]
@@ -35,6 +36,6 @@ class Project {
     }
     
     func getTasks(index: Int) -> [Task] {
-        return self.schedule.plans[index].tasks
+        return self.sprints[index].tasks
     }
 }

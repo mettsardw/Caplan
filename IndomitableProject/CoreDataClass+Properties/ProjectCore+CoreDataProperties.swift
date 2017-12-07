@@ -18,8 +18,10 @@ extension ProjectCore {
     }
 
     @NSManaged public var name: String?
-    @NSManaged public var userCore: UserCore?
+    @NSManaged public var duration: Int64
+    @NSManaged public var durationUnit: String?
     @NSManaged public var sprintCore: NSSet?
+    @NSManaged public var userCore: UserCore?
 
 }
 

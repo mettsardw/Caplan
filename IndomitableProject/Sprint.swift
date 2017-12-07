@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Plan{
+class Sprint{
     var name: String
     var duration: Int // total duration of all tasks inside
     var tasks: [Task]
