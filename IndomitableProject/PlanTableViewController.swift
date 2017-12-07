@@ -48,7 +48,19 @@ class PlanTableViewController: UITableViewController {
     func buttonAction(sender: UIButton!) {
         let btn: UIButton = sender
         if btn.tag == 0 {
-            dismiss(animated: true, completion: nil)
+//            guard let tlc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "tlc") as? TimelineController else {
+//                print("Could not instantiate timeline controller")
+//                return
+//            }
+//            guard let tlc = UIStoryboard(name: "Plan", bundle: nil).instantiateViewController(withIdentifier: "newTimeline") as? TimelineController else {
+//                print("Could not instantiate timeline controller")
+//                return
+//            }
+            var tlc: TimelineController = TimelineController()
+            tlc.view.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+            
+            self.navigationController?.pushViewController(tlc, animated:true)
+            //dismiss(animated: true, completion: nil)
         }
     }
     
