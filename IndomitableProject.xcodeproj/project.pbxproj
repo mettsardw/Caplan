@@ -49,6 +49,9 @@
 		92959A161FC6CDB0005B331F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92959A141FC6CDB0005B331F /* LaunchScreen.storyboard */; };
 		929682AF1FCFAF4600BBF591 /* coreDataCaplan.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 929682AD1FCFAF4500BBF591 /* coreDataCaplan.xcdatamodeld */; };
 		92C4BACE1FCFC95700B7C2DB /* TaskSprintSetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C4BACD1FCFC95700B7C2DB /* TaskSprintSetView.swift */; };
+		92CA5D0A1FDA553D0035631C /* ResetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CA5D091FDA553D0035631C /* ResetViewController.swift */; };
+		92CDA1EF1FDA5E14006C02F8 /* DetailTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CDA1EE1FDA5E14006C02F8 /* DetailTaskViewController.swift */; };
+		961197FF1FD6A26F00678BF2 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 961197FE1FD6A26F00678BF2 /* SWRevealViewController.m */; };
 		961E033F1FD7C3380069F402 /* UserCore+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961E03331FD7C3380069F402 /* UserCore+CoreDataClass.swift */; };
 		961E03401FD7C3380069F402 /* UserCore+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961E03341FD7C3380069F402 /* UserCore+CoreDataProperties.swift */; };
 		961E03451FD7C3380069F402 /* TipsCore+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961E03391FD7C3380069F402 /* TipsCore+CoreDataClass.swift */; };
@@ -119,6 +122,10 @@
 		92959A171FC6CDB0005B331F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		929682AE1FCFAF4500BBF591 /* coreDataCaplan.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = coreDataCaplan.xcdatamodel; sourceTree = "<group>"; };
 		92C4BACD1FCFC95700B7C2DB /* TaskSprintSetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskSprintSetView.swift; sourceTree = "<group>"; };
+		92CA5D091FDA553D0035631C /* ResetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetViewController.swift; sourceTree = "<group>"; };
+		92CDA1EE1FDA5E14006C02F8 /* DetailTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTaskViewController.swift; sourceTree = "<group>"; };
+		961197FD1FD6A26F00678BF2 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		961197FE1FD6A26F00678BF2 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		961E03331FD7C3380069F402 /* UserCore+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserCore+CoreDataClass.swift"; sourceTree = "<group>"; };
 		961E03341FD7C3380069F402 /* UserCore+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserCore+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		961E03391FD7C3380069F402 /* TipsCore+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TipsCore+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -199,6 +206,7 @@
 				22FB98E01FCFC18E000DD7F2 /* ProjectTableViewController.swift */,
 				22200D431FD5A9590090E4D3 /* EditNameViewController.swift */,
 				22200D451FD655FF0090E4D3 /* EditTimeViewController.swift */,
+				92CA5D091FDA553D0035631C /* ResetViewController.swift */,
 			);
 			name = UIProject;
 			sourceTree = "<group>";
@@ -296,6 +304,8 @@
 				CE8ED6511FD64ACA00D4D446 /* CodingTasks.swift */,
 				CE8ED6531FD64ADC00D4D446 /* RequirementTasks.swift */,
 				CE8ED6551FD64AF100D4D446 /* TestingTasks.swift */,
+				CE02E5261FD68CC7002BF59D /* sideMenuFunction.swift */,
+				92CDA1EE1FDA5E14006C02F8 /* DetailTaskViewController.swift */,
 			);
 			name = UIAllTasks;
 			sourceTree = "<group>";
@@ -402,6 +412,8 @@
 				961E03561FD7C6390069F402 /* SprintCore+CoreDataProperties.swift in Sources */,
 				220839141FCDD2CB003CD62A /* PlanLine.swift in Sources */,
 				220838C41FCC60DF003CD62A /* Project.swift in Sources */,
+				961197FF1FD6A26F00678BF2 /* SWRevealViewController.m in Sources */,
+				92CDA1EF1FDA5E14006C02F8 /* DetailTaskViewController.swift in Sources */,
 				47F44DBA1FD7A5A00049F4B7 /* TipsViewController.swift in Sources */,
 				96CD07771FCD64E700C0D563 /* Event.swift in Sources */,
 				220838BE1FCC5D54003CD62A /* Sprint.swift in Sources */,
@@ -409,6 +421,7 @@
 				22FB98791FCE9538000DD7F2 /* TestTableViewController.swift in Sources */,
 				929682AF1FCFAF4600BBF591 /* coreDataCaplan.xcdatamodeld in Sources */,
 				961E034A1FD7C3380069F402 /* TaskCore+CoreDataProperties.swift in Sources */,
+				92CA5D0A1FDA553D0035631C /* ResetViewController.swift in Sources */,
 				92959A0C1FC6CDB0005B331F /* AppDelegate.swift in Sources */,
 				961E03451FD7C3380069F402 /* TipsCore+CoreDataClass.swift in Sources */,
 				961E03491FD7C3380069F402 /* TaskCore+CoreDataClass.swift in Sources */,
