@@ -13,7 +13,7 @@ class TaskTableViewController: UIViewController, UITableViewDataSource, UITableV
     @IBOutlet weak var taskTable: UITableView!
 
     let section: [String] = ["Requirement", "Design", "Coding", "Testing"]
-    var data: [[Any]] = [RequirementTasks.fetchData(), DesignTasks.fetchData(), CodingTasks.fetchData(), TestingTasks.fetchData()]
+    var data: [[Any]] = []
     
     var tempDesc = [String]()
     var tempDay = [String]()
@@ -26,6 +26,10 @@ class TaskTableViewController: UIViewController, UITableViewDataSource, UITableV
         super.viewDidLoad()
         taskTable.dataSource = self
         taskTable.delegate = self
+        data.append(RequirementTasks.fetchData())
+        data.append(DesignTasks.fetchData())
+        data.append(CodingTasks.fetchData())
+        data.append(TestingTasks.fetchData())
         
         //search controller
         searchController = UISearchController(searchResultsController: resultController)
@@ -35,7 +39,6 @@ class TaskTableViewController: UIViewController, UITableViewDataSource, UITableV
         resultController.tableView.dataSource = self
         self.searchController.hidesNavigationBarDuringPresentation = false
         
-        print("\(data), asdasd\(data.count)")
         
         for index in 0..<data.count {
             for ind in 0..<data[index].count{
@@ -85,7 +88,6 @@ class TaskTableViewController: UIViewController, UITableViewDataSource, UITableV
     // declaration section's name
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         if !(searchController.isActive){
-            print("section: \(section)")
             return self.section[section]
         }else{
             return ""
@@ -103,7 +105,6 @@ class TaskTableViewController: UIViewController, UITableViewDataSource, UITableV
     
    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if !(searchController.isActive){
-            print("data: \(data[section].count), section: \(section)")
             return data[section].count
         }else{
             return filteredDesc.count
