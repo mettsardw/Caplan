@@ -6,7 +6,7 @@
 //  Copyright © 2017 RagingWind. All rights reserved.
 //
 
-import Foundation
+import UIKit
 import CoreData
 class User {
     var name: String

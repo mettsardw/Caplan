@@ -24,15 +24,18 @@ struct CodingTasks {
         do{
             let projects: [ProjectCore] = try container.fetch(projectFetch) as! [ProjectCore]
             let projectSprints: [SprintCore] = projects[0].sprintCore?.allObjects as![SprintCore]
-            let sprintTasks: [TaskCore] = projectSprints[0].tasks?.allObjects as! [TaskCore]
             
-            if sprintTasks.count > 2{
-                let taskEvents: [EventCore] = sprintTasks[2].event?.allObjects as! [EventCore]
+            for i in 0..<projectSprints.count{
+                let sprintTasks: [TaskCore] = projectSprints[i].tasks?.allObjects as! [TaskCore]
             
-                for sprintTask in sprintTasks{
-                    if sprintTask.name == "Coding"{
-                        for index in 0..<taskEvents.count{
-                            codingTasks.append(CodingTasks(day: String(describing: taskEvents[index].duration), event:   taskEvents[index].type!))
+                if sprintTasks.count > 2{
+                    let taskEvents: [EventCore] = sprintTasks[2].event?.allObjects as! [EventCore]
+                    
+                    for sprintTask in sprintTasks{
+                        if sprintTask.name == "Coding"{
+                            for index in 0..<taskEvents.count{
+                                codingTasks.append(CodingTasks(day: String(describing: taskEvents[index].duration), event:   taskEvents[index].type!))
+                            }
                         }
                     }
                 }

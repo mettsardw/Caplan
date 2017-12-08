@@ -16,8 +16,6 @@ class TimelineController: UIViewController {
     
     var scrollView: UIScrollView!
     
-    @IBOutlet weak var sideMenu: UIBarButtonItem!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -54,8 +52,6 @@ class TimelineController: UIViewController {
         //finish up view
         view.addSubview(scrollView)
         
-        //side menu
-        self.sideMenuView(sideMenu: sideMenu)
     }
     
     override func didReceiveMemoryWarning() {

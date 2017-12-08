@@ -11,7 +11,6 @@ import UIKit
 class TaskTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UISearchResultsUpdating {
     
     @IBOutlet weak var taskTable: UITableView!
-    @IBOutlet weak var sideMenu: UIBarButtonItem!
 
     let section: [String] = ["Requirement", "Design", "Coding", "Testing"]
     var data: [[Any]] = [RequirementTasks.fetchData(), DesignTasks.fetchData(), CodingTasks.fetchData(), TestingTasks.fetchData()]
@@ -34,6 +33,9 @@ class TaskTableViewController: UIViewController, UITableViewDataSource, UITableV
         searchController.searchResultsUpdater = self
         resultController.tableView.delegate = self
         resultController.tableView.dataSource = self
+        self.searchController.hidesNavigationBarDuringPresentation = false
+        
+        print("\(data), asdasd\(data.count)")
         
         for index in 0..<data.count {
             for ind in 0..<data[index].count{
@@ -59,8 +61,7 @@ class TaskTableViewController: UIViewController, UITableViewDataSource, UITableV
                 }
             }
         }
-        //sideMeu
-        self.sideMenuView(sideMenu: sideMenu)
+
     }
     
    func updateSearchResults(for searchController: UISearchController) {
@@ -84,6 +85,7 @@ class TaskTableViewController: UIViewController, UITableViewDataSource, UITableV
     // declaration section's name
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         if !(searchController.isActive){
+            print("section: \(section)")
             return self.section[section]
         }else{
             return ""
@@ -101,6 +103,7 @@ class TaskTableViewController: UIViewController, UITableViewDataSource, UITableV
     
    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if !(searchController.isActive){
+            print("data: \(data[section].count), section: \(section)")
             return data[section].count
         }else{
             return filteredDesc.count
