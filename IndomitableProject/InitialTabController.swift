@@ -19,6 +19,8 @@ class InitialTabController: UITabBarController {
         
         //notification
         notification.viewDidLoad()
+        
+        print("first")
     }
     
 }

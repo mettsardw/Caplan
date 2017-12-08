@@ -13,7 +13,7 @@ class TaskTableViewController: UIViewController, UITableViewDataSource, UITableV
     @IBOutlet weak var taskTable: UITableView!
 
     let section: [String] = ["Requirement", "Design", "Coding", "Testing"]
-    var data: [[Any]] = [RequirementTasks.fetchData(), DesignTasks.fetchData(), CodingTasks.fetchData(), TestingTasks.fetchData()]
+    var data: [[Any]] = []
     
     var tempDesc = [String]()
     var tempDay = [String]()
@@ -24,6 +24,12 @@ class TaskTableViewController: UIViewController, UITableViewDataSource, UITableV
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        data.append(RequirementTasks.fetchData())
+        data.append(DesignTasks.fetchData())
+        data.append(CodingTasks.fetchData())
+        data.append(TestingTasks.fetchData())
+        
         taskTable.dataSource = self
         taskTable.delegate = self
         
