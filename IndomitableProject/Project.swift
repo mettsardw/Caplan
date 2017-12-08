@@ -27,7 +27,25 @@ class Project {
         name = ""
         do {
             let projects: [ProjectCore] = try container.fetch(projectFetch) as! [ProjectCore]
-            name = projects[0].name!
+                name = projects[0].name!
+                let sprintsProject: [SprintCore] = projects[0].sprintCore?.allObjects as! [SprintCore]
+                
+                for sprint in sprintsProject {
+                    let tasksSprint: [TaskCore] = sprint.tasks?.allObjects as! [TaskCore]
+                    let insertSprint: Sprint = Sprint(name: sprint.name!)
+                    
+                    for task in tasksSprint{
+                        let insertTask: Task = Task(name: Tasks(rawValue: task.name!)!, memberCount: Int(task.memberCount), time: Time(duration: Int(task.duration), unit: Unit(rawValue: task.durationUnit!)!))
+                        insertSprint.addTask(task: insertTask)
+                    }
+                    sprints.append(insertSprint)
+                    
+                }
+                
+            
+            
+            
+            
         } catch _ as NSError {
             print("error")
         }

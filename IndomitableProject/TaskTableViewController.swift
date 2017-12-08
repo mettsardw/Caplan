@@ -14,7 +14,7 @@ class TaskTableViewController: UIViewController, UITableViewDataSource, UITableV
     @IBOutlet weak var sideMenu: UIBarButtonItem!
     
     let section: [String] = ["Requirement", "Design", "Coding", "Testing"]
-    var data: [[Any]] = [RequirementTasks.fetchData(), DesignTasks.fetchData(), CodingTasks.fetchData(), TestingTasks.fetchData()]
+    var data: [[Any]] = []
     
     var tempDesc = [String]()
     var tempDay = [String]()
@@ -27,7 +27,10 @@ class TaskTableViewController: UIViewController, UITableViewDataSource, UITableV
         super.viewDidLoad()
         taskTable.dataSource = self
         taskTable.delegate = self
-        
+        data.append(RequirementTasks.fetchData())
+        data.append(DesignTasks.fetchData())
+        data.append(CodingTasks.fetchData())
+        data.append(TestingTasks.fetchData())
         //search controller
         searchController = UISearchController(searchResultsController: resultController)
         taskTable.tableHeaderView = searchController.searchBar
