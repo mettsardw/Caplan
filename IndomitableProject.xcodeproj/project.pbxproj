@@ -205,6 +205,7 @@
 				22FB98E01FCFC18E000DD7F2 /* ProjectTableViewController.swift */,
 				22200D431FD5A9590090E4D3 /* EditNameViewController.swift */,
 				22200D451FD655FF0090E4D3 /* EditTimeViewController.swift */,
+				92D10B011FD9910300E78BBF /* ResetViewController.swift */,
 			);
 			name = UIProject;
 			sourceTree = "<group>";
