@@ -51,7 +51,6 @@
 		92C4BACE1FCFC95700B7C2DB /* TaskSprintSetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C4BACD1FCFC95700B7C2DB /* TaskSprintSetView.swift */; };
 		92CA5D0A1FDA553D0035631C /* ResetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CA5D091FDA553D0035631C /* ResetViewController.swift */; };
 		92CDA1EF1FDA5E14006C02F8 /* DetailTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CDA1EE1FDA5E14006C02F8 /* DetailTaskViewController.swift */; };
-		961197FF1FD6A26F00678BF2 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 961197FE1FD6A26F00678BF2 /* SWRevealViewController.m */; };
 		961E033F1FD7C3380069F402 /* UserCore+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961E03331FD7C3380069F402 /* UserCore+CoreDataClass.swift */; };
 		961E03401FD7C3380069F402 /* UserCore+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961E03341FD7C3380069F402 /* UserCore+CoreDataProperties.swift */; };
 		961E03451FD7C3380069F402 /* TipsCore+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961E03391FD7C3380069F402 /* TipsCore+CoreDataClass.swift */; };
@@ -68,8 +67,7 @@
 		96CD07771FCD64E700C0D563 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CD07761FCD64E700C0D563 /* Event.swift */; };
 		96CD07791FCDA30D00C0D563 /* TaskPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CD07781FCDA30D00C0D563 /* TaskPickerView.swift */; };
 		96CD079B1FCE89F700C0D563 /* TaskActivitiesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CD079A1FCE89F700C0D563 /* TaskActivitiesView.swift */; };
-		CE02E5271FD68CC7002BF59D /* sideMenuFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE02E5261FD68CC7002BF59D /* sideMenuFunction.swift */; };
-		CE02E52F1FD68E47002BF59D /* SideMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE02E52E1FD68E47002BF59D /* SideMenuTableViewController.swift */; };
+		CE470D391FD98DF80000036B /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE470D381FD98DF70000036B /* Notification.swift */; };
 		CE8ED6521FD64ACA00D4D446 /* CodingTasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8ED6511FD64ACA00D4D446 /* CodingTasks.swift */; };
 		CE8ED6541FD64ADC00D4D446 /* RequirementTasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8ED6531FD64ADC00D4D446 /* RequirementTasks.swift */; };
 		CE8ED6561FD64AF100D4D446 /* TestingTasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8ED6551FD64AF100D4D446 /* TestingTasks.swift */; };
@@ -125,7 +123,6 @@
 		92C4BACD1FCFC95700B7C2DB /* TaskSprintSetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskSprintSetView.swift; sourceTree = "<group>"; };
 		92CA5D091FDA553D0035631C /* ResetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetViewController.swift; sourceTree = "<group>"; };
 		92CDA1EE1FDA5E14006C02F8 /* DetailTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTaskViewController.swift; sourceTree = "<group>"; };
-		961197FD1FD6A26F00678BF2 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		961197FE1FD6A26F00678BF2 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		961E03331FD7C3380069F402 /* UserCore+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserCore+CoreDataClass.swift"; sourceTree = "<group>"; };
 		961E03341FD7C3380069F402 /* UserCore+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserCore+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -143,9 +140,7 @@
 		96CD07761FCD64E700C0D563 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		96CD07781FCDA30D00C0D563 /* TaskPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskPickerView.swift; sourceTree = "<group>"; };
 		96CD079A1FCE89F700C0D563 /* TaskActivitiesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskActivitiesView.swift; sourceTree = "<group>"; };
-		CE02E5221FD68C93002BF59D /* IndomitableProject-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "IndomitableProject-Bridging-Header.h"; sourceTree = "<group>"; };
-		CE02E5261FD68CC7002BF59D /* sideMenuFunction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sideMenuFunction.swift; sourceTree = "<group>"; };
-		CE02E52E1FD68E47002BF59D /* SideMenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuTableViewController.swift; sourceTree = "<group>"; };
+		CE470D381FD98DF70000036B /* Notification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
 		CE8ED6511FD64ACA00D4D446 /* CodingTasks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodingTasks.swift; sourceTree = "<group>"; };
 		CE8ED6531FD64ADC00D4D446 /* RequirementTasks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequirementTasks.swift; sourceTree = "<group>"; };
 		CE8ED6551FD64AF100D4D446 /* TestingTasks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingTasks.swift; sourceTree = "<group>"; };
@@ -203,6 +198,14 @@
 			name = UIPlan;
 			sourceTree = "<group>";
 		};
+		22200D471FDA7B6B0090E4D3 /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				961197FE1FD6A26F00678BF2 /* SWRevealViewController.m */,
+			);
+			name = "Recovered References";
+			sourceTree = "<group>";
+		};
 		22FB98DF1FCFBF54000DD7F2 /* UIProject */ = {
 			isa = PBXGroup;
 			children = (
@@ -219,6 +222,7 @@
 			children = (
 				92959A0A1FC6CDB0005B331F /* IndomitableProject */,
 				92959A091FC6CDAF005B331F /* Products */,
+				22200D471FDA7B6B0090E4D3 /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -233,10 +237,9 @@
 		92959A0A1FC6CDB0005B331F /* IndomitableProject */ = {
 			isa = PBXGroup;
 			children = (
+				CE470D381FD98DF70000036B /* Notification.swift */,
 				961198141FD70E6700678BF2 /* CoreDataClass+Properties */,
 				929682AD1FCFAF4500BBF591 /* coreDataCaplan.xcdatamodeld */,
-				961197FD1FD6A26F00678BF2 /* SWRevealViewController.h */,
-				961197FE1FD6A26F00678BF2 /* SWRevealViewController.m */,
 				92959A0B1FC6CDB0005B331F /* AppDelegate.swift */,
 				92959A0D1FC6CDB0005B331F /* ViewController.swift */,
 				220838E21FCD1ACB003CD62A /* Help.storyboard */,
@@ -249,6 +252,7 @@
 				220838DB1FCD1510003CD62A /* Project.storyboard */,
 				22FB98DF1FCFBF54000DD7F2 /* UIProject */,
 				220838D81FCD1039003CD62A /* Tasks.storyboard */,
+				CEAC67F61FCFAA4100AB0212 /* UIAllTasks */,
 				22FB987C1FCEAB3E000DD7F2 /* Plan.storyboard */,
 				2208390C1FCDC946003CD62A /* UIPlan */,
 				220838D31FCD0FEE003CD62A /* Timeline.storyboard */,
@@ -264,8 +268,6 @@
 				92C4BACC1FCFBB0400B7C2DB /* UIAddTask */,
 				220838D21FCD0454003CD62A /* UITimeline */,
 				220838C71FCC63D7003CD62A /* InitialTabController.swift */,
-				CEAC67F61FCFAA4100AB0212 /* UIAllTasks */,
-				CE02E5281FD68DBF002BF59D /* SideMenu */,
 			);
 			path = IndomitableProject;
 			sourceTree = "<group>";
@@ -300,15 +302,6 @@
 			path = "CoreDataClass+Properties";
 			sourceTree = "<group>";
 		};
-		CE02E5281FD68DBF002BF59D /* SideMenu */ = {
-			isa = PBXGroup;
-			children = (
-				CE02E5221FD68C93002BF59D /* IndomitableProject-Bridging-Header.h */,
-				CE02E52E1FD68E47002BF59D /* SideMenuTableViewController.swift */,
-			);
-			name = SideMenu;
-			sourceTree = "<group>";
-		};
 		CEAC67F61FCFAA4100AB0212 /* UIAllTasks */ = {
 			isa = PBXGroup;
 			children = (
@@ -318,7 +311,6 @@
 				CE8ED6511FD64ACA00D4D446 /* CodingTasks.swift */,
 				CE8ED6531FD64ADC00D4D446 /* RequirementTasks.swift */,
 				CE8ED6551FD64AF100D4D446 /* TestingTasks.swift */,
-				CE02E5261FD68CC7002BF59D /* sideMenuFunction.swift */,
 				92CDA1EE1FDA5E14006C02F8 /* DetailTaskViewController.swift */,
 			);
 			name = UIAllTasks;
@@ -410,8 +402,6 @@
 				220838BA1FCC5B83003CD62A /* Task.swift in Sources */,
 				961E03481FD7C3380069F402 /* EventCore+CoreDataProperties.swift in Sources */,
 				22200D461FD655FF0090E4D3 /* EditTimeViewController.swift in Sources */,
-				CE02E52F1FD68E47002BF59D /* SideMenuTableViewController.swift in Sources */,
-				CE02E5271FD68CC7002BF59D /* sideMenuFunction.swift in Sources */,
 				220838B21FCC0190003CD62A /* TaskLine.swift in Sources */,
 				2208390E1FCDC993003CD62A /* PlanBubble.swift in Sources */,
 				CEAC67FA1FCFAAB600AB0212 /* TaskTableViewCell.swift in Sources */,
@@ -428,7 +418,6 @@
 				961E03561FD7C6390069F402 /* SprintCore+CoreDataProperties.swift in Sources */,
 				220839141FCDD2CB003CD62A /* PlanLine.swift in Sources */,
 				220838C41FCC60DF003CD62A /* Project.swift in Sources */,
-				961197FF1FD6A26F00678BF2 /* SWRevealViewController.m in Sources */,
 				92CDA1EF1FDA5E14006C02F8 /* DetailTaskViewController.swift in Sources */,
 				47F44DBA1FD7A5A00049F4B7 /* TipsViewController.swift in Sources */,
 				96CD07771FCD64E700C0D563 /* Event.swift in Sources */,
@@ -450,6 +439,7 @@
 				96CD079B1FCE89F700C0D563 /* TaskActivitiesView.swift in Sources */,
 				CEE1AEDF1FD5913500A83A06 /* DesignTasks.swift in Sources */,
 				CEAC67F81FCFAA7B00AB0212 /* TaskTableViewController.swift in Sources */,
+				CE470D391FD98DF80000036B /* Notification.swift in Sources */,
 				220838B81FCC2629003CD62A /* TaskBundle.swift in Sources */,
 				961E033F1FD7C3380069F402 /* UserCore+CoreDataClass.swift in Sources */,
 				220838C21FCC608E003CD62A /* User.swift in Sources */,
@@ -616,7 +606,6 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.RagingWind.IndomitableProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "IndomitableProject/IndomitableProject-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
@@ -631,7 +620,6 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.RagingWind.IndomitableProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "IndomitableProject/IndomitableProject-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

@@ -31,6 +31,9 @@ class ProjectTableViewControlelr: UIViewController, UITableViewDelegate, UITable
         projectImage.layer.cornerRadius = projectImage.frame.height/2
         projectImage.clipsToBounds = true
         
+        //initialize navigation controller
+        self.navigationController?.navigationBar.tintColor = #colorLiteral(red: 0.3120126724, green: 0.8384783864, blue: 0.09061203152, alpha: 1)
+        
         projectTableView.dataSource = self
         projectTableView.delegate = self
     }

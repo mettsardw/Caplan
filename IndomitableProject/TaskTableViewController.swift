@@ -11,10 +11,9 @@ import UIKit
 class TaskTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UISearchResultsUpdating {
     
     @IBOutlet weak var taskTable: UITableView!
-    @IBOutlet weak var sideMenu: UIBarButtonItem!
-    
+
     let section: [String] = ["Requirement", "Design", "Coding", "Testing"]
-    var data: [[Any]] = [RequirementTasks.fetchData(), DesignTasks.fetchData(), CodingTasks.fetchData(), TestingTasks.fetchData()]
+    var data: [[Any]] = []
     
     var tempDesc = [String]()
     var tempDay = [String]()
@@ -25,8 +24,18 @@ class TaskTableViewController: UIViewController, UITableViewDataSource, UITableV
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        data.append(RequirementTasks.fetchData())
+        data.append(DesignTasks.fetchData())
+        data.append(CodingTasks.fetchData())
+        data.append(TestingTasks.fetchData())
+        
         taskTable.dataSource = self
         taskTable.delegate = self
+        data.append(RequirementTasks.fetchData())
+        data.append(DesignTasks.fetchData())
+        data.append(CodingTasks.fetchData())
+        data.append(TestingTasks.fetchData())
         
         //search controller
         searchController = UISearchController(searchResultsController: resultController)
@@ -34,6 +43,8 @@ class TaskTableViewController: UIViewController, UITableViewDataSource, UITableV
         searchController.searchResultsUpdater = self
         resultController.tableView.delegate = self
         resultController.tableView.dataSource = self
+        self.searchController.hidesNavigationBarDuringPresentation = false
+        
         
         for index in 0..<data.count {
             for ind in 0..<data[index].count{
@@ -58,9 +69,11 @@ class TaskTableViewController: UIViewController, UITableViewDataSource, UITableV
                     tempDay.append(dataString.day)
                 }
             }
+            
         }
-        //sideMeu
-        self.sideMenuView(sideMenu: sideMenu)
+        
+        //initialize navigation controller
+        self.navigationController?.navigationBar.tintColor = #colorLiteral(red: 0.3120126724, green: 0.8384783864, blue: 0.09061203152, alpha: 1)
     }
     
    func updateSearchResults(for searchController: UISearchController) {

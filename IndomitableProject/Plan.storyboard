@@ -183,7 +183,9 @@
                         </connections>
                     </tableView>
                     <tabBarItem key="tabBarItem" title="Plan" image="icon-plans" id="TNX-VT-6yd"/>
-                    <navigationItem key="navigationItem" id="JBj-mJ-C2S"/>
+                    <navigationItem key="navigationItem" id="JBj-mJ-C2S">
+                        <barButtonItem key="backBarButtonItem" title=" " id="FQU-bW-TKo"/>
+                    </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="planTableView" destination="P0v-NW-roP" id="3cw-AZ-4ac"/>
@@ -202,6 +204,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="euF-Ph-PIC">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>

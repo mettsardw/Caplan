@@ -16,20 +16,28 @@ struct CodingTasks {
     static func fetchData() -> [CodingTasks]{
         var codingTasks: [CodingTasks] = []
         
+        //get data
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let container = appDelegate.persistentContainer.viewContext
         
-        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "TaskCore")
-        fetchRequest.predicate = NSPredicate(format: "name == %@", "Coding")
-        
+        let projectFetch = NSFetchRequest<NSManagedObject>(entityName: "ProjectCore")
         do{
-            let codes: [TaskCore] = try container.fetch(fetchRequest) as! [TaskCore]
+            let projects: [ProjectCore] = try container.fetch(projectFetch) as! [ProjectCore]
+            let projectSprints: [SprintCore] = projects[0].sprintCore?.allObjects as![SprintCore]
             
-            for code in codes {
-                let taskEvents: [EventCore] = code.event?.allObjects as! [EventCore]
-                
-                for index in 0..<taskEvents.count{
-                    codingTasks.append(CodingTasks(day: String(describing: taskEvents[index].duration), event: taskEvents[index].type!))
+            for i in 0..<projectSprints.count{
+                let sprintTasks: [TaskCore] = projectSprints[i].tasks?.allObjects as! [TaskCore]
+            
+                if sprintTasks.count > 2{
+                    let taskEvents: [EventCore] = sprintTasks[2].event?.allObjects as! [EventCore]
+                    
+                    for sprintTask in sprintTasks{
+                        if sprintTask.name == "Coding"{
+                            for index in 0..<taskEvents.count{
+                                codingTasks.append(CodingTasks(day: String(describing: taskEvents[index].duration), event:   taskEvents[index].type!))
+                            }
+                        }
+                    }
                 }
             }
         }catch _ as NSError {
