@@ -17,7 +17,15 @@ class ProjectTableViewControlelr: UIViewController, UITableViewDelegate, UITable
     var projectName: String = "MyProject"
     var projectDays: Int = 100
     var projectIcon: UIImage?
-    var labels: [String] = ["edit project name","edit time limit","reset"]
+    var labels: [String] = ["edit project name","edit time limit","tips","help","reset"]
+    
+    @IBAction func tipsDidPress(_ sender: UIButton) {
+        let popOverVC = UIStoryboard(name: "Tips", bundle: nil).instantiateViewController(withIdentifier: "a") as! TipsViewController
+        self.addChildViewController(popOverVC)
+        popOverVC.view.frame = self.view.frame
+        self.view.addSubview(popOverVC.view)
+        popOverVC.didMove(toParentViewController:  self)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -66,7 +74,7 @@ class ProjectTableViewControlelr: UIViewController, UITableViewDelegate, UITable
         let cell = projectTableView.dequeueReusableCell(withIdentifier: idenName, for: indexPath)
         cell.textLabel?.text = labels[indexPath.row]
         
-        if indexPath.row == 2 {
+        if indexPath.row == 4 {
             cell.textLabel?.font = cell.textLabel?.font.bold()
             cell.textLabel?.textColor = #colorLiteral(red: 1, green: 0.3332303762, blue: 0.4212560356, alpha: 1)
         }

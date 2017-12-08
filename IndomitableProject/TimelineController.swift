@@ -7,8 +7,10 @@
 //
 
 import UIKit
+import CoreData
 
 class TimelineController: UIViewController {
+    var getSprintIndex: Int = 0
     var taskCount: Int = 0
     var taskButtons: [TaskButton] = []
     var taskLines: [TaskLine] = []
@@ -21,9 +23,8 @@ class TimelineController: UIViewController {
     init(ofSprint no: Int)
     {
         super.init(nibName: nil, bundle: nil)
+        getSprintIndex = no
         
-        //initiate the tasks inside the sprint No
-        //task[0]
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -39,7 +40,7 @@ class TimelineController: UIViewController {
         
         //get tasks
         var count = 0
-        for task in project.getTasks(index: 0){
+        for task in project.getTasks(index: getSprintIndex){
             //print(task.name.rawValue)
             taskBundles.append(TaskBundle(frame: self.view.frame, from: CGFloat(50 + count * 50), length: 100.0, task: task, color: #colorLiteral(red: 0.4666666687, green: 0.7647058964, blue: 0.2666666806, alpha: 1)))
             taskBundles[taskBundles.endIndex-1].btn?.addTarget(self, action: #selector(buttonAction), for: .touchUpInside) //add action for click

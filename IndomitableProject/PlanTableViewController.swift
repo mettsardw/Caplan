@@ -7,18 +7,21 @@
 //
 
 import UIKit
+import CoreData
 
 class PlanTableViewController: UITableViewController {
     @IBOutlet weak var planTableView: UITableView!
     
-    var sprintLabel: [String] = ["Sprint 1","Sprint 2","Sprint 3"] // append on making new sprint
+    var sprintLabel: [String] = [] // append on making new sprint
     var customLabel: [String] = ["","",""]
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        //initialize navigation controller
-        self.navigationController?.navigationBar.tintColor = #colorLiteral(red: 0.3120126724, green: 0.8384783864, blue: 0.09061203152, alpha: 1)
+
+            for sprint in project.sprints {
+                sprintLabel.append(sprint.name)
+            }
+       
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -33,6 +36,7 @@ class PlanTableViewController: UITableViewController {
         let cell = planTableView.dequeueReusableCell(withIdentifier: "planCell", for: indexPath) as! PlanTableViewCell
         // Configure the cell...
 //        let cellData = plans[indexPath.row]
+        
         if indexPath.row == 0 {
             cell.upline.isHidden = true
         }
