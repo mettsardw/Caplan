@@ -63,8 +63,8 @@ func manageProject(){
 //          newSprint.setValue("Sprint 1", forKey: "name")
 //          newSprint.setValue(20, forKey: "duration")
 //          newSprint.setValue("days", forKey: "durationUnit")
-    
-    /////// ---- TASK ----//
+//
+//    /////// ---- TASK ----//
 //        newTask.setValue("Requirement", forKey: "name")
 //        newTask.setValue(10, forKey: "memberCount")
 //        newTask.setValue(30, forKey: "point")
@@ -110,12 +110,27 @@ func manageProject(){
 //        newEvent.setValue(3, forKey: "memberCount")
 //        newEvent.setValue(2, forKey: "duration")
 //        newEvent.setValue("days", forKey: "durationUnit")
+//
+//
+//        newEvent1.setValue("Alpha Testing", forKey: "type")
+//        newEvent1.setValue(5, forKey: "memberCount")
+//        newEvent1.setValue(1, forKey: "duration")
+//        newEvent1.setValue("days", forKey: "durationUnit")
+//
+//
+//        newEvent2.setValue("Design UX", forKey: "type")
+//        newEvent2.setValue(2, forKey: "memberCount")
+//        newEvent2.setValue(4, forKey: "duration")
+//        newEvent2.setValue("days", forKey: "durationUnit")//
+
+//        newTask.addToEvent(newEvent)
+//        newTask.addToEvent(newEvent2)
+//        newTask.addToEvent(newEvent1)
+//        newTask2.addToEvent(newEvent2)
+//        newProject.addToSprintCore(newSprint)
+//        newSprint.addToTasks(newTask)
     
     
-    //    newEvent1.setValue("Alpha Testing", forKey: "type")
-    //    newEvent1.setValue(5, forKey: "memberCount")
-    //    newEvent1.setValue(1, forKey: "duration")
-    //    newEvent1.setValue("days", forKey: "durationUnit")
     
     
     //    newEvent2.setValue("Design UX", forKey: "type")
@@ -165,7 +180,7 @@ func manageProject(){
         
         ////////////////////////////////////// SPRINT PROJECT ///////////////////////////////////////////
         let projectSprints: [SprintCore] = projects[0].sprintCore?.allObjects as![SprintCore]
-        //        projectSprints[0].addToTasks(newTask2)
+//                projectSprints[0].addToTasks(newTask2)
         let sprints: [SprintCore] = try container.fetch(sprintFecth) as! [SprintCore]
         print("Sprint: \(sprints.count)")
         for sprint in sprints {
@@ -177,8 +192,8 @@ func manageProject(){
         let sprintTasks: [TaskCore] = projectSprints[0].tasks?.allObjects as! [TaskCore]
         let tasks: [TaskCore] = try container.fetch(taskFetch) as! [TaskCore]
         
-        //sprintTasks[0].addToEvent(newEvent2)
-        //saveData(targetContainer: container)
+//        sprintTasks[1].addToEvent(newEvent2)
+//        saveData(targetContainer: container)
         print("\nTasks : \(tasks.count)")
         
         for task in sprintTasks {
