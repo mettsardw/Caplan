@@ -70,13 +70,13 @@ func manageProject(){
 //
     //---------------------------------------------//
 //        newTask2.setValue("Design", forKey: "name")
-    //    newTask2.setValue(10, forKey: "memberCount")
-    //    newTask2.setValue(50, forKey: "point")
-    //    newTask2.setValue(1, forKey: "priority")
-    //    newTask2.setValue("ini Design: lorem ipsum dolor sit amet", forKey: "notes")
-    //    newTask2.setValue(7, forKey: "duration")
-    //    newTask2.setValue("days", forKey: "durationUnit")
-    
+//        newTask2.setValue(10, forKey: "memberCount")
+//        newTask2.setValue(50, forKey: "point")
+//        newTask2.setValue(1, forKey: "priority")
+//        newTask2.setValue("ini Design: lorem ipsum dolor sit amet", forKey: "notes")
+//        newTask2.setValue(7, forKey: "duration")
+//        newTask2.setValue("days", forKey: "durationUnit")
+//
     
     //---------------------------------------------//
 //        newTask3.setValue("Coding", forKey: "name")
@@ -106,17 +106,17 @@ func manageProject(){
     //    newEvent.setValue("days", forKey: "durationUnit")
     
     
-    //    newEvent1.setValue("Alpha Testing", forKey: "type")
-    //    newEvent1.setValue(5, forKey: "memberCount")
-    //    newEvent1.setValue(1, forKey: "duration")
-    //    newEvent1.setValue("days", forKey: "durationUnit")
+//        newEvent1.setValue("Alpha Testing", forKey: "type")
+//        newEvent1.setValue(5, forKey: "memberCount")
+//        newEvent1.setValue(1, forKey: "duration")
+//        newEvent1.setValue("days", forKey: "durationUnit")
     
-    
-    //    newEvent2.setValue("Design UX", forKey: "type")
-    //    newEvent2.setValue(2, forKey: "memberCount")
-    //    newEvent2.setValue(4, forKey: "duration")
-    //    newEvent2.setValue("days", forKey: "durationUnit")//
-    
+//
+//        newEvent2.setValue("Design UX", forKey: "type")
+//        newEvent2.setValue(2, forKey: "memberCount")
+//        newEvent2.setValue(4, forKey: "duration")
+//        newEvent2.setValue("days", forKey: "durationUnit")
+//
     //    newTask.addToEvent(newEvent)
     //    newTask.addToEvent(newEvent2)
     //    newTask.addToEvent(newEvent1)
@@ -159,17 +159,23 @@ func manageProject(){
         
         ////////////////////////////////////// SPRINT PROJECT ///////////////////////////////////////////
         let projectSprints: [SprintCore] = projects[0].sprintCore?.allObjects as![SprintCore]
-        //        projectSprints[0].addToTasks(newTask)
+        //        projectSprints[0].addToTasks(newTask2)
         let sprints: [SprintCore] = try container.fetch(sprintFecth) as! [SprintCore]
         print("Sprint: \(sprints.count)")
         for sprint in projectSprints {
             print("name \(String(describing: sprint.name)) ")
         }
+
         
         //////////////////////////////////////// TASK SPRINT /////////////////////////////////////////////
         let sprintTasks: [TaskCore] = projectSprints[1].tasks?.allObjects as! [TaskCore]
         let tasks: [TaskCore] = try container.fetch(taskFetch) as! [TaskCore]
         print("\nTasks : \(tasks.count)")
+       // deleteData(targetContainer: container, object: tasks[1])
+        for i in 0..<tasks.count {
+            print(tasks[i].event)
+        }
+        
         
         for task in sprintTasks {
             print("name: \(String(describing: task.name))")
