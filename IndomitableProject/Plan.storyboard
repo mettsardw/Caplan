@@ -182,7 +182,7 @@
                             <outlet property="delegate" destination="uJg-tO-sof" id="RLY-Fx-NxW"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Plan" image="list" id="TNX-VT-6yd"/>
+                    <tabBarItem key="tabBarItem" title="Plan" image="icon-plans" id="TNX-VT-6yd"/>
                     <navigationItem key="navigationItem" id="JBj-mJ-C2S"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
@@ -214,6 +214,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="list" width="32" height="32"/>
+        <image name="icon-plans" width="24" height="24"/>
     </resources>
 </document>
