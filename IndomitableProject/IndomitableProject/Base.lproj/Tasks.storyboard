@@ -71,7 +71,6 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Tasks" image="icon-list" id="Xun-Ic-GO7"/>
                     <navigationItem key="navigationItem" id="dCD-Ot-PAr">
-                        <barButtonItem key="leftBarButtonItem" title="Menu" id="vLG-oP-mNi"/>
                         <barButtonItem key="rightBarButtonItem" title="+" id="EwI-DG-OPf">
                             <connections>
                                 <segue destination="qdi-ka-p9n" kind="show" id="8da-gg-iGE"/>
@@ -81,7 +80,6 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="searchDisplayController" destination="uNr-OB-i19" id="Do8-1Q-x2B"/>
-                        <outlet property="sideMenu" destination="vLG-oP-mNi" id="d8S-Av-6VO"/>
                         <outlet property="taskTable" destination="ViV-Xa-Pvz" id="QEA-zq-6Bh"/>
                     </connections>
                 </viewController>
