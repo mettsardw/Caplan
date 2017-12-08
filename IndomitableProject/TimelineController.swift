@@ -68,6 +68,8 @@ class TimelineController: UIViewController {
         //finish up view
         view.addSubview(scrollView)
         
+        //side menu
+        //self.sideMenuView(sideMenu: sideMenu)
     }
     
     override func didReceiveMemoryWarning() {

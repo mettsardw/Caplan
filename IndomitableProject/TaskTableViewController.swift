@@ -24,6 +24,12 @@ class TaskTableViewController: UIViewController, UITableViewDataSource, UITableV
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        data.append(RequirementTasks.fetchData())
+        data.append(DesignTasks.fetchData())
+        data.append(CodingTasks.fetchData())
+        data.append(TestingTasks.fetchData())
+        
         taskTable.dataSource = self
         taskTable.delegate = self
         data.append(RequirementTasks.fetchData())
