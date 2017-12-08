@@ -35,7 +35,7 @@ func manageProject(){
     //    let newProject = NSEntityDescription.insertNewObject(forEntityName: "ProjectCore", into: container) as! ProjectCore
     //    let newUser =  NSEntityDescription.insertNewObject(forEntityName: "UserCore", into: container) as! UserCore
     
-//        let newTask = NSEntityDescription.insertNewObject(forEntityName: "TaskCore", into: container) as! TaskCore
+        let newTask = NSEntityDescription.insertNewObject(forEntityName: "TaskCore", into: container) as! TaskCore
     //    let newTask2 = NSEntityDescription.insertNewObject(forEntityName: "TaskCore", into: container) as! TaskCore
     //    let newTask3 = NSEntityDescription.insertNewObject(forEntityName: "TaskCore", into: container) as! TaskCore
     //    let newTask4 = NSEntityDescription.insertNewObject(forEntityName: "TaskCore", into: container) as! TaskCore
@@ -45,14 +45,14 @@ func manageProject(){
     //    let newEvent2 = NSEntityDescription.insertNewObject(forEntityName: "EventCore", into: container) as! EventCore
     //
     
-    //        newProject.setValue("MyProject", forKey: "name")
-    //        newProject.setValue(30, forKey: "duration")
-    //        newProject.setValue("days", forKey: "durationUnit")
+            newProject.setValue("MyProject", forKey: "name")
+            newProject.setValue(30, forKey: "duration")
+            newProject.setValue("days", forKey: "durationUnit")
     
-    ////////---- USER ----//
-//            newUser.setValue("Sardew", forKey: "name")
-//            newUser.setValue("mettasaridewi.w@gmail.com", forKey: "account")
-//            newUser.project = newProject
+    //////---- USER ----//
+            newUser.setValue("Sardew", forKey: "name")
+            newUser.setValue("mettasaridewi.w@gmail.com", forKey: "account")
+            newUser.project = newProject
     
     ////////---- PROJECT ----//
     //    newProject.userCore = newUser
@@ -128,6 +128,7 @@ func manageProject(){
 //        newProject.addToSprintCore(newSprint)
     //    newSprint.addToTasks(newTask)
     //
+    
     
     
     //    saveData(targetContainer: container)

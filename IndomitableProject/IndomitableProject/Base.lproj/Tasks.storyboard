@@ -69,7 +69,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Tasks" image="tasks" id="Xun-Ic-GO7"/>
+                    <tabBarItem key="tabBarItem" title="Tasks" image="icon-list" id="Xun-Ic-GO7"/>
                     <navigationItem key="navigationItem" id="dCD-Ot-PAr">
                         <barButtonItem key="rightBarButtonItem" title="+" id="EwI-DG-OPf">
                             <connections>
@@ -140,7 +140,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="icon-list" width="24" height="24"/>
         <image name="nextIcon" width="50" height="50"/>
-        <image name="tasks" width="32" height="32"/>
     </resources>
 </document>
