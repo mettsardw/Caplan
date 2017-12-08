@@ -88,8 +88,8 @@ class ProjectTableViewControlelr: UIViewController, UITableViewDelegate, UITable
             destination.parentTimeLabel = daysLabel
         } else if segue.identifier == "resetSegue" {
             let destination = segue.destination as! ResetViewController
-            destination.parentProjectLabel = projectLabel
-            destination.parentDaysLabel = daysLabel
+            destination.projectLabel = projectLabel
+            destination.daysLabel = daysLabel
         }
     }
     

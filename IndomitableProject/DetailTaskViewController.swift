@@ -2,32 +2,30 @@
 //  DetailTaskViewController.swift
 //  IndomitableProject
 //
-//  Created by yudi on 12/7/17.
+//  Created by yudi on 12/8/17.
 //  Copyright © 2017 RagingWind. All rights reserved.
 //
 
 import UIKit
 
 class DetailTaskViewController: UIViewController {
-
-    @IBOutlet weak var dayLeftLabel: UILabel!
-    @IBOutlet weak var taskNameLabel: UILabel!
-    @IBOutlet weak var peopleWorkingLabel: UILabel!
-    @IBOutlet weak var deadlineLabel: UILabel!
-    @IBOutlet weak var taskNotesLabel: UILabel!
     
+    @IBOutlet weak var dayLeftLabel: UILabel?
+    @IBOutlet weak var taskNameLabel: UILabel?
+    @IBOutlet weak var peopleWorkingLabel: UILabel?
+    @IBOutlet weak var notesLabel: UILabel?
+    @IBOutlet weak var deadlineLabel: UILabel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    @IBAction func editTask(_ sender: Any) {
-        // untuk edit task
     }
     
-    @IBAction func seeTipsDidTap(_ sender: UIButton) {
-        // untuk see tips
+    @IBAction func seeTipsDidTap() {
+        
     }
+    
+    @IBAction func changeTask() {
+        
+    }
+    
 }

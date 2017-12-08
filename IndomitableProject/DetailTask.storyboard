@@ -21,6 +21,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1 day left" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YT5-Zz-oN9">
                                 <rect key="frame" x="16" y="100" width="71" height="71"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.46666666666666667" green="0.83529411764705885" blue="0.20784313725490194" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -38,7 +39,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="See Tips"/>
                                 <connections>
-                                    <action selector="seeTipsDidTap:" destination="Eu0-oS-Eaj" eventType="touchUpInside" id="qDd-Tu-M4V"/>
+                                    <action selector="seeTipsDidTap" destination="Eu0-oS-Eaj" eventType="touchUpInside" id="fxQ-za-tV4"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icon-time" translatesAutoresizingMaskIntoConstraints="NO" id="ew4-uv-gcG">
@@ -78,6 +79,9 @@
                                 <rect key="frame" x="298" y="124" width="55" height="24"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="edit" image="icon-edit"/>
+                                <connections>
+                                    <action selector="changeTask" destination="Eu0-oS-Eaj" eventType="touchUpInside" id="gsU-KT-5PS"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -87,11 +91,11 @@
                         <barButtonItem key="backBarButtonItem" title="&lt; " id="orn-q7-6UE"/>
                     </navigationItem>
                     <connections>
-                        <outlet property="dayLeftLabel" destination="YT5-Zz-oN9" id="WSs-dj-QhE"/>
-                        <outlet property="deadlineLabel" destination="jjt-5g-Hfd" id="eSV-vt-RTr"/>
-                        <outlet property="peopleWorkingLabel" destination="reT-Ws-5nd" id="E5b-iu-Ley"/>
-                        <outlet property="taskNameLabel" destination="giB-qM-QtX" id="VSZ-Da-T7Q"/>
-                        <outlet property="taskNotesLabel" destination="kbJ-h5-kS9" id="gGK-M9-tYx"/>
+                        <outlet property="dayLeftLabel" destination="YT5-Zz-oN9" id="6sB-hy-kzf"/>
+                        <outlet property="deadlineLabel" destination="jjt-5g-Hfd" id="Z0W-Q5-jfV"/>
+                        <outlet property="notesLabel" destination="kbJ-h5-kS9" id="w07-Rl-hZ4"/>
+                        <outlet property="peopleWorkingLabel" destination="reT-Ws-5nd" id="Mcf-hd-yiq"/>
+                        <outlet property="taskNameLabel" destination="giB-qM-QtX" id="zIR-5H-VhA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LMq-jA-g04" userLabel="First Responder" sceneMemberID="firstResponder"/>

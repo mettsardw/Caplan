@@ -2,31 +2,29 @@
 //  ResetViewController.swift
 //  IndomitableProject
 //
-//  Created by yudi on 12/7/17.
+//  Created by yudi on 12/8/17.
 //  Copyright © 2017 RagingWind. All rights reserved.
 //
 
 import UIKit
 
 class ResetViewController: UIViewController {
-
-    var parentProjectLabel: UILabel?
-    var parentDaysLabel: UILabel?
+    
+    var projectLabel: UILabel?
+    var daysLabel: UILabel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
-
-    @IBAction func noButtonDidTap() {
+    
+    @IBAction func noButtonDidTap(){
         navigationController?.popToRootViewController(animated: true)
     }
     
-    @IBAction func yesButtonDidTap() {
+    @IBAction func yesButtonDidTap(){
         
-        parentProjectLabel?.text = "MyPlan"
-        parentDaysLabel?.text = "100 days left"
+        projectLabel?.text = "MyPlan"
+        daysLabel?.text = "100 days left"
         
         navigationController?.popToRootViewController(animated: true)
     }
