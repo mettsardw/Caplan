@@ -58,6 +58,7 @@
                                             <outlet property="dayLabel" destination="55E-I0-55i" id="nHS-so-mlW"/>
                                             <outlet property="descLabel" destination="rR1-dw-h1F" id="UwY-U7-hW7"/>
                                             <outlet property="detailTaskButton" destination="ELD-Ma-K6y" id="Ua6-hm-vnM"/>
+                                            <segue destination="cSa-K8-Fxg" kind="show" id="GbD-Nn-La1"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -118,6 +119,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0AU-Fx-U8f" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1666" y="1220"/>
+        </scene>
+        <!--DetailTask-->
+        <scene sceneID="izJ-T4-gtE">
+            <objects>
+                <viewControllerPlaceholder storyboardName="DetailTask" id="cSa-K8-Fxg" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5bE-wx-pfX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1742" y="1317"/>
         </scene>
         <!--Tasks-->
         <scene sceneID="cYC-um-YU4">

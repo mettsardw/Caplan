@@ -14,9 +14,12 @@ class EditNameViewController: UIViewController {
     @IBOutlet weak var doneButton: UIButton!
     
     var descText: String?
+    var descLabel: UILabel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
         
         //pas di view did load harusnya datanya ud dapet
         
@@ -24,9 +27,15 @@ class EditNameViewController: UIViewController {
         textField.placeholder = "MyProject"
     }
     
+    @IBAction func unitSelecting(){
+        
+    }
+    
     //create a function that will be done in done click
     @IBAction func doneButtonDidTap(){
         //munculin alert
+        descLabel?.text = textField.text
+        navigationController?.popToRootViewController(animated: true)
     }
 }
 
