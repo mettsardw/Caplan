@@ -252,6 +252,7 @@
 				220838DB1FCD1510003CD62A /* Project.storyboard */,
 				22FB98DF1FCFBF54000DD7F2 /* UIProject */,
 				220838D81FCD1039003CD62A /* Tasks.storyboard */,
+				CEAC67F61FCFAA4100AB0212 /* UIAllTasks */,
 				22FB987C1FCEAB3E000DD7F2 /* Plan.storyboard */,
 				2208390C1FCDC946003CD62A /* UIPlan */,
 				220838D31FCD0FEE003CD62A /* Timeline.storyboard */,
@@ -267,7 +268,6 @@
 				92C4BACC1FCFBB0400B7C2DB /* UIAddTask */,
 				220838D21FCD0454003CD62A /* UITimeline */,
 				220838C71FCC63D7003CD62A /* InitialTabController.swift */,
-				CEAC67F61FCFAA4100AB0212 /* UIAllTasks */,
 			);
 			path = IndomitableProject;
 			sourceTree = "<group>";

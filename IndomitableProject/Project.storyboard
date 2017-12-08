@@ -142,7 +142,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Project" image="icon-project" selectedImage="pc" id="tAa-51-4pA"/>
-                    <navigationItem key="navigationItem" id="9hN-MM-r4z"/>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="zJm-ud-VIR">
+                        <barButtonItem key="backBarButtonItem" title=" " id="aiU-a6-cTa"/>
+                    </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="daysLabel" destination="9Pl-iu-fDI" id="TZd-TY-sOx"/>
@@ -154,14 +156,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zzZ-bq-Cc4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="919.20000000000005" y="568.06596701649175"/>
-        </scene>
-        <!--AddTask-->
-        <scene sceneID="VHc-XM-zvs">
-            <objects>
-                <viewControllerPlaceholder storyboardName="AddTask" id="d3V-H4-Eib" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="iFv-OV-i36" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1486" y="351"/>
         </scene>
         <!--Edit Project Name-->
         <scene sceneID="Ug5-Sf-Wwv">
@@ -194,7 +188,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="done">
-                                    <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleColor" red="0.46666666670000001" green="0.82745098039999998" blue="0.2666666667" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                                 <connections>
                                     <action selector="doneButtonDidTap" destination="H9z-1r-dJ1" eventType="touchDown" id="cat-io-huC"/>
@@ -263,6 +257,7 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" red="0.46666666666666667" green="0.82745098039215681" blue="0.26666666666666666" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wz1-53-bdr" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -298,7 +293,9 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Egm-kh-OFZ">
                                 <rect key="frame" x="110" y="318" width="90" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Select Units"/>
+                                <state key="normal" title="Select Units">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="selectUnit:" destination="Cau-w0-6kD" eventType="touchUpInside" id="cm3-8V-1Nt"/>
                                 </connections>
@@ -308,7 +305,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="done">
-                                    <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleColor" red="0.46666666670000001" green="0.82745098039999998" blue="0.2666666667" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                                 <connections>
                                     <action selector="doneButtonDidTap" destination="Cau-w0-6kD" eventType="touchDown" id="yAR-6P-xaE"/>
@@ -365,6 +362,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="m7w-Cd-bN7">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
