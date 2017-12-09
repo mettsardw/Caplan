@@ -18,7 +18,7 @@ class TimelineController: UIViewController {
     
     var scrollView: UIScrollView!
     
-    @IBOutlet weak var sideMenu: UIBarButtonItem!
+   // @IBOutlet weak var sideMenu: UIBarButtonItem!
     
     init(ofSprint no: Int)
     {
