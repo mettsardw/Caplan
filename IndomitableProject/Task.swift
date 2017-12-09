@@ -21,18 +21,10 @@ enum Tasks: String {
 class Task{
     var name: Tasks
     var events: [Event]
-    var notes: String
-    var memberCount: Int
-    var time: Time
-    var points: Int
     var priority: Int
     
-    init(name: Tasks, memberCount: Int, time: Time) {
+    init(name: Tasks) {
         self.name = name
-        self.notes = ""
-        self.memberCount = memberCount
-        self.time = time
-        self.points = 100 //calculation goes here
         self.priority = 1 // optional
         self.events = []
     }

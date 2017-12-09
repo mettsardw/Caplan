@@ -14,7 +14,7 @@ class TaskBundle: UIView {
     var line: TaskLine?
     var taskName: UILabel?
     var days: UILabel?
-    var task: Task?
+    var task: Event?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -24,7 +24,7 @@ class TaskBundle: UIView {
         super.init(coder: aDecoder)
     }
     
-    init(frame: CGRect, from y: CGFloat, length: CGFloat, task: Task, color: UIColor) {
+    init(frame: CGRect, from y: CGFloat, length: CGFloat, task: Event, color: UIColor) {
         //set big frame
         bigFrame = CGRect(x: frame.width/2, y: y, width: 20, height: length)
         super.init(frame: bigFrame!)
@@ -36,7 +36,7 @@ class TaskBundle: UIView {
         
         //declare task label here
         taskName = UILabel()
-        taskName?.text = task.name.rawValue
+        taskName?.text = task.type
         taskName?.textColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
         let labelFrame = bigFrame!
         taskName?.frame = labelFrame
@@ -45,11 +45,11 @@ class TaskBundle: UIView {
         
         //declare days here
         days = UILabel()
-        if task.time.unit == .days {
-            days?.text = "\(task.time.duration)d" //change with number of days according to assigned task and unit
+        if task.timeBoxed.unit == .days {
+            days?.text = "\(task.timeBoxed.duration)d" //change with number of days according to assigned task and unit
         }
-        else if task.time.unit == .month{
-            days?.text = "\(task.time.duration)m"
+        else if task.timeBoxed.unit == .month{
+            days?.text = "\(task.timeBoxed.duration)m"
         }
         days?.textColor = #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
         days?.frame = labelFrame

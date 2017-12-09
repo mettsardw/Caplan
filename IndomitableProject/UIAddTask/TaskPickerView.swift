@@ -18,14 +18,14 @@ class TaskPickerView: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     @IBAction func showActDetail(_ sender: UIButton) {
         if (numberMember.text?.isEmpty)! || numberMember.text == "0" {
             alert.text = "set your member first!"
-        
+            
         }else{
             alert.text = ""
             performSegue(withIdentifier: "taskDetail", sender: nil)
         }
     }
     @IBOutlet weak var dataPicker: UIPickerView!
-    var taskData: [String] = ["Requirement","Design","Coding","Testing","Review"]
+    var taskData: [String] = ["Requirement","Design","Coding","Testing"]
     
     @IBOutlet weak var numberMember: UITextField!
     
@@ -54,24 +54,22 @@ class TaskPickerView: UIViewController, UIPickerViewDataSource, UIPickerViewDele
             destination.sourceTask = selectedData
             if selectedData == "Requirement" {
                 destination.dataActivites.append("Requirement Ghatering")
-                destination.dataActivites.append("Requirement Analysis")
+                destination.dataActivites.append("Requirement Specification")
+                destination.dataActivites.append("Requirement Validation")
             }else if selectedData == "Design" { 
                 destination.dataActivites.append("System Design")
                 destination.dataActivites.append("Program Design")
+                destination.dataActivites.append("Database Design")
             }
             else if selectedData == "Coding" {
-                destination.dataActivites.append("Main")
-                destination.dataActivites.append("Feature")
+                destination.dataActivites.append("Core System")
+                destination.dataActivites.append("Additional Feature")
+                destination.dataActivites.append("Database System")
             }
             else if selectedData == "Testing" {
                 destination.dataActivites.append("Unit Testing")
                 destination.dataActivites.append("Integration Testing")
                 destination.dataActivites.append("System Testing")
-            }
-            else if selectedData == "Review" {
-                destination.dataActivites.append("Requirement fulfilled")
-                destination.dataActivites.append("Performance")
-                destination.dataActivites.append("Increment")
             }else{
                 destination.dataActivites.append("yooman")
                 destination.dataActivites.append("yooman")
