@@ -38,12 +38,12 @@ func manageProject(){
 //        let newUser =  NSEntityDescription.insertNewObject(forEntityName: "UserCore", into: container) as! UserCore
 //
 //        let newTask = NSEntityDescription.insertNewObject(forEntityName: "TaskCore", into: container) as! TaskCore
-    //    let newTask2 = NSEntityDescription.insertNewObject(forEntityName: "TaskCore", into: container) as! TaskCore
+//        let newTask2 = NSEntityDescription.insertNewObject(forEntityName: "TaskCore", into: container) as! TaskCore
 //        let newTask3 = NSEntityDescription.insertNewObject(forEntityName: "TaskCore", into: container) as! TaskCore
 //        let newTask4 = NSEntityDescription.insertNewObject(forEntityName: "TaskCore", into: container) as! TaskCore
     
 //        let newEvent = NSEntityDescription.insertNewObject(forEntityName: "EventCore", into: container) as! EventCore
-    //    let newEvent1 = NSEntityDescription.insertNewObject(forEntityName: "EventCore", into: container) as! EventCore
+//        let newEvent1 = NSEntityDescription.insertNewObject(forEntityName: "EventCore", into: container) as! EventCore
     //    let newEvent2 = NSEntityDescription.insertNewObject(forEntityName: "EventCore", into: container) as! EventCore
 //
 //
@@ -82,7 +82,7 @@ func manageProject(){
 //        newTask2.setValue("ini Design: lorem ipsum dolor sit amet", forKey: "notes")
 //        newTask2.setValue(7, forKey: "duration")
 //        newTask2.setValue("days", forKey: "durationUnit")
-//
+
     
     //---------------------------------------------//
 //        newTask3.setValue("Coding", forKey: "name")
@@ -106,17 +106,17 @@ func manageProject(){
 //
 //
     //set Event
-//        newEvent.setValue("Beta Testing", forKey: "type")
+//        newEvent.setValue("Design Testing", forKey: "type")
 //        newEvent.setValue(3, forKey: "memberCount")
 //        newEvent.setValue(2, forKey: "duration")
 //        newEvent.setValue("days", forKey: "durationUnit")
 //
 //
-//        newEvent1.setValue("Alpha Testing", forKey: "type")
+//        newEvent1.setValue("Design Database", forKey: "type")
 //        newEvent1.setValue(5, forKey: "memberCount")
 //        newEvent1.setValue(1, forKey: "duration")
 //        newEvent1.setValue("days", forKey: "durationUnit")
-//
+
 //
 //        newEvent2.setValue("Design UX", forKey: "type")
 //        newEvent2.setValue(2, forKey: "memberCount")
@@ -144,8 +144,9 @@ func manageProject(){
 //
     //    newTask.addToEvent(newEvent)
     //    newTask.addToEvent(newEvent2)
-    //    newTask.addToEvent(newEvent1)
-   //     newTask2.addToEvent(newEvent2)
+//        newTask.addToEvent(newEvent1)
+//        newTask2.addToEvent(newEvent)
+//        newTask2.addToEvent(newEvent1)
 //        newProject.addToSprintCore(newSprint)
     //    newSprint.addToTasks(newTask)
     //
@@ -189,7 +190,8 @@ func manageProject(){
         
         ////////////////////////////////////// SPRINT PROJECT ///////////////////////////////////////////
         let projectSprints: [SprintCore] = projects[0].sprintCore?.allObjects as![SprintCore]
-        //        projectSprints[0].addToTasks(newTask2)
+//        projectSprints[1].addToTasks(newTask2)
+//        saveData(targetContainer: container)
         let sprints: [SprintCore] = try container.fetch(sprintFecth) as! [SprintCore]
         print("Sprint: \(sprints.count)")
         for sprint in projectSprints {

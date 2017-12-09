@@ -13,6 +13,7 @@ struct RequirementTasks {
     var day: String
     var event: String
     
+    
     static func fetchData() -> [RequirementTasks]{
         var requirementTasks: [RequirementTasks] = []
         
@@ -25,12 +26,10 @@ struct RequirementTasks {
             let projects: [ProjectCore] = try container.fetch(projectFetch) as! [ProjectCore]
             let projectSprints: [SprintCore] = projects[0].sprintCore?.allObjects as![SprintCore]
             
-            for i in 0..<projectSprints.count{
-                let sprintTasks: [TaskCore] = projectSprints[i].tasks?.allObjects as! [TaskCore]
-            
-                if sprintTasks.count > 0{
-                    let taskEvents: [EventCore] = sprintTasks[0].event?.allObjects as! [EventCore]
-            
+            for sprint in projectSprints{
+                let sprintTasks: [TaskCore] = sprint.tasks?.allObjects as! [TaskCore]
+                for task in sprintTasks{
+                    let taskEvents: [EventCore] = task.event?.allObjects as! [EventCore]
                     for sprintTask in sprintTasks{
                         if sprintTask.name == "Requirement"{
                             for index in 0..<taskEvents.count{

@@ -25,12 +25,10 @@ struct CodingTasks {
             let projects: [ProjectCore] = try container.fetch(projectFetch) as! [ProjectCore]
             let projectSprints: [SprintCore] = projects[0].sprintCore?.allObjects as![SprintCore]
             
-            for i in 0..<projectSprints.count{
-                let sprintTasks: [TaskCore] = projectSprints[i].tasks?.allObjects as! [TaskCore]
-            
-                if sprintTasks.count > 2{
-                    let taskEvents: [EventCore] = sprintTasks[2].event?.allObjects as! [EventCore]
-                    
+            for sprint in projectSprints{
+                let sprintTasks: [TaskCore] = sprint.tasks?.allObjects as! [TaskCore]
+                for task in sprintTasks{
+                    let taskEvents: [EventCore] = task.event?.allObjects as! [EventCore]
                     for sprintTask in sprintTasks{
                         if sprintTask.name == "Coding"{
                             for index in 0..<taskEvents.count{

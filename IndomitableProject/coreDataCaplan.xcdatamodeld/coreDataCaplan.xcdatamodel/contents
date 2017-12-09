@@ -3,6 +3,7 @@
     <entity name="EventCore" representedClassName=".EventCore" syncable="YES">
         <attribute name="duration" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="durationUnit" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="memberCount" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="taskEvent" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="TaskCore" inverseName="event" inverseEntity="TaskCore" syncable="YES"/>
@@ -44,7 +45,7 @@
         <relationship name="project" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ProjectCore" inverseName="userCore" inverseEntity="ProjectCore" syncable="YES"/>
     </entity>
     <elements>
-        <element name="EventCore" positionX="-2106" positionY="-558" width="128" height="118"/>
+        <element name="EventCore" positionX="-2106" positionY="-558" width="128" height="135"/>
         <element name="ProjectCore" positionX="-1917" positionY="-630" width="128" height="120"/>
         <element name="SprintCore" positionX="-2081" positionY="-357" width="128" height="120"/>
         <element name="TaskCore" positionX="-2351" positionY="-549" width="128" height="180"/>

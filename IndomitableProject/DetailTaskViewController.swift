@@ -16,8 +16,11 @@ class DetailTaskViewController: UIViewController {
     @IBOutlet weak var notesLabel: UILabel?
     @IBOutlet weak var deadlineLabel: UILabel?
     
+    var taskName: String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        taskNameLabel?.text = taskName
     }
     
     @IBAction func seeTipsDidTap() {

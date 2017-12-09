@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class TaskTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UISearchResultsUpdating {
     
@@ -14,7 +15,7 @@ class TaskTableViewController: UIViewController, UITableViewDataSource, UITableV
 
     let section: [String] = ["Requirement", "Design", "Coding", "Testing"]
     var data: [[Any]] = []
-    
+    //var datas: [[String]] = []
     var tempDesc = [String]()
     var tempDay = [String]()
     var filteredDesc = [String]()
@@ -22,8 +23,11 @@ class TaskTableViewController: UIViewController, UITableViewDataSource, UITableV
     var searchController = UISearchController()
     var resultController = UITableViewController()
     
+    var tempTitle: String = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        //self.hideKeyboardWhenTappedAround()
         
         taskTable.dataSource = self
         taskTable.delegate = self
@@ -32,6 +36,8 @@ class TaskTableViewController: UIViewController, UITableViewDataSource, UITableV
         data.append(CodingTasks.fetchData())
         data.append(TestingTasks.fetchData())
         
+        print(data)
+        
         //search controller
         searchController = UISearchController(searchResultsController: resultController)
         taskTable.tableHeaderView = searchController.searchBar
@@ -39,7 +45,6 @@ class TaskTableViewController: UIViewController, UITableViewDataSource, UITableV
         resultController.tableView.delegate = self
         resultController.tableView.dataSource = self
         self.searchController.hidesNavigationBarDuringPresentation = false
-        
         
         for index in 0..<data.count {
             for ind in 0..<data[index].count{
@@ -147,6 +152,25 @@ class TaskTableViewController: UIViewController, UITableViewDataSource, UITableV
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        //let indexPath = tableView.indexPathForSelectedRow
+        let b = tableView.cellForRow(at: indexPath) as! TaskTableViewCell
+        
+        if searchController.isActive {
+            searchController.isActive = false
+        }
+        tempTitle = b.descLabel.text!
+        
+        self.performSegue(withIdentifier: "detailTaskSegue", sender: Any?.self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "detailTaskSegue" {
+            let destination = segue.destination as! DetailTaskViewController
+            
+            
+            destination.taskName = tempTitle
+            print(destination.taskName)
+        }
     }
 }
 
@@ -155,4 +179,20 @@ extension String {
         return self.range(of: find, options: .caseInsensitive) != nil
     }
 }
+
+protocol SelectedCellProtocol {
+    func didSelectedCell(text: String)
+}
+
+//extension UIViewController {
+//    func hideKeyboardWhenTappedAround() {
+//        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
+//        tap.cancelsTouchesInView = false
+//        view.addGestureRecognizer(tap)
+//    }
+//
+//    func dismissKeyboard() {
+//        view.endEditing(true)
+//    }
+//}
 
