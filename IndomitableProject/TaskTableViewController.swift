@@ -15,7 +15,9 @@ class TaskTableViewController: UIViewController, UITableViewDataSource, UITableV
 
     let section: [String] = ["Requirement", "Design", "Coding", "Testing"]
     var data: [[Any]] = []
-    //var datas: [[String]] = []
+    
+    var tempMemberCount = [String]()
+    var tempNote = [String]()
     var tempDesc = [String]()
     var tempDay = [String]()
     var filteredDesc = [String]()
@@ -23,11 +25,18 @@ class TaskTableViewController: UIViewController, UITableViewDataSource, UITableV
     var searchController = UISearchController()
     var resultController = UITableViewController()
     
-    var tempTitle: String = ""
+    var tempDescForSend: String = ""
+    var tempDayForSend: String = ""
+    var tempMemberCountForSend: String = ""
+    var tempNoteForSend: String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //self.hideKeyboardWhenTappedAround()
+
+        data.append(RequirementTasks.fetchData())
+        data.append(DesignTasks.fetchData())
+        data.append(CodingTasks.fetchData())
+        data.append(TestingTasks.fetchData())
         
         taskTable.dataSource = self
         taskTable.delegate = self
@@ -46,21 +55,29 @@ class TaskTableViewController: UIViewController, UITableViewDataSource, UITableV
                     let dataString: RequirementTasks = self.data[index][ind] as! RequirementTasks
                     tempDesc.append(dataString.event)
                     tempDay.append(dataString.day)
+                    tempNote.append(dataString.note)
+                    tempMemberCount.append(dataString.memberCount)
                 }
                 else if index == 1{
                     let dataString: DesignTasks = self.data[index][ind] as! DesignTasks
                     tempDesc.append(dataString.event)
                     tempDay.append(dataString.day)
+                    tempNote.append(dataString.note)
+                    tempMemberCount.append(dataString.memberCount)
                 }
                 else if index == 2{
                     let dataString: CodingTasks = self.data[index][ind] as! CodingTasks
                     tempDesc.append(dataString.event)
                     tempDay.append(dataString.day)
+                    tempNote.append(dataString.note)
+                    tempMemberCount.append(dataString.memberCount)
                 }
                 else if index == 3{
                     let dataString: TestingTasks = self.data[index][ind] as! TestingTasks
                     tempDesc.append(dataString.event)
                     tempDay.append(dataString.day)
+                    tempNote.append(dataString.note)
+                    tempMemberCount.append(dataString.memberCount)
                 }
             }
             
@@ -83,10 +100,6 @@ class TaskTableViewController: UIViewController, UITableViewDataSource, UITableV
         }
         resultController.tableView.reloadData()
    }
-    
-    func getDayAfterSearch(string: String) -> String{
-        return tempDay[tempDesc.index(of: string)!]
-    }
     
     // declaration section's name
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
@@ -146,13 +159,15 @@ class TaskTableViewController: UIViewController, UITableViewDataSource, UITableV
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        //let indexPath = tableView.indexPathForSelectedRow
         let b = tableView.cellForRow(at: indexPath) as! TaskTableViewCell
         
         if searchController.isActive {
             searchController.isActive = false
         }
-        tempTitle = b.descLabel.text!
+        tempDescForSend = b.descLabel.text!
+        tempDayForSend = b.dayLabel.text!
+        tempMemberCountForSend = getMemberCountstring(string: b.descLabel.text!)
+        tempNoteForSend = getNotestring(string: b.descLabel.text!)
         
         self.performSegue(withIdentifier: "detailTaskSegue", sender: Any?.self)
     }
@@ -160,11 +175,23 @@ class TaskTableViewController: UIViewController, UITableViewDataSource, UITableV
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "detailTaskSegue" {
             let destination = segue.destination as! DetailTaskViewController
-            
-            
-            destination.taskName = tempTitle
-            print(destination.taskName)
+            destination.taskName = tempDescForSend
+            destination.dayLeftText = tempDayForSend
+            destination.peopleWorkingText = tempMemberCountForSend
+            destination.notesText = tempNoteForSend
         }
+    }
+    
+    func getDayAfterSearch(string: String) -> String{
+        return tempDay[tempDesc.index(of: string)!]
+    }
+    
+    func getMemberCountstring(string: String) -> String{
+        return tempMemberCount[tempDesc.index(of: string)!]
+    }
+    
+    func getNotestring(string: String) -> String{
+        return tempNote[tempDesc.index(of: string)!]
     }
 }
 

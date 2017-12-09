@@ -17,10 +17,21 @@ class DetailTaskViewController: UIViewController {
     @IBOutlet weak var deadlineLabel: UILabel?
     
     var taskName: String?
+    var dayLeftText: String?
+    var peopleWorkingText: String?
+    var notesText: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         taskNameLabel?.text = taskName
+        dayLeftLabel?.text = "\(dayLeftText!) days left"
+        peopleWorkingLabel?.text = "\(peopleWorkingText!) Peoples"
+        notesLabel?.text = notesText
+        var date = Date()
+        let calendar = Calendar.current
+        date = calendar.date(byAdding: .day, value: Int(dayLeftText!)!, to: date)!
+        
+        deadlineLabel?.text = "\(calendar.component(.day, from: date)) - \(calendar.component(.month, from: date)) - \(calendar.component(.year, from: date))"
     }
     
     @IBAction func seeTipsDidTap() {

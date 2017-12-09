@@ -12,7 +12,8 @@ import CoreData
 struct RequirementTasks {
     var day: String
     var event: String
-    
+    var memberCount: String
+    var note: String
     
     static func fetchData() -> [RequirementTasks]{
         var requirementTasks: [RequirementTasks] = []
@@ -32,7 +33,7 @@ struct RequirementTasks {
                     let taskEvent: [EventCore] = task.event?.allObjects as! [EventCore]
                     if task.name == "Requirement"{
                         for index in 0..<taskEvent.count{
-                            requirementTasks.append(RequirementTasks(day: String(describing: taskEvent[index].duration), event:   taskEvent[index].type!))
+                            requirementTasks.append(RequirementTasks(day: String(describing: taskEvent[index].duration), event:   taskEvent[index].type!, memberCount: String(taskEvent[index].memberCount), note: taskEvent[index].notes!))
                         }
                     }
                 }
