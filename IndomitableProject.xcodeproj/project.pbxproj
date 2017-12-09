@@ -51,7 +51,6 @@
 		92C4BACE1FCFC95700B7C2DB /* TaskSprintSetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C4BACD1FCFC95700B7C2DB /* TaskSprintSetView.swift */; };
 		92CA5D0A1FDA553D0035631C /* ResetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CA5D091FDA553D0035631C /* ResetViewController.swift */; };
 		92CDA1EF1FDA5E14006C02F8 /* DetailTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CDA1EE1FDA5E14006C02F8 /* DetailTaskViewController.swift */; };
-		961197FF1FD6A26F00678BF2 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 961197FE1FD6A26F00678BF2 /* SWRevealViewController.m */; };
 		961E033F1FD7C3380069F402 /* UserCore+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961E03331FD7C3380069F402 /* UserCore+CoreDataClass.swift */; };
 		961E03401FD7C3380069F402 /* UserCore+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961E03341FD7C3380069F402 /* UserCore+CoreDataProperties.swift */; };
 		961E03451FD7C3380069F402 /* TipsCore+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961E03391FD7C3380069F402 /* TipsCore+CoreDataClass.swift */; };
@@ -124,7 +123,6 @@
 		92C4BACD1FCFC95700B7C2DB /* TaskSprintSetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskSprintSetView.swift; sourceTree = "<group>"; };
 		92CA5D091FDA553D0035631C /* ResetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetViewController.swift; sourceTree = "<group>"; };
 		92CDA1EE1FDA5E14006C02F8 /* DetailTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTaskViewController.swift; sourceTree = "<group>"; };
-		961197FD1FD6A26F00678BF2 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		961197FE1FD6A26F00678BF2 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		961E03331FD7C3380069F402 /* UserCore+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserCore+CoreDataClass.swift"; sourceTree = "<group>"; };
 		961E03341FD7C3380069F402 /* UserCore+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserCore+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -216,6 +214,7 @@
 			children = (
 				92959A0A1FC6CDB0005B331F /* IndomitableProject */,
 				92959A091FC6CDAF005B331F /* Products */,
+				CEBFB2451FDA872200A2514E /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -304,10 +303,17 @@
 				CE8ED6511FD64ACA00D4D446 /* CodingTasks.swift */,
 				CE8ED6531FD64ADC00D4D446 /* RequirementTasks.swift */,
 				CE8ED6551FD64AF100D4D446 /* TestingTasks.swift */,
-				CE02E5261FD68CC7002BF59D /* sideMenuFunction.swift */,
 				92CDA1EE1FDA5E14006C02F8 /* DetailTaskViewController.swift */,
 			);
 			name = UIAllTasks;
+			sourceTree = "<group>";
+		};
+		CEBFB2451FDA872200A2514E /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				961197FE1FD6A26F00678BF2 /* SWRevealViewController.m */,
+			);
+			name = "Recovered References";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -342,6 +348,7 @@
 				TargetAttributes = {
 					92959A071FC6CDAF005B331F = {
 						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = ZM4UB7NGW4;
 						LastSwiftMigration = 0910;
 						ProvisioningStyle = Automatic;
 					};
@@ -412,7 +419,6 @@
 				961E03561FD7C6390069F402 /* SprintCore+CoreDataProperties.swift in Sources */,
 				220839141FCDD2CB003CD62A /* PlanLine.swift in Sources */,
 				220838C41FCC60DF003CD62A /* Project.swift in Sources */,
-				961197FF1FD6A26F00678BF2 /* SWRevealViewController.m in Sources */,
 				92CDA1EF1FDA5E14006C02F8 /* DetailTaskViewController.swift in Sources */,
 				47F44DBA1FD7A5A00049F4B7 /* TipsViewController.swift in Sources */,
 				96CD07771FCD64E700C0D563 /* Event.swift in Sources */,
@@ -597,6 +603,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = ZM4UB7NGW4;
 				INFOPLIST_FILE = IndomitableProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.RagingWind.IndomitableProject;
@@ -611,6 +618,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = ZM4UB7NGW4;
 				INFOPLIST_FILE = IndomitableProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.RagingWind.IndomitableProject;

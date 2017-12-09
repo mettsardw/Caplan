@@ -198,7 +198,7 @@ func manageProject(){
 
         
         //////////////////////////////////////// TASK SPRINT /////////////////////////////////////////////
-        let sprintTasks: [TaskCore] = projectSprints[1].tasks?.allObjects as! [TaskCore]
+        let sprintTasks: [TaskCore] = projectSprints[0].tasks?.allObjects as! [TaskCore]
         let tasks: [TaskCore] = try container.fetch(taskFetch) as! [TaskCore]
         
 //        sprintTasks[1].addToEvent(newEvent2)
