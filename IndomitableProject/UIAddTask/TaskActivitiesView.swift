@@ -10,11 +10,10 @@ import UIKit
 
 class TaskActivitesView: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
     
-    @IBAction func backButton(_ sender: Any) {
-        self.presentingViewController?.dismiss(animated: true, completion: nil)
-    }
+    @IBOutlet weak var descriptionText: UILabel!
     @IBOutlet weak var activitiesPicker: UIPickerView!
-    var dataActivites: [String] = []
+    var dataActivities: [String] = []
+    var descriptionActivities: [String] = []
     var sourceTask: String?
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -31,19 +30,23 @@ class TaskActivitesView: UIViewController, UIPickerViewDataSource, UIPickerViewD
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         
-        return dataActivites.count
+        return dataActivities.count
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return dataActivites[row]
+        return dataActivities[row]
     }
     
-    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        descriptionText.text = descriptionActivities[row]
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         activitiesPicker.dataSource = self
         activitiesPicker.delegate = self
         self.title = sourceTask
+        descriptionText.text = descriptionActivities[0]
+        
         
     }
 }

@@ -152,8 +152,8 @@ func manageProject(){
     
     
 //        saveData(targetContainer: container)
-    let sprint: Sprint = Sprint(name: "Planning")
-    //var plan2: Plan = Plan(name: "Sprinting")
+//    let sprint: Sprint = Sprint(name: "Planning")
+
     //////////////////////////////////////////////////////////////////////////////////////////////////////////
     ///////////////////////////////////  FECTH DATA   &   DEBUGGING PRINT  ////////////////////////////////////
     
@@ -204,9 +204,9 @@ func manageProject(){
         
         
         
-        for task in tasks {
+        for task in sprintTasks {
             print("name: \(String(describing: task.name))")
-            sprint.addTask(task: Task(name: Tasks(rawValue: task.name!)!))
+            
             //deleteData(targetContainer: container, object: task)
         }
 //        sprintTasks[0].addToEvent(newEvent)
@@ -218,6 +218,7 @@ func manageProject(){
         
         print("Event : \(events.count)")
         for event in events {
+            print(event.objectID)
             print("name: \(String(describing: event.type))")
             //deleteData(targetContainer: container, object: event)
         }
@@ -226,7 +227,6 @@ func manageProject(){
         print("error")
     }
     
-    project.sprints.append(sprint)
 }
 
 func taskToIndicateEndOfProject() -> Event{
@@ -257,15 +257,11 @@ func deleteData(targetContainer: NSManagedObjectContext, object: NSManagedObject
     
 }
 
-func getTotalDuration() -> Int {
+func getTotalDuration(sprintIndex: Int) -> Int {
     
     var totalDuration = 0
-    for sprint in project.sprints {
-        for task in sprint.tasks{
-            for event in task.events{
-                totalDuration += event.timeBoxed.duration
-            }
-        }
+    for event in project.getEvents(sprintIndex: sprintIndex){
+        totalDuration += event.timeBoxed.duration
     }
     return totalDuration
 }

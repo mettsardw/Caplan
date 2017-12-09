@@ -18,26 +18,26 @@ class TaskAddedInfoView: UIViewController {
         if segue.identifier == "addAnotherTask" {
             let destination = segue.destination as! TaskActivitesView
             if sourceTask == "Requirement" {
-                destination.dataActivites.append("Requirement Ghatering")
-                destination.dataActivites.append("Requirement Specification")
-                destination.dataActivites.append("Requirement Validation")
+                destination.dataActivities.append("Requirement Ghatering")
+                destination.dataActivities.append("Requirement Specification")
+                destination.dataActivities.append("Requirement Validation")
             }else if sourceTask == "Design" {
-                destination.dataActivites.append("System Design")
-                destination.dataActivites.append("Program Design")
-                destination.dataActivites.append("Database Design")
+                destination.dataActivities.append("System Design")
+                destination.dataActivities.append("Program Design")
+                destination.dataActivities.append("Database Design")
             }
             else if sourceTask == "Coding" {
-                destination.dataActivites.append("Core System")
-                destination.dataActivites.append("Additional Feature")
-                destination.dataActivites.append("Database System")
+                destination.dataActivities.append("Core System")
+                destination.dataActivities.append("Additional Feature")
+                destination.dataActivities.append("Database System")
             }
             else if sourceTask == "Testing" {
-                destination.dataActivites.append("Unit Testing")
-                destination.dataActivites.append("Integration Testing")
-                destination.dataActivites.append("System Testing")
+                destination.dataActivities.append("Unit Testing")
+                destination.dataActivities.append("Integration Testing")
+                destination.dataActivities.append("System Testing")
             }else{
-                destination.dataActivites.append("yooman")
-                destination.dataActivites.append("yooman")
+                destination.dataActivities.append("yooman")
+                destination.dataActivities.append("yooman")
                 
             }
 
