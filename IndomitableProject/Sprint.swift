@@ -27,7 +27,6 @@ class Sprint{
     
     func addTask(task: Task) {
         tasks.append(task)
-        duration += task.time.duration
     }
     
     func getTask(named: String) -> Task {
@@ -37,7 +36,7 @@ class Sprint{
             }
         }
 
-        return Task(name: .noMatchFound, memberCount: 0, time: Time(duration: 0, unit: .days))
+        return Task(name: .noMatchFound)
     }
     
     func getUrgentTask() -> Task {

@@ -11,13 +11,27 @@ import UIKit
 class TaskSprintSetView: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
     
     
-    @IBOutlet weak var timePicker: UIPickerView!
-    
+    @IBOutlet weak var layer: UIView!
+    @IBOutlet weak var pickerContainer: UIView!
+    @IBOutlet weak var selectSprint: UIButton!
+    @IBOutlet weak var sprintPicker: UIPickerView!
     @IBOutlet weak var teamSet: UITextField!
-    @IBOutlet weak var durationSet: UITextField!
+    @IBAction func pickSprint(_ sender: UIButton) {
+        layer.isHidden = false
+        UIView.animate(withDuration: 0.3) {
+            self.pickerContainer.frame = CGRect(x: 0, y: UIScreen.main.bounds.height - self.pickerContainer.bounds.height - (self.tabBarController?.tabBar.frame.height)!, width: self.pickerContainer.bounds.width, height: self.pickerContainer.bounds.height)
+        }
+    }
+    @IBAction func selectSprint(_ sender: UIButton) {
+        layer.isHidden = true
+        UIView.animate(withDuration: 0.3) {
+            self.pickerContainer.frame = CGRect(x: 0, y: UIScreen.main.bounds.height, width: self.pickerContainer.bounds.width, height: self.pickerContainer.bounds.height)
+        }
+        selectSprint.titleLabel?.text = sprintData[sprintPicker.selectedRow(inComponent: 0)]
+    }
     
     var sourceTask: String?
-    var timeData: [String] = ["Hour","Day","Month"]
+    var sprintData: [String] = []
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "successView" {
@@ -26,9 +40,7 @@ class TaskSprintSetView: UIViewController, UIPickerViewDataSource, UIPickerViewD
         }
     }
     
-    @IBAction func durationSetStepper(_ sender: UIStepper) {
-        durationSet.text = String(format: "%.0f",sender.value)
-    }
+
     @IBAction func teamSetStepper(_ sender: UIStepper) {
         teamSet.text = String(format: "%.0f",sender.value)
     }
@@ -38,16 +50,20 @@ class TaskSprintSetView: UIViewController, UIPickerViewDataSource, UIPickerViewD
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return timeData.count
+        return sprintData.count
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return timeData[row]
+        return sprintData[row]
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        timePicker.dataSource = self
-        timePicker.delegate = self
+        sprintPicker.dataSource = self
+        sprintPicker.delegate = self
+        layer.isHidden = true
+        for sprint in project.sprints {
+            sprintData.append(sprint.name)
+        }
     }
 }

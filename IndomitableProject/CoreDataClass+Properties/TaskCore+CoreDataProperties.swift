@@ -2,7 +2,7 @@
 //  TaskCore+CoreDataProperties.swift
 //  IndomitableProject
 //
-//  Created by Davin Reinaldo Gozali on 06/12/17.
+//  Created by Davin Reinaldo Gozali on 09/12/17.
 //  Copyright © 2017 RagingWind. All rights reserved.
 //
 //
@@ -17,12 +17,7 @@ extension TaskCore {
         return NSFetchRequest<TaskCore>(entityName: "TaskCore")
     }
 
-    @NSManaged public var duration: Int64
-    @NSManaged public var durationUnit: String?
-    @NSManaged public var memberCount: Int64
     @NSManaged public var name: String?
-    @NSManaged public var notes: String?
-    @NSManaged public var point: Int64
     @NSManaged public var priority: Int64
     @NSManaged public var event: NSSet?
     @NSManaged public var sprint: SprintCore?
@@ -31,6 +26,24 @@ extension TaskCore {
 
 // MARK: Generated accessors for event
 extension TaskCore {
+
+    @objc(insertObject:inEventAtIndex:)
+    @NSManaged public func insertIntoEvent(_ value: EventCore, at idx: Int)
+
+    @objc(removeObjectFromEventAtIndex:)
+    @NSManaged public func removeFromEvent(at idx: Int)
+
+    @objc(insertEvent:atIndexes:)
+    @NSManaged public func insertIntoEvent(_ values: [EventCore], at indexes: NSIndexSet)
+
+    @objc(removeEventAtIndexes:)
+    @NSManaged public func removeFromEvent(at indexes: NSIndexSet)
+
+    @objc(replaceObjectInEventAtIndex:withObject:)
+    @NSManaged public func replaceEvent(at idx: Int, with value: EventCore)
+
+    @objc(replaceEventAtIndexes:withEvent:)
+    @NSManaged public func replaceEvent(at indexes: NSIndexSet, with values: [EventCore])
 
     @objc(addEventObject:)
     @NSManaged public func addToEvent(_ value: EventCore)

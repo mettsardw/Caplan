@@ -40,9 +40,9 @@ class TimelineController: UIViewController {
         
         //get tasks
         var count = 0
-        for task in project.getTasks(index: getSprintIndex){
+        for event in project.getEvents(sprintIndex: getSprintIndex){
             //print(task.name.rawValue)
-            taskBundles.append(TaskBundle(frame: self.view.frame, from: CGFloat(50 + count * 50), length: 100.0, task: task, color: #colorLiteral(red: 0.4666666687, green: 0.7647058964, blue: 0.2666666806, alpha: 1)))
+            taskBundles.append(TaskBundle(frame: self.view.frame, from: CGFloat(50 + count * 50), length: 100.0, task: event, color: #colorLiteral(red: 0.4666666687, green: 0.7647058964, blue: 0.2666666806, alpha: 1)))
             taskBundles[taskBundles.endIndex-1].btn?.addTarget(self, action: #selector(buttonAction), for: .touchUpInside) //add action for click
             taskBundles[taskBundles.endIndex-1].btn?.tag = taskBundles.endIndex-1
             scrollView.addSubview(taskBundles[taskBundles.endIndex-1])

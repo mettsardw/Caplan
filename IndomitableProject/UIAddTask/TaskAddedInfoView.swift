@@ -11,30 +11,30 @@ import UIKit
 class TaskAddedInfoView: UIViewController {
     
     var sourceTask: String?
-    
+    @IBAction func doneButton(){
+        navigationController?.popToRootViewController(animated: true)
+    }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "addAnotherTask" {
             let destination = segue.destination as! TaskActivitesView
             if sourceTask == "Requirement" {
                 destination.dataActivites.append("Requirement Ghatering")
-                destination.dataActivites.append("Requirement Analysis")
+                destination.dataActivites.append("Requirement Specification")
+                destination.dataActivites.append("Requirement Validation")
             }else if sourceTask == "Design" {
                 destination.dataActivites.append("System Design")
                 destination.dataActivites.append("Program Design")
+                destination.dataActivites.append("Database Design")
             }
             else if sourceTask == "Coding" {
-                destination.dataActivites.append("Main")
-                destination.dataActivites.append("Feature")
+                destination.dataActivites.append("Core System")
+                destination.dataActivites.append("Additional Feature")
+                destination.dataActivites.append("Database System")
             }
             else if sourceTask == "Testing" {
                 destination.dataActivites.append("Unit Testing")
                 destination.dataActivites.append("Integration Testing")
                 destination.dataActivites.append("System Testing")
-            }
-            else if sourceTask == "Review" {
-                destination.dataActivites.append("Requirement fulfilled")
-                destination.dataActivites.append("Performance")
-                destination.dataActivites.append("Increment")
             }else{
                 destination.dataActivites.append("yooman")
                 destination.dataActivites.append("yooman")

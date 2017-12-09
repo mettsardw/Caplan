@@ -31,13 +31,7 @@ class TaskTableViewController: UIViewController, UITableViewDataSource, UITableV
         
         taskTable.dataSource = self
         taskTable.delegate = self
-        data.append(RequirementTasks.fetchData())
-        data.append(DesignTasks.fetchData())
-        data.append(CodingTasks.fetchData())
-        data.append(TestingTasks.fetchData())
-        
-        print(data)
-        
+
         //search controller
         searchController = UISearchController(searchResultsController: resultController)
         taskTable.tableHeaderView = searchController.searchBar

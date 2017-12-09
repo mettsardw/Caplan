@@ -5,6 +5,8 @@
         <attribute name="durationUnit" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="memberCount" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="notes" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="point" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="taskEvent" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="TaskCore" inverseName="event" inverseEntity="TaskCore" syncable="YES"/>
     </entity>
@@ -23,12 +25,7 @@
         <relationship name="tasks" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="TaskCore" inverseName="sprint" inverseEntity="TaskCore" syncable="YES"/>
     </entity>
     <entity name="TaskCore" representedClassName="TaskCore" syncable="YES">
-        <attribute name="duration" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="durationUnit" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="memberCount" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="notes" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="point" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="priority" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <relationship name="event" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="EventCore" inverseName="taskEvent" inverseEntity="EventCore" syncable="YES"/>
         <relationship name="sprint" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="SprintCore" inverseName="tasks" inverseEntity="SprintCore" syncable="YES"/>
@@ -45,10 +42,10 @@
         <relationship name="project" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ProjectCore" inverseName="userCore" inverseEntity="ProjectCore" syncable="YES"/>
     </entity>
     <elements>
-        <element name="EventCore" positionX="-2106" positionY="-558" width="128" height="135"/>
+        <element name="EventCore" positionX="-2106" positionY="-558" width="128" height="150"/>
         <element name="ProjectCore" positionX="-1917" positionY="-630" width="128" height="120"/>
         <element name="SprintCore" positionX="-2081" positionY="-357" width="128" height="120"/>
-        <element name="TaskCore" positionX="-2351" positionY="-549" width="128" height="180"/>
+        <element name="TaskCore" positionX="-2351" positionY="-549" width="128" height="105"/>
         <element name="TipsCore" positionX="-2099" positionY="-765" width="128" height="105"/>
         <element name="UserCore" positionX="-1890" positionY="-421" width="128" height="88"/>
     </elements>
