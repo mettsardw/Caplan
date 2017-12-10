@@ -75,7 +75,7 @@
                         <barButtonItem key="backBarButtonItem" title=" " id="V1Y-18-kzC"/>
                         <barButtonItem key="rightBarButtonItem" image="icon-add" id="EwI-DG-OPf">
                             <connections>
-                                <segue destination="qdi-ka-p9n" kind="show" id="8da-gg-iGE"/>
+                                <segue destination="qdi-ka-p9n" kind="show" id="Ik1-fB-2Vi"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

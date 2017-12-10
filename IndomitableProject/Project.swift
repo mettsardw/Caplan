@@ -32,10 +32,17 @@ class Project {
                 
                 for sprint in sprintsProject {
                     let tasksSprint: [TaskCore] = sprint.tasks?.allObjects as! [TaskCore]
-                    let insertSprint: Sprint = Sprint(name: sprint.name!)
+                    let insertSprint: Sprint = Sprint(name: sprint.name!, objectID: String(describing: sprint.objectID))
+                    
                     
                     for task in tasksSprint{
-                        let insertTask: Task = Task(name: Tasks(rawValue: task.name!)!, memberCount: Int(task.memberCount), time: Time(duration: Int(task.duration), unit: Unit(rawValue: task.durationUnit!)!))
+                        let eventsTask: [EventCore] = task.event?.allObjects as! [EventCore]
+                        let insertTask: Task = Task(name: Tasks(rawValue: task.name!)!)
+                        
+                        for event in eventsTask{
+                            let insertEvent: Event = Event(timeBoxed: Time(duration: Int(event.duration), unit: Unit(rawValue: event.durationUnit!)!), type: event.type!, memberCount: Int(event.memberCount), notes: event.notes!, point: Int(event.point))
+                            insertTask.events.append(insertEvent)
+                        }
                         insertSprint.addTask(task: insertTask)
                     }
                     sprints.append(insertSprint)
@@ -53,7 +60,17 @@ class Project {
         //image is optional
     }
     
-    func getTasks(index: Int) -> [Task] {
-        return self.sprints[index].tasks
+    func getTasks(sprintIndex: Int) -> [Task] {
+        return self.sprints[sprintIndex].tasks
+    }
+    
+    func getEvents(sprintIndex: Int) -> [Event] {
+        var events: [Event] = []
+        for task in sprints[sprintIndex].tasks {
+            for event in task.events{
+                events.append(event)
+            }
+        }
+        return events
     }
 }
