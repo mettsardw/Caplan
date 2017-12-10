@@ -219,6 +219,7 @@ func manageProject(){
         
         print("Event : \(events.count)")
         for event in events {
+            //print(event.objectID)
             print("name: \(String(describing: event.type))")
 //            deleteData(targetContainer: container, object: event)
         }
@@ -258,15 +259,11 @@ func deleteData(targetContainer: NSManagedObjectContext, object: NSManagedObject
     
 }
 
-func getTotalDuration() -> Int {
+func getTotalDuration(sprintIndex: Int) -> Int {
     
     var totalDuration = 0
-    for sprint in project.sprints {
-        for task in sprint.tasks{
-            for event in task.events{
-                totalDuration += event.timeBoxed.duration
-            }
-        }
+    for event in project.getEvents(sprintIndex: sprintIndex){
+        totalDuration += event.timeBoxed.duration
     }
     return totalDuration
 }
@@ -275,4 +272,21 @@ func getContainer() -> NSManagedObjectContext {
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     let container = appDelegate.persistentContainer.viewContext
     return container
+}
+
+func setTask(name: String, event: String, memberCount: Int, notes: String)-> TaskCore{
+    let newTask = NSEntityDescription.insertNewObject(forEntityName: "TaskCore", into: getContainer()) as! TaskCore
+    let newEvent = NSEntityDescription.insertNewObject(forEntityName: "EventCore", into: getContainer()) as! EventCore
+    
+    newTask.setValue(name, forKey: "name")
+    newTask.setValue(1, forKey: "priority")
+    newEvent.setValue(event, forKey: "type")
+    newEvent.setValue(memberCount, forKey: "memberCount")
+    newEvent.setValue(2, forKey: "duration")
+    newEvent.setValue("days", forKey: "durationUnit")
+    newEvent.setValue(notes, forKey: "notes")
+    newEvent.setValue(5, forKey: "point")
+    
+    newTask.addToEvent(newEvent)
+    return newTask
 }

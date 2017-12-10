@@ -11,6 +11,9 @@ import UIKit
 class TaskSprintSetView: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
     
     
+    @IBOutlet weak var noteText: UITextView!
+    @IBOutlet weak var alertSprintSet: UILabel!
+    @IBOutlet weak var alertTeamSet: UILabel!
     @IBOutlet weak var layer: UIView!
     @IBOutlet weak var pickerContainer: UIView!
     @IBOutlet weak var selectSprint: UIButton!
@@ -32,15 +35,41 @@ class TaskSprintSetView: UIViewController, UIPickerViewDataSource, UIPickerViewD
     
     var sourceTask: String?
     var sprintData: [String] = []
+    var sprintID: [String] = []
+    var sourceActivities: String?
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "successView" {
             let destination = segue.destination as! TaskAddedInfoView
             destination.sourceTask = self.sourceTask
+            destination.sourceSprintID = sprintID[sprintPicker.selectedRow(inComponent: 0)]
+            destination.sourceMemberCount = Int(teamSet.text!)
+            destination.sourceEvent = sourceActivities
+            destination.sourceNotes = noteText.text
         }
     }
     
-
+    @IBAction func doneButton(_ sender: UIButton) {
+        
+        if teamSet.text == "" || teamSet.text == "0" || selectSprint.titleLabel?.text == "Select a Sprint"{
+            if teamSet.text == "" || teamSet.text == "0" {
+                alertTeamSet.text = "set your team"
+            }
+            else{
+                alertTeamSet.text = ""
+            }
+            if selectSprint.titleLabel?.text == "Select a Sprint"{
+                alertSprintSet.text = "select a sprint"
+            }else{
+                alertSprintSet.text = ""
+            }
+        }else{
+            performSegue(withIdentifier: "successView", sender: nil)
+            alertTeamSet.text = ""
+            alertSprintSet.text = ""
+        }
+    }
+    
     @IBAction func teamSetStepper(_ sender: UIStepper) {
         teamSet.text = String(format: "%.0f",sender.value)
     }
@@ -61,9 +90,12 @@ class TaskSprintSetView: UIViewController, UIPickerViewDataSource, UIPickerViewD
         super.viewDidLoad()
         sprintPicker.dataSource = self
         sprintPicker.delegate = self
+        alertTeamSet.text = ""
+        alertSprintSet.text = ""
         layer.isHidden = true
         for sprint in project.sprints {
             sprintData.append(sprint.name)
+            sprintID.append(sprint.objectID)
         }
     }
 }

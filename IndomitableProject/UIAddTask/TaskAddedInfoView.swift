@@ -7,9 +7,13 @@
 //
 
 import UIKit
+import CoreData
 
 class TaskAddedInfoView: UIViewController {
-    
+    var sourceSprintID: String?
+    var sourceEvent: String?
+    var sourceNotes: String?
+    var sourceMemberCount: Int?
     var sourceTask: String?
     @IBAction func doneButton(){
         navigationController?.popToRootViewController(animated: true)
@@ -18,26 +22,26 @@ class TaskAddedInfoView: UIViewController {
         if segue.identifier == "addAnotherTask" {
             let destination = segue.destination as! TaskActivitesView
             if sourceTask == "Requirement" {
-                destination.dataActivites.append("Requirement Ghatering")
-                destination.dataActivites.append("Requirement Specification")
-                destination.dataActivites.append("Requirement Validation")
+                destination.dataActivities.append("Requirement Ghatering")
+                destination.dataActivities.append("Requirement Specification")
+                destination.dataActivities.append("Requirement Validation")
             }else if sourceTask == "Design" {
-                destination.dataActivites.append("System Design")
-                destination.dataActivites.append("Program Design")
-                destination.dataActivites.append("Database Design")
+                destination.dataActivities.append("System Design")
+                destination.dataActivities.append("Program Design")
+                destination.dataActivities.append("Database Design")
             }
             else if sourceTask == "Coding" {
-                destination.dataActivites.append("Core System")
-                destination.dataActivites.append("Additional Feature")
-                destination.dataActivites.append("Database System")
+                destination.dataActivities.append("Core System")
+                destination.dataActivities.append("Additional Feature")
+                destination.dataActivities.append("Database System")
             }
             else if sourceTask == "Testing" {
-                destination.dataActivites.append("Unit Testing")
-                destination.dataActivites.append("Integration Testing")
-                destination.dataActivites.append("System Testing")
+                destination.dataActivities.append("Unit Testing")
+                destination.dataActivities.append("Integration Testing")
+                destination.dataActivities.append("System Testing")
             }else{
-                destination.dataActivites.append("yooman")
-                destination.dataActivites.append("yooman")
+                destination.dataActivities.append("yooman")
+                destination.dataActivities.append("yooman")
                 
             }
 
@@ -46,5 +50,21 @@ class TaskAddedInfoView: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let container = getContainer()
+        let projectFetch = NSFetchRequest<NSManagedObject>(entityName: "ProjectCore")
+        do {
+            let projects: [ProjectCore] = try container.fetch(projectFetch) as! [ProjectCore]
+            let projectSprints: [SprintCore] = projects[0].sprintCore?.allObjects as! [SprintCore]
+            for sprint in projectSprints {
+                let sprintID = String(describing: sprint.objectID)
+                if sprintID == sourceSprintID {
+                    sprint.addToTasks(setTask(name: sourceTask!, event: sourceEvent!, memberCount: sourceMemberCount!, notes: sourceNotes!))
+                    saveData(targetContainer: container)
+                    project = Project()
+                }
+            }
+        } catch _ as NSError {
+            print("error")
+        }
     }
 }

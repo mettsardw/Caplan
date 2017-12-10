@@ -156,6 +156,8 @@ class TaskTableViewController: UIViewController, UITableViewDataSource, UITableV
         self.navigationController?.navigationBar.tintColor = #colorLiteral(red: 0.3120126724, green: 0.8384783864, blue: 0.09061203152, alpha: 1)
     }
     
+    
+    
    func updateSearchResults(for searchController: UISearchController) {
         filteredDesc = tempDesc.filter({ (array:String) -> Bool in
             if array.containsIgnoringCase(find: searchController.searchBar.text!){
@@ -226,6 +228,8 @@ class TaskTableViewController: UIViewController, UITableViewDataSource, UITableV
         return cell
     }
     
+    
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         let b = tableView.cellForRow(at: indexPath) as! TaskTableViewCell
@@ -263,6 +267,7 @@ class TaskTableViewController: UIViewController, UITableViewDataSource, UITableV
         return tempNote[tempDesc.index(of: string)!]
     }
 }
+
 
 extension String {
     func containsIgnoringCase(find: String) -> Bool{

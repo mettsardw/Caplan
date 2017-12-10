@@ -22,7 +22,6 @@ struct RequirementTasks {
         //get data
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let container = appDelegate.persistentContainer.viewContext
-        
         let projectFetch = NSFetchRequest<NSManagedObject>(entityName: "ProjectCore")
         do{
             let projects: [ProjectCore] = try container.fetch(projectFetch) as! [ProjectCore]
