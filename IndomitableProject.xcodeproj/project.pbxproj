@@ -67,10 +67,10 @@
 		96CD07771FCD64E700C0D563 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CD07761FCD64E700C0D563 /* Event.swift */; };
 		96CD07791FCDA30D00C0D563 /* TaskPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CD07781FCDA30D00C0D563 /* TaskPickerView.swift */; };
 		96CD079B1FCE89F700C0D563 /* TaskActivitiesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CD079A1FCE89F700C0D563 /* TaskActivitiesView.swift */; };
-		CE470D391FD98DF80000036B /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE470D381FD98DF70000036B /* Notification.swift */; };
 		CE8ED6521FD64ACA00D4D446 /* CodingTasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8ED6511FD64ACA00D4D446 /* CodingTasks.swift */; };
 		CE8ED6541FD64ADC00D4D446 /* RequirementTasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8ED6531FD64ADC00D4D446 /* RequirementTasks.swift */; };
 		CE8ED6561FD64AF100D4D446 /* TestingTasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8ED6551FD64AF100D4D446 /* TestingTasks.swift */; };
+		CEA472F01FDD5BA200659ADD /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA472EF1FDD5BA200659ADD /* Notification.swift */; };
 		CEAC67F81FCFAA7B00AB0212 /* TaskTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAC67F71FCFAA7B00AB0212 /* TaskTableViewController.swift */; };
 		CEAC67FA1FCFAAB600AB0212 /* TaskTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAC67F91FCFAAB600AB0212 /* TaskTableViewCell.swift */; };
 		CEE1AEDF1FD5913500A83A06 /* DesignTasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE1AEDE1FD5913500A83A06 /* DesignTasks.swift */; };
@@ -140,10 +140,10 @@
 		96CD07761FCD64E700C0D563 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		96CD07781FCDA30D00C0D563 /* TaskPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskPickerView.swift; sourceTree = "<group>"; };
 		96CD079A1FCE89F700C0D563 /* TaskActivitiesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskActivitiesView.swift; sourceTree = "<group>"; };
-		CE470D381FD98DF70000036B /* Notification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
 		CE8ED6511FD64ACA00D4D446 /* CodingTasks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodingTasks.swift; sourceTree = "<group>"; };
 		CE8ED6531FD64ADC00D4D446 /* RequirementTasks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequirementTasks.swift; sourceTree = "<group>"; };
 		CE8ED6551FD64AF100D4D446 /* TestingTasks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingTasks.swift; sourceTree = "<group>"; };
+		CEA472EF1FDD5BA200659ADD /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
 		CEAC67F71FCFAA7B00AB0212 /* TaskTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTableViewController.swift; sourceTree = "<group>"; };
 		CEAC67F91FCFAAB600AB0212 /* TaskTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTableViewCell.swift; sourceTree = "<group>"; };
 		CEE1AEDE1FD5913500A83A06 /* DesignTasks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignTasks.swift; sourceTree = "<group>"; };
@@ -237,7 +237,6 @@
 		92959A0A1FC6CDB0005B331F /* IndomitableProject */ = {
 			isa = PBXGroup;
 			children = (
-				CE470D381FD98DF70000036B /* Notification.swift */,
 				961198141FD70E6700678BF2 /* CoreDataClass+Properties */,
 				929682AD1FCFAF4500BBF591 /* coreDataCaplan.xcdatamodeld */,
 				92959A0B1FC6CDB0005B331F /* AppDelegate.swift */,
@@ -268,6 +267,7 @@
 				92C4BACC1FCFBB0400B7C2DB /* UIAddTask */,
 				220838D21FCD0454003CD62A /* UITimeline */,
 				220838C71FCC63D7003CD62A /* InitialTabController.swift */,
+				CEA472EF1FDD5BA200659ADD /* Notification.swift */,
 			);
 			path = IndomitableProject;
 			sourceTree = "<group>";
@@ -314,14 +314,6 @@
 				92CDA1EE1FDA5E14006C02F8 /* DetailTaskViewController.swift */,
 			);
 			name = UIAllTasks;
-			sourceTree = "<group>";
-		};
-		CEBFB2451FDA872200A2514E /* Recovered References */ = {
-			isa = PBXGroup;
-			children = (
-				961197FE1FD6A26F00678BF2 /* SWRevealViewController.m */,
-			);
-			name = "Recovered References";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -428,6 +420,7 @@
 				CE8ED6521FD64ACA00D4D446 /* CodingTasks.swift in Sources */,
 				CE8ED6561FD64AF100D4D446 /* TestingTasks.swift in Sources */,
 				220839141FCDD2CB003CD62A /* PlanLine.swift in Sources */,
+				CEA472F01FDD5BA200659ADD /* Notification.swift in Sources */,
 				220838C41FCC60DF003CD62A /* Project.swift in Sources */,
 				92CDA1EF1FDA5E14006C02F8 /* DetailTaskViewController.swift in Sources */,
 				47F44DBA1FD7A5A00049F4B7 /* TipsViewController.swift in Sources */,
@@ -450,7 +443,6 @@
 				96CD079B1FCE89F700C0D563 /* TaskActivitiesView.swift in Sources */,
 				CEE1AEDF1FD5913500A83A06 /* DesignTasks.swift in Sources */,
 				CEAC67F81FCFAA7B00AB0212 /* TaskTableViewController.swift in Sources */,
-				CE470D391FD98DF80000036B /* Notification.swift in Sources */,
 				220838B81FCC2629003CD62A /* TaskBundle.swift in Sources */,
 				220838C21FCC608E003CD62A /* User.swift in Sources */,
 				22FB98E11FCFC18E000DD7F2 /* ProjectTableViewController.swift in Sources */,

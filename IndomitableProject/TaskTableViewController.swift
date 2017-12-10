@@ -13,7 +13,8 @@ class TaskTableViewController: UIViewController, UITableViewDataSource, UITableV
     
     @IBOutlet weak var taskTable: UITableView!
 
-    //let section: [String] = ["Requirement", "Design", "Coding", "Testing"]
+    //let notification = Notification()
+    
     var section: [String] = []
     var data: [[Any]] = []
     
@@ -31,9 +32,27 @@ class TaskTableViewController: UIViewController, UITableViewDataSource, UITableV
     var tempMemberCountForSend: String = ""
     var tempNoteForSend: String = ""
     
+    override func viewWillAppear(_ animated: Bool) {
+        data.removeAll()
+        tempDay.removeAll()
+        tempNote.removeAll()
+        tempDesc.removeAll()
+        tempMemberCount.removeAll()
+        filteredDesc.removeAll()
+        filteredDay.removeAll()
+        tempDescForSend = ""
+        tempDayForSend = ""
+        tempMemberCountForSend = ""
+        tempNoteForSend = ""
+        self.viewDidLoad()
+        taskTable.reloadData()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        //notification.viewDidLoad()
+        
         data.append(RequirementTasks.fetchData())
         data.append(DesignTasks.fetchData())
         data.append(CodingTasks.fetchData())
@@ -50,8 +69,6 @@ class TaskTableViewController: UIViewController, UITableViewDataSource, UITableV
         for i in (0..<indData.count).reversed(){
            data.remove(at: indData[i])
         }
-        
-        print("\(data), \(data.count)")
         
         taskTable.dataSource = self
         taskTable.delegate = self

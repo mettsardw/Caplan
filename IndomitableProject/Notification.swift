@@ -2,47 +2,31 @@
 //  Notification.swift
 //  IndomitableProject
 //
-//  Created by Martinus on 06/12/17.
+//  Created by Martinus on 10/12/17.
 //  Copyright © 2017 RagingWind. All rights reserved.
 //
 
-import UIKit
 import UserNotifications
+import UIKit
 
 class Notification: UIViewController{
+    
     override func viewDidLoad() {
-        super.viewDidLoad()
-        //ini yang munculin notif gk pake tombol. auto
-        
         let content = UNMutableNotificationContent()
-        content.title = "Hello World"
-        content.subtitle = "Hello World, How are you?"
-        content.body = "Hello World, what shold i do today?"
-        content.badge = 1
+        content.title = NSString.localizedUserNotificationString(forKey: "Wake up!", arguments: nil)
+        content.body = NSString.localizedUserNotificationString(forKey: "Rise and shine! It's morning time!",
+                                                                arguments: nil)
         
-        var dateComponent = DateComponents()
-        dateComponent.day = 7
-        dateComponent.hour = 14
-        dateComponent.minute = 46
+        // Configure the trigger for a 7am wakeup.
+        var dateInfo = DateComponents()
+        dateInfo.hour = 20
+        dateInfo.minute = 24
+        let trigger = UNCalendarNotificationTrigger(dateMatching: dateInfo, repeats: false)
         
-        let notificationTrigger = UNCalendarNotificationTrigger(dateMatching: dateComponent, repeats: true)
-        let request = UNNotificationRequest(identifier: "notification1", content: content, trigger: notificationTrigger)
-        
-        UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
-        
-        
-        UNUserNotificationCenter.current().requestAuthorization(options:  [.alert, .sound, .badge], completionHandler:{didAllow, error in})
+        // Create the request object.
+        let request = UNNotificationRequest(identifier: "MorningAlarm", content: content, trigger: trigger)
+        let center = UNUserNotificationCenter.current()
+        center.add(request) { (error : Error?) in }
     }
     
-    func getDay(){
-        
-    }
-    
-    func getHour(){
-        
-    }
-    
-    func getMinute(){
-        
-    }
 }
