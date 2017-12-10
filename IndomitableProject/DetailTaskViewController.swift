@@ -24,8 +24,8 @@ class DetailTaskViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         taskNameLabel?.text = taskName
-        dayLeftLabel?.text = "\(dayLeftText!) days left"
-        peopleWorkingLabel?.text = "\(peopleWorkingText!) Peoples"
+        dayLeftLabel?.text = "\(dayLeftText!) \ndays left"
+        peopleWorkingLabel?.text = "\(peopleWorkingText!) Person(s)"
         notesLabel?.text = notesText
         var date = Date()
         let calendar = Calendar.current
