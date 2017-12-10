@@ -58,7 +58,7 @@ class TaskSprintSetView: UIViewController, UIPickerViewDataSource, UIPickerViewD
             else{
                 alertTeamSet.text = ""
             }
-            if selectSprint.titleLabel?.text == "Select a Sprint"{
+            if selectSprint.titleLabel?.text == "Select a Sprint..."{
                 alertSprintSet.text = "select a sprint"
             }else{
                 alertSprintSet.text = ""
