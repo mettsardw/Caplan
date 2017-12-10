@@ -10,6 +10,7 @@ import UIKit
 import CoreData
 
 struct RequirementTasks {
+    var task: String
     var day: String
     var event: String
     var memberCount: String
@@ -30,10 +31,11 @@ struct RequirementTasks {
             for sprint in projectSprints {
                 let sprintTask: [TaskCore] = sprint.tasks?.allObjects as! [TaskCore]
                 for task in sprintTask{
+                    let tempTask = task.name
                     let taskEvent: [EventCore] = task.event?.allObjects as! [EventCore]
                     if task.name == "Requirement"{
                         for index in 0..<taskEvent.count{
-                            requirementTasks.append(RequirementTasks(day: String(describing: taskEvent[index].duration), event:   taskEvent[index].type!, memberCount: String(taskEvent[index].memberCount), note: taskEvent[index].notes!))
+                            requirementTasks.append(RequirementTasks(task: tempTask!, day: String(describing: taskEvent[index].duration), event:   taskEvent[index].type!, memberCount: String(taskEvent[index].memberCount), note: taskEvent[index].notes!))
                         }
                     }
                 }
