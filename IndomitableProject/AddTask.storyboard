@@ -284,9 +284,9 @@
                             <constraint firstItem="Fub-S8-VaR" firstAttribute="top" secondItem="jDu-ZA-jka" secondAttribute="bottom" constant="49" id="9yd-zh-uMf"/>
                             <constraint firstItem="jDu-ZA-jka" firstAttribute="leading" secondItem="WCZ-Vc-tKj" secondAttribute="leadingMargin" constant="-17" id="C0y-71-t0p"/>
                             <constraint firstItem="MgK-tZ-ZHb" firstAttribute="bottom" secondItem="NuH-Oh-xMt" secondAttribute="bottom" id="MKK-gb-Drn"/>
-                            <constraint firstItem="Fub-S8-VaR" firstAttribute="centerX" secondItem="WCZ-Vc-tKj" secondAttribute="centerX" id="NLs-07-mii"/>
                             <constraint firstItem="Fub-S8-VaR" firstAttribute="centerX" secondItem="QeX-UV-Ndw" secondAttribute="centerX" id="RQs-5I-vPA"/>
                             <constraint firstItem="MgK-tZ-ZHb" firstAttribute="leading" secondItem="QeX-UV-Ndw" secondAttribute="leading" id="bor-4B-DGu"/>
+                            <constraint firstAttribute="trailing" secondItem="MgK-tZ-ZHb" secondAttribute="trailing" id="fx1-f2-1Hd"/>
                             <constraint firstAttribute="bottom" secondItem="jDu-ZA-jka" secondAttribute="bottom" constant="160" id="gtf-CD-d0W"/>
                             <constraint firstItem="MgK-tZ-ZHb" firstAttribute="top" secondItem="WCZ-Vc-tKj" secondAttribute="top" id="gxY-KN-fqf"/>
                             <constraint firstAttribute="bottom" secondItem="QeX-UV-Ndw" secondAttribute="bottom" constant="-125" id="l9L-G5-DBJ"/>
@@ -338,7 +338,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WL6-If-suh">
-                                <rect key="frame" x="158" y="563" width="58" height="32"/>
+                                <rect key="frame" x="158" y="556" width="58" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                 <state key="normal" title="Done">
@@ -364,6 +364,7 @@
         <image name="icon-plane" width="50" height="50"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="DKs-0X-h2p"/>
+        <segue reference="XQQ-EP-gyA"/>
+        <segue reference="t5q-dY-TH7"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -14,6 +14,11 @@ class PlanTableViewController: UITableViewController {
     
     var sprintLabel: [String] = [] // append on making new sprint
     var customLabel: [String] = ["","",""]
+    override func viewWillAppear(_ animated: Bool) {
+        sprintLabel.removeAll()
+        self.viewDidLoad()
+        tableView.reloadData()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,7 +41,7 @@ class PlanTableViewController: UITableViewController {
         let cell = planTableView.dequeueReusableCell(withIdentifier: "planCell", for: indexPath) as! PlanTableViewCell
         // Configure the cell...
 //        let cellData = plans[indexPath.row]
-        
+
         if indexPath.row == 0 {
             cell.upline.isHidden = true
         }

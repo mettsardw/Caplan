@@ -54,6 +54,17 @@ class AddSprintViewController: UIViewController, UIPickerViewDataSource, UIPicke
         if durationText.text == "" || durationText.text == "0" || selectedUnit.titleLabel?.text == "Select unit" || nameText.text == "" {
             
         }else{
+            let container = getContainer()
+            let projectFetch = NSFetchRequest<NSManagedObject>(entityName: "ProjectCore")
+            do {
+                let projects: [ProjectCore] = try container.fetch(projectFetch) as! [ProjectCore]
+                projects[0].addToSprintCore(setSprint(name: nameText.text!, duration: Int(durationText.text!)!, unit: (selectedUnit.titleLabel?.text)!))
+                saveData(targetContainer: container)
+            } catch _ as NSError {
+                print("error")
+            }
+            
+            project = Project()
             navigationController?.popToRootViewController(animated: true)
         }
     }
