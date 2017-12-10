@@ -31,6 +31,24 @@ class TaskTableViewController: UIViewController, UITableViewDataSource, UITableV
     var tempMemberCountForSend: String = ""
     var tempNoteForSend: String = ""
     
+    override func viewWillAppear(_ animated: Bool) {
+        section.removeAll()
+        data.removeAll()
+        tempMemberCount.removeAll()
+        tempNote.removeAll()
+        tempDesc.removeAll()
+        tempDay.removeAll()
+        filteredDesc.removeAll()
+        filteredDay.removeAll()
+        
+        tempDescForSend = ""
+        tempDayForSend = ""
+        tempMemberCountForSend = ""
+        tempNoteForSend = ""
+        self.viewDidLoad()
+        taskTable.reloadData()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

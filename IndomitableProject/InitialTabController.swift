@@ -208,7 +208,7 @@ func manageProject(){
         for task in tasks {
             print("name: \(String(describing: task.name))")
             
-            //deleteData(targetContainer: container, object: task)
+           // deleteData(targetContainer: container, object: task)
         }
 //        sprintTasks[0].addToEvent(newEvent)
 //        sprintTasks[0].addToEvent(newEvent1)
@@ -221,7 +221,7 @@ func manageProject(){
         for event in events {
             //print(event.objectID)
             print("name: \(String(describing: event.type))")
-//            deleteData(targetContainer: container, object: event)
+           // deleteData(targetContainer: container, object: event)
         }
         
     }catch _ as NSError {
