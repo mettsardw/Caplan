@@ -198,7 +198,11 @@ func manageProject(){
 
         
         //////////////////////////////////////// TASK SPRINT /////////////////////////////////////////////
+<<<<<<< Updated upstream
 //        let sprintTasks: [TaskCore] = projectSprints[1].tasks?.allObjects as! [TaskCore]
+=======
+        let sprintTasks: [TaskCore] = projectSprints[0].tasks?.allObjects as! [TaskCore]
+>>>>>>> Stashed changes
         let tasks: [TaskCore] = try container.fetch(taskFetch) as! [TaskCore]
         
         //sprintTasks[0].addToEvent(newEvent2)
