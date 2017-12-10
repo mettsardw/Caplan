@@ -44,7 +44,7 @@ func manageProject(){
 //        let newEvent1 = NSEntityDescription.insertNewObject(forEntityName: "EventCore", into: container) as! EventCore
 //        let newEvent2 = NSEntityDescription.insertNewObject(forEntityName: "EventCore", into: container) as! EventCore
 //
-//
+////
 //            newProject.setValue("MyProject", forKey: "name")
 //            newProject.setValue(30, forKey: "duration")
 //            newProject.setValue("days", forKey: "durationUnit")
@@ -141,7 +141,7 @@ func manageProject(){
     //    newTask.addToEvent(newEvent1)
 //        newTask2.addToEvent(newEvent2)
 //        newProject.addToSprintCore(newSprint)
-    //    newSprint.addToTasks(newTask)
+//        newSprint.addToTasks(newTask)
     //
     
 //        newProject.addToSprintCore(newSprint)
@@ -298,6 +298,23 @@ func setTask(name: String, event: String, memberCount: Int, notes: String)-> Tas
     newEvent.setValue(event, forKey: "type")
     newEvent.setValue(memberCount, forKey: "memberCount")
     newEvent.setValue(2, forKey: "duration")
+    newEvent.setValue("days", forKey: "durationUnit")
+    newEvent.setValue(notes, forKey: "notes")
+    newEvent.setValue(5, forKey: "point")
+    
+    newTask.addToEvent(newEvent)
+    return newTask
+}
+
+func setTask(name: String, event: String, memberCount: Int, notes: String, duration: Int)-> TaskCore{
+    let newTask = NSEntityDescription.insertNewObject(forEntityName: "TaskCore", into: getContainer()) as! TaskCore
+    let newEvent = NSEntityDescription.insertNewObject(forEntityName: "EventCore", into: getContainer()) as! EventCore
+    
+    newTask.setValue(name, forKey: "name")
+    newTask.setValue(1, forKey: "priority")
+    newEvent.setValue(event, forKey: "type")
+    newEvent.setValue(memberCount, forKey: "memberCount")
+    newEvent.setValue(duration, forKey: "duration")
     newEvent.setValue("days", forKey: "durationUnit")
     newEvent.setValue(notes, forKey: "notes")
     newEvent.setValue(5, forKey: "point")

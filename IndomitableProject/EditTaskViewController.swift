@@ -39,7 +39,6 @@ class EditTaskViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     }
     
     @IBAction func taskFieldTap(_ sender: Any) {
-        self.view.endEditing(true)
         layer.isHidden = false
         UIView.animate(withDuration: 0.3) {
             self.pickerTime.frame = CGRect(x: 0, y: UIScreen.main.bounds.height - self.pickerTime.bounds.height - (self.tabBarController?.tabBar.frame.height)!, width: self.pickerTime.bounds.width, height: self.pickerTime
@@ -100,7 +99,13 @@ class EditTaskViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         personWorkingField.text = peopleText
         notesField.text = notesText
         
-        
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(AddSprintViewController.dissmissKeyboard))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
+    
+    func dissmissKeyboard(){
+        view.endEditing(true)
     }
     
 }

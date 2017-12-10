@@ -11,6 +11,7 @@ import CoreData
 
 class PlanTableViewController: UITableViewController {
     @IBOutlet weak var planTableView: UITableView!
+
     
     var sprintLabel: [String] = [] // append on making new sprint
     var customLabel: [String] = ["","",""]
@@ -20,9 +21,27 @@ class PlanTableViewController: UITableViewController {
         tableView.reloadData()
     }
     
+    @IBAction func deleteSprintBtn(_ sender: UIBarButtonItem) {
+        let container = getContainer()
+        let projectFetch = NSFetchRequest<NSManagedObject>(entityName: "ProjectCore")
+        do {
+            let projects: [ProjectCore] = try container.fetch(projectFetch) as! [ProjectCore]
+            let projectSprints: [SprintCore] = projects[0].sprintCore?.allObjects as! [SprintCore
+            ]
+            projects[0].removeFromSprintCore(at: projectSprints.count - 1)
+            saveData(targetContainer: container)
+            project = Project()
+        } catch _ as NSError {
+            print("error")
+        }
+        sprintLabel.removeAll()
+        self.viewDidLoad()
+        tableView.reloadData()
+
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.navigationController?.navigationBar.tintColor = #colorLiteral(red: 0.3120126724, green: 0.8384783864, blue: 0.09061203152, alpha: 1)
             for sprint in project.sprints {
                 sprintLabel.append(sprint.name)
             }

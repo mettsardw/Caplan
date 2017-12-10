@@ -185,6 +185,12 @@
                     <tabBarItem key="tabBarItem" title="Plan" image="icon-plans" id="TNX-VT-6yd"/>
                     <navigationItem key="navigationItem" id="JBj-mJ-C2S">
                         <barButtonItem key="backBarButtonItem" title=" " id="FQU-bW-TKo"/>
+                        <barButtonItem key="leftBarButtonItem" title="Delete" id="4gb-Mu-abt">
+                            <color key="tintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="deleteSprintBtn:" destination="uJg-tO-sof" id="8bq-le-RvO"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="+" image="icon-add" id="Uhz-X5-ZYI">
                             <connections>
                                 <segue destination="g1r-S5-bYs" kind="show" id="CC1-Wt-6dl"/>

@@ -66,7 +66,11 @@ class DetailTaskViewController: UIViewController {
         navigationController?.popToRootViewController(animated: true)
     }
     @IBAction func seeTipsDidTap() {
-        
+        let popOverVC = UIStoryboard(name: "Tips", bundle: nil).instantiateViewController(withIdentifier: "a") as! TipsViewController
+        self.addChildViewController(popOverVC)
+        popOverVC.view.frame = self.view.frame
+        self.view.addSubview(popOverVC.view)
+        popOverVC.didMove(toParentViewController:  self)
     }
     
     @IBAction func changeTask() {

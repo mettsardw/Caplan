@@ -88,5 +88,13 @@ class AddSprintViewController: UIViewController, UIPickerViewDataSource, UIPicke
         layer.isHidden = true
         alertName.text = ""
         alertDuration.text = ""
+        
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(AddSprintViewController.dissmissKeyboard))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
+    
+    func dissmissKeyboard(){
+        view.endEditing(true)
     }
 }
