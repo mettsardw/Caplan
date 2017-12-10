@@ -39,7 +39,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="DOmlkBBX4AEWBLN" translatesAutoresizingMaskIntoConstraints="NO" id="9fy-zw-Xbk">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icon-image" translatesAutoresizingMaskIntoConstraints="NO" id="9fy-zw-Xbk">
                                         <rect key="frame" x="137" y="21" width="100" height="100"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
@@ -458,7 +458,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="DOmlkBBX4AEWBLN" width="800" height="1200"/>
+        <image name="icon-image" width="96" height="96"/>
         <image name="icon-project" width="24" height="24"/>
         <image name="icons8-back-50" width="50" height="50"/>
         <image name="pc" width="32" height="32"/>
