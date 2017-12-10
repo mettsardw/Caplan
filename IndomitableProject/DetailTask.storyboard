@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -101,7 +100,10 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lFU-kv-uMN">
-                                <rect key="frame" x="16" y="534" width="144" height="33"/>
+                                <rect key="frame" x="27" y="524" width="144" height="33"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="144" id="ZXG-Gd-naH"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <state key="normal" title="see tips...">
                                     <color key="titleColor" red="0.46666666670000001" green="0.82745098039999998" blue="0.2666666667" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -119,21 +121,35 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eKm-Cd-4he">
+                                <rect key="frame" x="241" y="521" width="84" height="37"/>
+                                <color key="backgroundColor" red="0.91921168565750122" green="0.36073401485954648" blue="0.23278008435577463" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <state key="normal" title="Delete">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="deleteDidTap:" destination="Eu0-oS-Eaj" eventType="touchUpInside" id="9s5-ed-e4y"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="lFU-kv-uMN" firstAttribute="top" secondItem="jHg-Oa-AQh" secondAttribute="bottom" constant="39" id="9JS-tR-HY5"/>
                             <constraint firstItem="s6f-Wk-vX5" firstAttribute="top" secondItem="4Os-AK-V9Y" secondAttribute="top" constant="80" id="9ta-Jk-lTf"/>
                             <constraint firstItem="jHg-Oa-AQh" firstAttribute="leading" secondItem="s6f-Wk-vX5" secondAttribute="leading" id="AS7-CS-xGS"/>
                             <constraint firstItem="giB-qM-QtX" firstAttribute="top" secondItem="4Os-AK-V9Y" secondAttribute="top" constant="63" id="DaF-mE-cwK"/>
                             <constraint firstItem="jHg-Oa-AQh" firstAttribute="centerY" secondItem="tvX-T3-cdV" secondAttribute="centerY" id="E07-4Z-WPq"/>
                             <constraint firstItem="jHg-Oa-AQh" firstAttribute="trailing" secondItem="4Os-AK-V9Y" secondAttribute="trailing" id="EL7-zQ-8dh"/>
                             <constraint firstItem="jHg-Oa-AQh" firstAttribute="top" secondItem="giB-qM-QtX" secondAttribute="bottom" id="IDX-6d-2Kw"/>
+                            <constraint firstItem="4Os-AK-V9Y" firstAttribute="trailing" secondItem="eKm-Cd-4he" secondAttribute="trailing" constant="50" id="WMm-G7-Ite"/>
                             <constraint firstItem="giB-qM-QtX" firstAttribute="leading" secondItem="4Os-AK-V9Y" secondAttribute="leading" constant="98" id="aqo-Gc-kbB"/>
-                            <constraint firstItem="lFU-kv-uMN" firstAttribute="leading" secondItem="tvX-T3-cdV" secondAttribute="leadingMargin" id="h4Q-gR-yz1"/>
+                            <constraint firstItem="eKm-Cd-4he" firstAttribute="leading" secondItem="lFU-kv-uMN" secondAttribute="trailing" constant="70" id="iC8-dc-SwV"/>
+                            <constraint firstItem="eKm-Cd-4he" firstAttribute="top" secondItem="jHg-Oa-AQh" secondAttribute="bottom" constant="36" id="iRE-ku-81d"/>
                             <constraint firstItem="giB-qM-QtX" firstAttribute="centerX" secondItem="s6f-Wk-vX5" secondAttribute="centerX" id="kyX-fn-02I"/>
-                            <constraint firstItem="4Os-AK-V9Y" firstAttribute="bottom" secondItem="lFU-kv-uMN" secondAttribute="bottom" constant="100" id="m0B-As-1FE"/>
+                            <constraint firstItem="4Os-AK-V9Y" firstAttribute="bottom" secondItem="eKm-Cd-4he" secondAttribute="bottom" constant="109" id="lw1-ji-Hkt"/>
                             <constraint firstItem="jHg-Oa-AQh" firstAttribute="leading" secondItem="4Os-AK-V9Y" secondAttribute="leading" id="noN-PY-qIl"/>
-                            <constraint firstItem="4Os-AK-V9Y" firstAttribute="trailing" secondItem="lFU-kv-uMN" secondAttribute="trailing" constant="215" id="vqR-mw-Cju"/>
+                            <constraint firstItem="lFU-kv-uMN" firstAttribute="leading" secondItem="4Os-AK-V9Y" secondAttribute="leading" constant="27" id="otN-e2-cXk"/>
                             <constraint firstItem="jHg-Oa-AQh" firstAttribute="top" secondItem="s6f-Wk-vX5" secondAttribute="bottom" constant="3" id="xLY-ML-nFv"/>
                             <constraint firstItem="jHg-Oa-AQh" firstAttribute="trailing" secondItem="s6f-Wk-vX5" secondAttribute="trailing" id="xdU-lY-1Mh"/>
                         </constraints>
@@ -145,6 +161,7 @@
                     <connections>
                         <outlet property="dayLeftLabel" destination="YT5-Zz-oN9" id="6sB-hy-kzf"/>
                         <outlet property="deadlineLabel" destination="jjt-5g-Hfd" id="Z0W-Q5-jfV"/>
+                        <outlet property="deleteBtn" destination="eKm-Cd-4he" id="sNa-SJ-QaX"/>
                         <outlet property="notesLabel" destination="kbJ-h5-kS9" id="w07-Rl-hZ4"/>
                         <outlet property="peopleWorkingLabel" destination="reT-Ws-5nd" id="Mcf-hd-yiq"/>
                         <outlet property="taskNameLabel" destination="giB-qM-QtX" id="zIR-5H-VhA"/>
@@ -199,7 +216,7 @@
                                 <rect key="frame" x="111" y="272" width="240" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>

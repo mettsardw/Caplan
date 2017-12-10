@@ -13,6 +13,8 @@ class EditTaskViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     @IBOutlet weak var layer: UIView!
     @IBOutlet weak var taskNameField: UITextField!
     @IBOutlet weak var personWorkingField: UITextField!
+    @IBAction func deleteButton(_ sender: UIButton) {
+    }
     @IBOutlet weak var notesField: UITextView!
     @IBOutlet weak var pickerTime: UIView!
     @IBOutlet weak var timePicker: UIPickerView!

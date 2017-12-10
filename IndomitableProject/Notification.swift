@@ -19,8 +19,8 @@ class Notification: UIViewController{
         
         // Configure the trigger for a 7am wakeup.
         var dateInfo = DateComponents()
-        dateInfo.hour = 20
-        dateInfo.minute = 24
+        dateInfo.hour = 21
+        dateInfo.minute = 27
         let trigger = UNCalendarNotificationTrigger(dateMatching: dateInfo, repeats: false)
         
         // Create the request object.
