@@ -93,6 +93,9 @@ class TaskSprintSetView: UIViewController, UIPickerViewDataSource, UIPickerViewD
         alertTeamSet.text = ""
         alertSprintSet.text = ""
         layer.isHidden = true
+        noteText.layer.borderWidth = 1
+        noteText.layer.cornerRadius = 10
+        noteText.layer.borderColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
         for sprint in project.sprints {
             sprintData.append(sprint.name)
             sprintID.append(sprint.objectID)
