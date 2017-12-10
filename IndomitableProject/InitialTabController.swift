@@ -44,7 +44,7 @@ func manageProject(){
     
 //        let newEvent = NSEntityDescription.insertNewObject(forEntityName: "EventCore", into: container) as! EventCore
 //        let newEvent1 = NSEntityDescription.insertNewObject(forEntityName: "EventCore", into: container) as! EventCore
-    //    let newEvent2 = NSEntityDescription.insertNewObject(forEntityName: "EventCore", into: container) as! EventCore
+//        let newEvent2 = NSEntityDescription.insertNewObject(forEntityName: "EventCore", into: container) as! EventCore
 //
 //
 //            newProject.setValue("MyProject", forKey: "name")
@@ -65,13 +65,12 @@ func manageProject(){
 //          newSprint.setValue("days", forKey: "durationUnit")
 //////
 //    ///// ---- TASK ----//
-//        newTask.setValue("Coding", forKey: "name")
+//        newTask.setValue("Requirement", forKey: "name")
 //        newTask.setValue(1, forKey: "priority")
-////
+//////
 ////
     //---------------------------------------------//
 //        newTask2.setValue("Design", forKey: "name")
-//        newTask2.setValue(50, forKey: "point")
 //        newTask2.setValue(1, forKey: "priority")
 //
     
@@ -97,26 +96,28 @@ func manageProject(){
 //
 //
     //set Event
-//        newEvent.setValue("Core System", forKey: "type")
+//        newEvent.setValue("Requirement Gathering", forKey: "type")
 //        newEvent.setValue(3, forKey: "memberCount")
 //        newEvent.setValue(2, forKey: "duration")
 //        newEvent.setValue("days", forKey: "durationUnit")
-//        newEvent.setValue("ini core system", forKey: "notes")
+//        newEvent.setValue("ini req gather", forKey: "notes")
 //        newEvent.setValue(5, forKey: "point")
 //
-//        newEvent1.setValue("Additional Features", forKey: "type")
+//        newEvent1.setValue("Requirement Specification", forKey: "type")
 //        newEvent1.setValue(7, forKey: "memberCount")
 //        newEvent1.setValue(1, forKey: "duration")
 //        newEvent1.setValue("days", forKey: "durationUnit")
-//        newEvent1.setValue("ini additional feature", forKey: "notes")
+//        newEvent1.setValue("ini req spec", forKey: "notes")
 //        newEvent1.setValue(5, forKey: "point")
-    
+//
 //
 //
 //        newEvent2.setValue("Database Design", forKey: "type")
 //        newEvent2.setValue(2, forKey: "memberCount")
 //        newEvent2.setValue(4, forKey: "duration")
 //        newEvent2.setValue("days", forKey: "durationUnit")//
+//        newEvent2.setValue("ini note", forKey: "notes")
+//        newEvent2.setValue(6, forKey: "point")
 
 //        newTask.addToEvent(newEvent)
 //        newTask.addToEvent(newEvent2)
@@ -140,7 +141,7 @@ func manageProject(){
 //        newTask.addToEvent(newEvent)
 //        newTask.addToEvent(newEvent1)
     //    newTask.addToEvent(newEvent1)
-   //     newTask2.addToEvent(newEvent2)
+//        newTask2.addToEvent(newEvent2)
 //        newProject.addToSprintCore(newSprint)
     //    newSprint.addToTasks(newTask)
     //
@@ -183,8 +184,8 @@ func manageProject(){
 //        saveData(targetContainer: container)
         
         ////////////////////////////////////// SPRINT PROJECT ///////////////////////////////////////////
-        let projectSprints: [SprintCore] = projects[0].sprintCore?.allObjects as![SprintCore]
-        //projectSprints[1].addToTasks(newTask)
+       let projectSprints: [SprintCore] = projects[0].sprintCore?.allObjects as![SprintCore]
+//        projectSprints[0].addToTasks(newTask)
         //saveData(targetContainer: container)
         let sprints: [SprintCore] = try container.fetch(sprintFecth) as! [SprintCore]
         print("Sprint: \(sprints.count)")
@@ -194,20 +195,20 @@ func manageProject(){
 
         
         //////////////////////////////////////// TASK SPRINT /////////////////////////////////////////////
-        let sprintTasks: [TaskCore] = projectSprints[0].tasks?.allObjects as! [TaskCore]
+//        let sprintTasks: [TaskCore] = projectSprints[1].tasks?.allObjects as! [TaskCore]
         let tasks: [TaskCore] = try container.fetch(taskFetch) as! [TaskCore]
         
-//        sprintTasks[1].addToEvent(newEvent2)
-//        saveData(targetContainer: container)
+        //sprintTasks[0].addToEvent(newEvent2)
+        //saveData(targetContainer: container)
         print("\nTasks : \(tasks.count)")
-       // deleteData(targetContainer: container, object: tasks[1])
+//        deleteData(targetContainer: container, object: tasks[0])
         
         
         
         for task in tasks {
             print("name: \(String(describing: task.name))")
             
-            //deleteData(targetContainer: container, object: task)
+           // deleteData(targetContainer: container, object: task)
         }
 //        sprintTasks[0].addToEvent(newEvent)
 //        sprintTasks[0].addToEvent(newEvent1)
@@ -220,7 +221,7 @@ func manageProject(){
         for event in events {
             //print(event.objectID)
             print("name: \(String(describing: event.type))")
-            //deleteData(targetContainer: container, object: event)
+           // deleteData(targetContainer: container, object: event)
         }
         
     }catch _ as NSError {

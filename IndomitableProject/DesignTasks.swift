@@ -10,8 +10,11 @@ import UIKit
 import CoreData
 
 struct DesignTasks {
+    var task: String
     var day: String
     var event: String
+    var memberCount: String
+    var note: String
     
     static func fetchData() -> [DesignTasks]{
         var designTasks: [DesignTasks] = []
@@ -33,7 +36,7 @@ struct DesignTasks {
                     let taskEvent: [EventCore] = task.event?.allObjects as! [EventCore]
                     if task.name == "Design"{
                         for index in 0..<taskEvent.count{
-                            designTasks.append(DesignTasks(day: String(describing: taskEvent[index].duration), event:   taskEvent[index].type!))
+                            designTasks.append(DesignTasks(task: sprintTask[index].name!, day: String(describing: taskEvent[index].duration), event:   taskEvent[index].type!, memberCount: String(taskEvent[index].memberCount), note: taskEvent[index].notes!))
                         }
                     }
                 }
