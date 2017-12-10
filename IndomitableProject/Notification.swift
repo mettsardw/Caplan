@@ -21,9 +21,9 @@ class Notification: UIViewController{
         content.badge = 1
         
         var dateComponent = DateComponents()
-        dateComponent.day = 7
-        dateComponent.hour = 14
-        dateComponent.minute = 46
+        dateComponent.day = 10
+        dateComponent.hour = 6
+        dateComponent.minute = 2
         
         let notificationTrigger = UNCalendarNotificationTrigger(dateMatching: dateComponent, repeats: true)
         let request = UNNotificationRequest(identifier: "notification1", content: content, trigger: notificationTrigger)

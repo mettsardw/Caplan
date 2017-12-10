@@ -75,9 +75,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="quh-Aa-BxW">
-                                <rect key="frame" x="342" y="125" width="28" height="24"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="quh-Aa-BxW">
+                                <rect key="frame" x="315" y="125" width="55" height="24"/>
                                 <state key="normal" title="edit" image="icon-edit"/>
                                 <connections>
                                     <action selector="changeTask" destination="Eu0-oS-Eaj" eventType="touchUpInside" id="gsU-KT-5PS"/>
@@ -85,6 +84,10 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="4Os-AK-V9Y" firstAttribute="trailing" secondItem="quh-Aa-BxW" secondAttribute="trailing" constant="5" id="2um-Pr-CEH"/>
+                            <constraint firstItem="quh-Aa-BxW" firstAttribute="top" secondItem="4Os-AK-V9Y" secondAttribute="top" constant="105" id="iCH-ED-KdE"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="4Os-AK-V9Y"/>
                     </view>
                     <navigationItem key="navigationItem" id="Af9-JK-D9y">
@@ -111,16 +114,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="task name" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NC7-8y-zjI">
-                                <rect key="frame" x="39" y="117" width="296" height="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="task name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WOt-cw-i8q">
+                                <rect key="frame" x="20" y="117" width="296" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TvN-j7-ijg">
+                                <rect key="frame" x="320" y="117" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Edit"/>
                                 <connections>
-                                    <action selector="taskFieldTap:" destination="tu2-MA-Gjo" eventType="touchDown" id="A6x-om-Wp7"/>
+                                    <action selector="taskFieldTap:" destination="tu2-MA-Gjo" eventType="touchDown" id="DlS-zT-I4x"/>
                                 </connections>
-                            </textField>
+                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icon-members" translatesAutoresizingMaskIntoConstraints="NO" id="1rx-N9-TDM">
                                 <rect key="frame" x="32" y="208" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -147,7 +155,7 @@
                                 <rect key="frame" x="111" y="272" width="240" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -192,7 +200,7 @@
                         <outlet property="notesField" destination="epF-JO-aF7" id="Ixr-xl-E1x"/>
                         <outlet property="personWorkingField" destination="LFf-iK-a9U" id="8zm-hV-YFi"/>
                         <outlet property="pickerTime" destination="lhn-ha-ifG" id="xB0-iB-CJq"/>
-                        <outlet property="taskNameField" destination="NC7-8y-zjI" id="q7F-PX-jQj"/>
+                        <outlet property="taskNameField" destination="WOt-cw-i8q" id="9BK-Z9-eNe"/>
                         <outlet property="timePicker" destination="Ozd-xp-faH" id="w9r-bn-leI"/>
                     </connections>
                 </viewController>

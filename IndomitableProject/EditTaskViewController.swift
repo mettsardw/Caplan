@@ -10,7 +10,7 @@ import UIKit
 
 class EditTaskViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource{
     @IBOutlet weak var layer: UIView!
-    @IBOutlet weak var taskNameField: UITextField!
+    @IBOutlet weak var taskNameField: UILabel!
     @IBOutlet weak var personWorkingField: UITextField!
     @IBOutlet weak var notesField: UITextView!
     @IBOutlet weak var pickerTime: UIView!

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class EditTimeViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource{
+class EditTimeViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate{
     @IBOutlet weak var mainLabel: UILabel!
     @IBOutlet weak var timeField: UITextField!
     @IBOutlet weak var timePicker: UIPickerView!
@@ -31,6 +31,8 @@ class EditTimeViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         //pas di view did load harusnya datanya ud dapet
         
         mainLabel.text = "edit time limit..."
+        
+        timeField.delegate = self
     }
     
     @IBAction func selectUnit(_ sender: UIButton) {
@@ -76,6 +78,13 @@ class EditTimeViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
             parentTimeLabel?.text = "\(dayLimit) days left"
             navigationController?.popToRootViewController(animated: true)
         }
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField == timeField {
+            view.endEditing(true)
+        }
+        return false
     }
 }
 

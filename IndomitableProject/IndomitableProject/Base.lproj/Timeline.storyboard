@@ -44,7 +44,7 @@
                 <viewControllerPlaceholder storyboardName="AddTask" id="UaY-Co-p3r" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Hv-1a-KuH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1454" y="-451"/>
+            <point key="canvasLocation" x="1753" y="-388"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="nfu-FJ-Pf6">
@@ -102,7 +102,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="771-ma-DaY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1830" y="-62"/>
+            <point key="canvasLocation" x="2154" y="115"/>
         </scene>
         <!--Timeline-->
         <scene sceneID="JoZ-ld-T3x">
