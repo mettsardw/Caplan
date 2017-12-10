@@ -42,6 +42,7 @@
 		479484331FD65AD7005585C4 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479484321FD65AD7005585C4 /* SettingsTableViewController.swift */; };
 		479484351FD67F2D005585C4 /* ColorSettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479484341FD67F2D005585C4 /* ColorSettingsTableViewController.swift */; };
 		47F44DBA1FD7A5A00049F4B7 /* TipsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F44DB91FD7A5A00049F4B7 /* TipsViewController.swift */; };
+		92926DB41FDD2525007046E9 /* EditTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92926DB31FDD2525007046E9 /* EditTaskViewController.swift */; };
 		92959A0C1FC6CDB0005B331F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92959A0B1FC6CDB0005B331F /* AppDelegate.swift */; };
 		92959A0E1FC6CDB0005B331F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92959A0D1FC6CDB0005B331F /* ViewController.swift */; };
 		92959A111FC6CDB0005B331F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92959A0F1FC6CDB0005B331F /* Main.storyboard */; };
@@ -113,6 +114,7 @@
 		479484321FD65AD7005585C4 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		479484341FD67F2D005585C4 /* ColorSettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSettingsTableViewController.swift; sourceTree = "<group>"; };
 		47F44DB91FD7A5A00049F4B7 /* TipsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsViewController.swift; sourceTree = "<group>"; };
+		92926DB31FDD2525007046E9 /* EditTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTaskViewController.swift; sourceTree = "<group>"; };
 		92959A081FC6CDAF005B331F /* IndomitableProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IndomitableProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92959A0B1FC6CDB0005B331F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		92959A0D1FC6CDB0005B331F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -315,6 +317,7 @@
 				CE8ED6531FD64ADC00D4D446 /* RequirementTasks.swift */,
 				CE8ED6551FD64AF100D4D446 /* TestingTasks.swift */,
 				92CDA1EE1FDA5E14006C02F8 /* DetailTaskViewController.swift */,
+				92926DB31FDD2525007046E9 /* EditTaskViewController.swift */,
 			);
 			name = UIAllTasks;
 			sourceTree = "<group>";
@@ -425,6 +428,7 @@
 				220839141FCDD2CB003CD62A /* PlanLine.swift in Sources */,
 				220838C41FCC60DF003CD62A /* Project.swift in Sources */,
 				92CDA1EF1FDA5E14006C02F8 /* DetailTaskViewController.swift in Sources */,
+				92926DB41FDD2525007046E9 /* EditTaskViewController.swift in Sources */,
 				47F44DBA1FD7A5A00049F4B7 /* TipsViewController.swift in Sources */,
 				96CD07771FCD64E700C0D563 /* Event.swift in Sources */,
 				220838BE1FCC5D54003CD62A /* Sprint.swift in Sources */,

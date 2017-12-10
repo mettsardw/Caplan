@@ -23,6 +23,8 @@ class DetailTaskViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "Detail Task"
+        self.navigationItem.backBarButtonItem?.title = " "
         taskNameLabel?.text = taskName
         dayLeftLabel?.text = "\(dayLeftText!) days left"
         peopleWorkingLabel?.text = "\(peopleWorkingText!) Person(s)"
@@ -39,7 +41,16 @@ class DetailTaskViewController: UIViewController {
     }
     
     @IBAction func changeTask() {
-        
+        performSegue(withIdentifier: "editTaskSegue", sender: Any?)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "editTaskSegue" {
+            let destination = segue.destination as! EditTaskViewController
+            destination.notesText = notesText!
+            destination.peopleText = peopleWorkingText!
+            destination.taskText = taskName!
+        }
     }
     
 }
