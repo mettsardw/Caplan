@@ -303,3 +303,4 @@ func setTask(name: String, event: String, memberCount: Int, notes: String)-> Tas
     newTask.addToEvent(newEvent)
     return newTask
 }
+

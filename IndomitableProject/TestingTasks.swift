@@ -15,6 +15,7 @@ struct TestingTasks {
     var event: String
     var memberCount: String
     var note: String
+    var objectID: String
     
     static func fetchData() -> [TestingTasks]{
         var testingTasks: [TestingTasks] = []
@@ -35,7 +36,7 @@ struct TestingTasks {
                     let taskEvent: [EventCore] = task.event?.allObjects as! [EventCore]
                     if task.name == "Testing"{
                         for index in 0..<taskEvent.count{
-                            testingTasks.append(TestingTasks(task: temptask!, day: String(describing: taskEvent[index].duration), event:   taskEvent[index].type!, memberCount: String(taskEvent[index].memberCount), note: taskEvent[index].notes!))
+                            testingTasks.append(TestingTasks(task: temptask!, day: String(describing: taskEvent[index].duration), event:   taskEvent[index].type!, memberCount: String(taskEvent[index].memberCount), note: taskEvent[index].notes!, objectID: String(describing: taskEvent[index].objectID)))
                         }
                     }
                 }

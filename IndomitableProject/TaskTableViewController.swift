@@ -16,7 +16,7 @@ class TaskTableViewController: UIViewController, UITableViewDataSource, UITableV
     //let section: [String] = ["Requirement", "Design", "Coding", "Testing"]
     var section: [String] = []
     var data: [[Any]] = []
-    
+    var tempObjectID = [String]()
     var tempMemberCount = [String]()
     var tempNote = [String]()
     var tempDesc = [String]()
@@ -30,10 +30,12 @@ class TaskTableViewController: UIViewController, UITableViewDataSource, UITableV
     var tempDayForSend: String = ""
     var tempMemberCountForSend: String = ""
     var tempNoteForSend: String = ""
+    var tempObjectIDForSend: String = ""
     
     override func viewWillAppear(_ animated: Bool) {
         section.removeAll()
         data.removeAll()
+        tempObjectID.removeAll()
         tempMemberCount.removeAll()
         tempNote.removeAll()
         tempDesc.removeAll()
@@ -109,6 +111,7 @@ class TaskTableViewController: UIViewController, UITableViewDataSource, UITableV
                     tempDay.append(dataString.day)
                     tempNote.append(dataString.note)
                     tempMemberCount.append(dataString.memberCount)
+                    tempObjectID.append(dataString.objectID)
                 }
                 else if let dataString: DesignTasks = self.data[index][ind] as? DesignTasks{
                     var flag: Int = 0
@@ -129,6 +132,7 @@ class TaskTableViewController: UIViewController, UITableViewDataSource, UITableV
                     tempDay.append(dataString.day)
                     tempNote.append(dataString.note)
                     tempMemberCount.append(dataString.memberCount)
+                    tempObjectID.append(dataString.objectID)
                 }
                 else if let dataString: CodingTasks = self.data[index][ind] as? CodingTasks{
                     var flag: Int = 0
@@ -149,6 +153,7 @@ class TaskTableViewController: UIViewController, UITableViewDataSource, UITableV
                     tempDay.append(dataString.day)
                     tempNote.append(dataString.note)
                     tempMemberCount.append(dataString.memberCount)
+                    tempObjectID.append(dataString.objectID)
                 }
                 else if let dataString: TestingTasks = self.data[index][ind] as? TestingTasks{
                     var flag: Int = 0
@@ -169,6 +174,7 @@ class TaskTableViewController: UIViewController, UITableViewDataSource, UITableV
                     tempDay.append(dataString.day)
                     tempNote.append(dataString.note)
                     tempMemberCount.append(dataString.memberCount)
+                    tempObjectID.append(dataString.objectID)
                 }
             }
         }
@@ -263,7 +269,7 @@ class TaskTableViewController: UIViewController, UITableViewDataSource, UITableV
         tempDayForSend = b.dayLabel.text!
         tempMemberCountForSend = getMemberCountstring(string: b.descLabel.text!)
         tempNoteForSend = getNotestring(string: b.descLabel.text!)
-        
+        tempObjectIDForSend = getObjectID(string: b.descLabel.text!)
         self.performSegue(withIdentifier: "detailTaskSegue", sender: Any?.self)
     }
     
@@ -274,6 +280,7 @@ class TaskTableViewController: UIViewController, UITableViewDataSource, UITableV
             destination.dayLeftText = tempDayForSend
             destination.peopleWorkingText = tempMemberCountForSend
             destination.notesText = tempNoteForSend
+            destination.sourceObjectID = tempObjectIDForSend
         }
     }
     
@@ -287,6 +294,10 @@ class TaskTableViewController: UIViewController, UITableViewDataSource, UITableV
     
     func getNotestring(string: String) -> String{
         return tempNote[tempDesc.index(of: string)!]
+    }
+    
+    func getObjectID(string: String) -> String{
+        return tempObjectID[tempDesc.index(of: string)!]
     }
 }
 

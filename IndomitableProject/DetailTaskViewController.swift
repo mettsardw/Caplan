@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class DetailTaskViewController: UIViewController {
     
@@ -20,6 +21,7 @@ class DetailTaskViewController: UIViewController {
     var dayLeftText: String?
     var peopleWorkingText: String?
     var notesText: String?
+    var sourceObjectID: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,7 +43,7 @@ class DetailTaskViewController: UIViewController {
     }
     
     @IBAction func changeTask() {
-        performSegue(withIdentifier: "editTaskSegue", sender: Any?)
+        performSegue(withIdentifier: "editTaskSegue", sender: Any?.self)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -50,6 +52,50 @@ class DetailTaskViewController: UIViewController {
             destination.notesText = notesText!
             destination.peopleText = peopleWorkingText!
             destination.taskText = taskName!
+            destination.sourceObjectID = sourceObjectID
+            let container = getContainer()
+            let projectFetch = NSFetchRequest<NSManagedObject>(entityName: "ProjectCore")
+            do{
+                let projects: [ProjectCore] = try container.fetch(projectFetch) as! [ProjectCore]
+                let projectSprints: [SprintCore] = projects[0].sprintCore?.allObjects as! [SprintCore]
+                for sprint in projectSprints {
+                    let sprintTasks: [TaskCore] = sprint.tasks?.allObjects as! [TaskCore]
+                    for task in sprintTasks {
+                        let taskEvents: [EventCore] = task.event?.allObjects as! [EventCore]
+                        for event in taskEvents {
+                            let objectID = String(describing: event.objectID)
+                            if objectID == sourceObjectID {
+                                let getTask = event.taskEvent?.name!
+                                if getTask == "Requirement" {
+                                    destination.data.append("Requirement Ghatering")
+                                    destination.data.append("Requirement Specification")
+                                    destination.data.append("Requirement Validation")
+                                }else if getTask == "Design" {
+                                    destination.data.append("System Design")
+                                    destination.data.append("Program Design")
+                                    destination.data.append("Database Design")
+                                }
+                                else if getTask == "Coding" {
+                                    destination.data.append("Core System")
+                                    destination.data.append("Additional Feature")
+                                    destination.data.append("Database System")
+                                }
+                                else if getTask == "Testing" {
+                                    destination.data.append("Unit Testing")
+                                    destination.data.append("Integration Testing")
+                                    destination.data.append("System Testing")
+                                }else{
+                                    destination.data.append("yooman")
+                                    destination.data.append("yooman")
+                                    
+                                }
+                            }
+                        }
+                    }
+                }
+            }catch _ as NSError{
+                print("error")
+            }
         }
     }
     
