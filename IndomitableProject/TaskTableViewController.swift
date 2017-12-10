@@ -69,7 +69,7 @@ class TaskTableViewController: UIViewController, UITableViewDataSource, UITableV
            data.remove(at: indData[i])
         }
         
-        print("\(data), \(data.count)")
+        //print("\(data), \(data.count)")
         
         taskTable.dataSource = self
         taskTable.delegate = self
@@ -82,7 +82,7 @@ class TaskTableViewController: UIViewController, UITableViewDataSource, UITableV
         resultController.tableView.dataSource = self
         self.searchController.hidesNavigationBarDuringPresentation = false
         
-        print(section)
+        //print(section)
         
         for index in 0..<data.count{
             for ind in 0..<data[index].count{
@@ -168,7 +168,7 @@ class TaskTableViewController: UIViewController, UITableViewDataSource, UITableV
                 }
             }
         }
-        print(section)
+        //print(section)
         
         //initialize navigation controller
         self.navigationController?.navigationBar.tintColor = #colorLiteral(red: 0.3120126724, green: 0.8384783864, blue: 0.09061203152, alpha: 1)
@@ -221,7 +221,7 @@ class TaskTableViewController: UIViewController, UITableViewDataSource, UITableV
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = taskTable.dequeueReusableCell(withIdentifier: "tasksCell", for: indexPath) as! TaskTableViewCell
-        print(indexPath)
+        //print(indexPath)
         if tableView == resultController.tableView && searchController.isActive{
             cell.dayLabel.text = filteredDay[indexPath.row]
             cell.descLabel.text = filteredDesc[indexPath.row]
