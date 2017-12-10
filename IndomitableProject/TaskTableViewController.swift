@@ -13,7 +13,8 @@ class TaskTableViewController: UIViewController, UITableViewDataSource, UITableV
     
     @IBOutlet weak var taskTable: UITableView!
 
-    //let section: [String] = ["Requirement", "Design", "Coding", "Testing"]
+    //let notification = Notification()
+    
     var section: [String] = []
     var data: [[Any]] = []
     var tempObjectID = [String]()

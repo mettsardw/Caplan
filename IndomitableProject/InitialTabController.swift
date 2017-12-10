@@ -19,8 +19,6 @@ class InitialTabController: UITabBarController {
         
         //notification
         notification.viewDidLoad()
-        
-        print("first")
     }
     
 }
@@ -33,40 +31,40 @@ func manageProject(){
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     let container = appDelegate.persistentContainer.viewContext
 ///////////////////   BARU ///////////////////////////////////////
-//        let newSprint = NSEntityDescription.insertNewObject(forEntityName: "SprintCore", into: container) as! SprintCore
-//        let newProject = NSEntityDescription.insertNewObject(forEntityName: "ProjectCore", into: container) as! ProjectCore
-//        let newUser =  NSEntityDescription.insertNewObject(forEntityName: "UserCore", into: container) as! UserCore
+        let newSprint = NSEntityDescription.insertNewObject(forEntityName: "SprintCore", into: container) as! SprintCore
+        let newProject = NSEntityDescription.insertNewObject(forEntityName: "ProjectCore", into: container) as! ProjectCore
+        let newUser =  NSEntityDescription.insertNewObject(forEntityName: "UserCore", into: container) as! UserCore
 //
-//        let newTask = NSEntityDescription.insertNewObject(forEntityName: "TaskCore", into: container) as! TaskCore
+        let newTask = NSEntityDescription.insertNewObject(forEntityName: "TaskCore", into: container) as! TaskCore
 //        let newTask2 = NSEntityDescription.insertNewObject(forEntityName: "TaskCore", into: container) as! TaskCore
 //        let newTask3 = NSEntityDescription.insertNewObject(forEntityName: "TaskCore", into: container) as! TaskCore
 //        let newTask4 = NSEntityDescription.insertNewObject(forEntityName: "TaskCore", into: container) as! TaskCore
     
-//        let newEvent = NSEntityDescription.insertNewObject(forEntityName: "EventCore", into: container) as! EventCore
+        let newEvent = NSEntityDescription.insertNewObject(forEntityName: "EventCore", into: container) as! EventCore
 //        let newEvent1 = NSEntityDescription.insertNewObject(forEntityName: "EventCore", into: container) as! EventCore
 //        let newEvent2 = NSEntityDescription.insertNewObject(forEntityName: "EventCore", into: container) as! EventCore
 //
 //
-//            newProject.setValue("MyProject", forKey: "name")
-//            newProject.setValue(30, forKey: "duration")
-//            newProject.setValue("days", forKey: "durationUnit")
+            newProject.setValue("MyProject", forKey: "name")
+            newProject.setValue(30, forKey: "duration")
+            newProject.setValue("days", forKey: "durationUnit")
 //
 //    //////---- USER ----//
-//            newUser.setValue("Sardew", forKey: "name")
-//            newUser.setValue("mettasaridewi.w@gmail.com", forKey: "account")
-//            newUser.project = newProject
-//
+            newUser.setValue("Sardew", forKey: "name")
+            newUser.setValue("mettasaridewi.w@gmail.com", forKey: "account")
+            newUser.project = newProject
+
 //    ////////---- PROJECT ----//
-//        newProject.userCore = newUser
+        newProject.userCore = newUser
 //    //
 //    //////---- SPRINT ----//
-//          newSprint.setValue("Sprint 2", forKey: "name")
-//          newSprint.setValue(20, forKey: "duration")
-//          newSprint.setValue("days", forKey: "durationUnit")
+          newSprint.setValue("Sprint 2", forKey: "name")
+          newSprint.setValue(20, forKey: "duration")
+          newSprint.setValue("days", forKey: "durationUnit")
 //////
 //    ///// ---- TASK ----//
-//        newTask.setValue("Requirement", forKey: "name")
-//        newTask.setValue(1, forKey: "priority")
+        newTask.setValue("Requirement", forKey: "name")
+        newTask.setValue(1, forKey: "priority")
 //////
 ////
     //---------------------------------------------//
@@ -96,12 +94,12 @@ func manageProject(){
 //
 //
     //set Event
-//        newEvent.setValue("Requirement Gathering", forKey: "type")
-//        newEvent.setValue(3, forKey: "memberCount")
-//        newEvent.setValue(2, forKey: "duration")
-//        newEvent.setValue("days", forKey: "durationUnit")
-//        newEvent.setValue("ini req gather", forKey: "notes")
-//        newEvent.setValue(5, forKey: "point")
+        newEvent.setValue("Requirement Gathering", forKey: "type")
+        newEvent.setValue(3, forKey: "memberCount")
+        newEvent.setValue(2, forKey: "duration")
+        newEvent.setValue("days", forKey: "durationUnit")
+        newEvent.setValue("ini req gather", forKey: "notes")
+        newEvent.setValue(5, forKey: "point")
 //
 //        newEvent1.setValue("Requirement Specification", forKey: "type")
 //        newEvent1.setValue(7, forKey: "memberCount")
@@ -138,7 +136,7 @@ func manageProject(){
 //        newEvent2.setValue(4, forKey: "duration")
 //        newEvent2.setValue("days", forKey: "durationUnit")
 //
-//        newTask.addToEvent(newEvent)
+        newTask.addToEvent(newEvent)
 //        newTask.addToEvent(newEvent1)
     //    newTask.addToEvent(newEvent1)
 //        newTask2.addToEvent(newEvent2)
@@ -146,8 +144,8 @@ func manageProject(){
     //    newSprint.addToTasks(newTask)
     //
     
-//        newProject.addToSprintCore(newSprint)
-//        newSprint.addToTasks(newTask3)
+        newProject.addToSprintCore(newSprint)
+        newSprint.addToTasks(newTask)
 //        newSprint.addToTasks(newTask4)
 //
     
