@@ -58,30 +58,6 @@
             </objects>
             <point key="canvasLocation" x="366" y="583"/>
         </scene>
-        <!--Settings-->
-        <scene sceneID="8HQ-3r-JRu">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Settings" id="eY8-o7-JMV" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="O52-cf-oNt" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="298" y="822"/>
-        </scene>
-        <!--Help-->
-        <scene sceneID="Dfm-b4-XXC">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Help" id="5YW-Fa-eAN" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Zrf-Hy-6Nl" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="299" y="703"/>
-        </scene>
-        <!--Tips-->
-        <scene sceneID="dZj-v3-8O9">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Tips" id="MfI-1o-rXy" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="tLT-hP-s23" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="297.60000000000002" y="763.71814092953525"/>
-        </scene>
         <!--Tips-->
         <scene sceneID="f5w-Qb-8yW">
             <objects>
