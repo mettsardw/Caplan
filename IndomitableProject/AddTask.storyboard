@@ -247,6 +247,7 @@
                         <outlet property="alertSprintSet" destination="Am2-wz-im6" id="Iwv-yB-REz"/>
                         <outlet property="alertTeamSet" destination="u68-7o-eai" id="mzm-3H-H0r"/>
                         <outlet property="layer" destination="INK-P5-E1a" id="XGc-oP-Rc8"/>
+                        <outlet property="noteText" destination="IHR-gq-1MF" id="hKR-m5-IUO"/>
                         <outlet property="pickerContainer" destination="QeX-UV-Ndw" id="pSH-94-ktd"/>
                         <outlet property="selectSprint" destination="iSn-O2-BlA" id="BIA-Rx-PKk"/>
                         <outlet property="sprintPicker" destination="nhc-FQ-Dln" id="p4C-5B-X4Y"/>

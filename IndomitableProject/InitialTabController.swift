@@ -204,7 +204,7 @@ func manageProject(){
         
         
         
-        for task in sprintTasks {
+        for task in tasks {
             print("name: \(String(describing: task.name))")
             
             //deleteData(targetContainer: container, object: task)
@@ -218,7 +218,7 @@ func manageProject(){
         
         print("Event : \(events.count)")
         for event in events {
-            print(event.objectID)
+            //print(event.objectID)
             print("name: \(String(describing: event.type))")
             //deleteData(targetContainer: container, object: event)
         }
@@ -270,4 +270,21 @@ func getContainer() -> NSManagedObjectContext {
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     let container = appDelegate.persistentContainer.viewContext
     return container
+}
+
+func setTask(name: String, event: String, memberCount: Int, notes: String)-> TaskCore{
+    let newTask = NSEntityDescription.insertNewObject(forEntityName: "TaskCore", into: getContainer()) as! TaskCore
+    let newEvent = NSEntityDescription.insertNewObject(forEntityName: "EventCore", into: getContainer()) as! EventCore
+    
+    newTask.setValue(name, forKey: "name")
+    newTask.setValue(1, forKey: "priority")
+    newEvent.setValue(event, forKey: "type")
+    newEvent.setValue(memberCount, forKey: "memberCount")
+    newEvent.setValue(2, forKey: "duration")
+    newEvent.setValue("days", forKey: "durationUnit")
+    newEvent.setValue(notes, forKey: "notes")
+    newEvent.setValue(5, forKey: "point")
+    
+    newTask.addToEvent(newEvent)
+    return newTask
 }

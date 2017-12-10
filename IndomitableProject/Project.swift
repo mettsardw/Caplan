@@ -32,7 +32,8 @@ class Project {
                 
                 for sprint in sprintsProject {
                     let tasksSprint: [TaskCore] = sprint.tasks?.allObjects as! [TaskCore]
-                    let insertSprint: Sprint = Sprint(name: sprint.name!)
+                    let insertSprint: Sprint = Sprint(name: sprint.name!, objectID: String(describing: sprint.objectID))
+                    
                     
                     for task in tasksSprint{
                         let eventsTask: [EventCore] = task.event?.allObjects as! [EventCore]

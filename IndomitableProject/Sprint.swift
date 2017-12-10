@@ -6,20 +6,22 @@
 //  Copyright © 2017 RagingWind. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
 
 class Sprint{
     var name: String
     var duration: Int // total duration of all tasks inside
     var tasks: [Task]
     var limit: Int
-    
-    init(name: String) {
+    var objectID: String
+    init(name: String, objectID: String) {
         //set default values
         self.name = name
         self.duration = 0
         self.tasks = []
         self.limit = 0
+        self.objectID = objectID
         
         //modified logic
         limit = self.recommendedLimit() // change content of function with calculation of rec limit of days

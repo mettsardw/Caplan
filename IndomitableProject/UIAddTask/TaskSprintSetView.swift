@@ -11,6 +11,7 @@ import UIKit
 class TaskSprintSetView: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
     
     
+    @IBOutlet weak var noteText: UITextView!
     @IBOutlet weak var alertSprintSet: UILabel!
     @IBOutlet weak var alertTeamSet: UILabel!
     @IBOutlet weak var layer: UIView!
@@ -34,11 +35,17 @@ class TaskSprintSetView: UIViewController, UIPickerViewDataSource, UIPickerViewD
     
     var sourceTask: String?
     var sprintData: [String] = []
+    var sprintID: [String] = []
+    var sourceActivities: String?
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "successView" {
             let destination = segue.destination as! TaskAddedInfoView
             destination.sourceTask = self.sourceTask
+            destination.sourceSprintID = sprintID[sprintPicker.selectedRow(inComponent: 0)]
+            destination.sourceMemberCount = Int(teamSet.text!)
+            destination.sourceEvent = sourceActivities
+            destination.sourceNotes = noteText.text
         }
     }
     
@@ -88,6 +95,7 @@ class TaskSprintSetView: UIViewController, UIPickerViewDataSource, UIPickerViewD
         layer.isHidden = true
         for sprint in project.sprints {
             sprintData.append(sprint.name)
+            sprintID.append(sprint.objectID)
         }
     }
 }

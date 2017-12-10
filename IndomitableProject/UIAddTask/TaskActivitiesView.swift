@@ -20,6 +20,7 @@ class TaskActivitesView: UIViewController, UIPickerViewDataSource, UIPickerViewD
         if segue.identifier == "sprintSetup" {
             let destination = segue.destination as! TaskSprintSetView
             destination.sourceTask = sourceTask
+            destination.sourceActivities = dataActivities[activitiesPicker.selectedRow(inComponent: 0)]
         }
     }
     

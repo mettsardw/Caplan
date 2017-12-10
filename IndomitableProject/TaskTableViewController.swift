@@ -14,7 +14,6 @@ class TaskTableViewController: UIViewController, UITableViewDataSource, UITableV
 
     let section: [String] = ["Requirement", "Design", "Coding", "Testing"]
     var data: [[Any]] = []
-    
     var tempDesc = [String]()
     var tempDay = [String]()
     var filteredDesc = [String]()
@@ -22,14 +21,20 @@ class TaskTableViewController: UIViewController, UITableViewDataSource, UITableV
     var searchController = UISearchController()
     var resultController = UITableViewController()
     
+    override func viewWillAppear(_ animated: Bool) {
+        data.removeAll()
+        tempDay.removeAll()
+        tempDesc.removeAll()
+        self.viewDidLoad()
+        self.taskTable.reloadData()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         data.append(RequirementTasks.fetchData())
         data.append(DesignTasks.fetchData())
         data.append(CodingTasks.fetchData())
         data.append(TestingTasks.fetchData())
-        
         taskTable.dataSource = self
         taskTable.delegate = self
 
@@ -71,6 +76,8 @@ class TaskTableViewController: UIViewController, UITableViewDataSource, UITableV
         //initialize navigation controller
         self.navigationController?.navigationBar.tintColor = #colorLiteral(red: 0.3120126724, green: 0.8384783864, blue: 0.09061203152, alpha: 1)
     }
+    
+    
     
    func updateSearchResults(for searchController: UISearchController) {
         filteredDesc = tempDesc.filter({ (array:String) -> Bool in
@@ -146,10 +153,13 @@ class TaskTableViewController: UIViewController, UITableViewDataSource, UITableV
         return cell
     }
     
+    
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
     }
 }
+
 
 extension String {
     func containsIgnoringCase(find: String) -> Bool{

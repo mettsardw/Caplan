@@ -7,9 +7,13 @@
 //
 
 import UIKit
+import CoreData
 
 class TaskAddedInfoView: UIViewController {
-    
+    var sourceSprintID: String?
+    var sourceEvent: String?
+    var sourceNotes: String?
+    var sourceMemberCount: Int?
     var sourceTask: String?
     @IBAction func doneButton(){
         navigationController?.popToRootViewController(animated: true)
@@ -46,5 +50,21 @@ class TaskAddedInfoView: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let container = getContainer()
+        let projectFetch = NSFetchRequest<NSManagedObject>(entityName: "ProjectCore")
+        do {
+            let projects: [ProjectCore] = try container.fetch(projectFetch) as! [ProjectCore]
+            let projectSprints: [SprintCore] = projects[0].sprintCore?.allObjects as! [SprintCore]
+            for sprint in projectSprints {
+                let sprintID = String(describing: sprint.objectID)
+                if sprintID == sourceSprintID {
+                    sprint.addToTasks(setTask(name: sourceTask!, event: sourceEvent!, memberCount: sourceMemberCount!, notes: sourceNotes!))
+                    saveData(targetContainer: container)
+                    project = Project()
+                }
+            }
+        } catch _ as NSError {
+            print("error")
+        }
     }
 }
