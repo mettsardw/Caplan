@@ -82,6 +82,10 @@ class TaskTableViewController: UIViewController, UITableViewDataSource, UITableV
         resultController.tableView.dataSource = self
         self.searchController.hidesNavigationBarDuringPresentation = false
         
+        //manage search bar
+        searchController.searchBar.backgroundImage = UIImage()
+        searchController.searchBar.tintColor = #colorLiteral(red: 0.3120126724, green: 0.8384783864, blue: 0.09061203152, alpha: 1)
+        
         //print(section)
         
         for index in 0..<data.count{

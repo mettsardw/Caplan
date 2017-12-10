@@ -189,6 +189,9 @@ func manageProject(){
         //saveData(targetContainer: container)
         let sprints: [SprintCore] = try container.fetch(sprintFecth) as! [SprintCore]
         print("Sprint: \(sprints.count)")
+//        deleteData(targetContainer: container, object: projectSprints[2])
+//        deleteData(targetContainer: container, object: projectSprints[3])
+        //deleteData(targetContainer: container, object: projectSprints[4])
         for sprint in projectSprints {
             print("name \(String(describing: sprint.name)) ")
         }
@@ -275,6 +278,17 @@ func getContainer() -> NSManagedObjectContext {
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     let container = appDelegate.persistentContainer.viewContext
     return container
+}
+
+func setSprint(name: String, duration: Int, unit: String) -> SprintCore {
+    
+    let newSprint = NSEntityDescription.insertNewObject(forEntityName: "SprintCore", into: getContainer()) as! SprintCore
+    
+    newSprint.setValue(name, forKey: "name")
+    newSprint.setValue(duration, forKey: "duration")
+    newSprint.setValue(unit, forKey: "durationUnit")
+    
+    return newSprint
 }
 
 func setTask(name: String, event: String, memberCount: Int, notes: String)-> TaskCore{
