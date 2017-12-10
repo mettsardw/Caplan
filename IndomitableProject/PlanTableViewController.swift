@@ -47,7 +47,7 @@ class PlanTableViewController: UITableViewController {
         cell.bubble.tag = indexPath.row
         cell.bubble.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
         cell.name.text = "\(sprintLabel[indexPath.row])"
-        cell.days.text = "\(arc4random_uniform(10))d"
+        cell.days.text = "\(getTotalDuration(sprintIndex: indexPath.row))d"
 
         return cell
     }

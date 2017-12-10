@@ -8,22 +8,19 @@
 
 import Foundation
 
-enum Types{
-    case SprintPlanning
-    case Sprint
-    case DailyScrum
-    case Review
-    case Retrospective
-}
 
 class Event{
     var timeBoxed: Time
-    var type: Types
+    var type: String
     var memberCount: Int
+    var notes: String
+    var point: Int
     
-    init(timeBoxed: Time, type: Types, memberCount: Int) {
+    init(timeBoxed: Time, type: String, memberCount: Int, notes: String, point: Int) {
         self.timeBoxed = timeBoxed
         self.type = type
         self.memberCount = memberCount
+        self.notes = notes
+        self.point = point
     }
 }

@@ -42,6 +42,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
     
+    func applicationDidFinishLaunching(_ application: UIApplication) {
+        //set UI font
+        UILabel.appearance().substituteFontName = "Avenir Next"
+    }
     
     
     // MARK: - Core Data stack
@@ -90,7 +94,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
     }
+}
+
+//UI Extension! To set default font
+extension UILabel {
     
+    var substituteFontName : String {
+        get { return self.font.fontName }
+        set { self.font = UIFont(name: newValue, size: self.font.pointSize) }
+    }
 }
 
 

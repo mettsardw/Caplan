@@ -2,7 +2,7 @@
 //  EventCore+CoreDataProperties.swift
 //  IndomitableProject
 //
-//  Created by Davin Reinaldo Gozali on 06/12/17.
+//  Created by Davin Reinaldo Gozali on 09/12/17.
 //  Copyright © 2017 RagingWind. All rights reserved.
 //
 //
@@ -21,6 +21,8 @@ extension EventCore {
     @NSManaged public var durationUnit: String?
     @NSManaged public var memberCount: Int64
     @NSManaged public var type: String?
+    @NSManaged public var notes: String?
+    @NSManaged public var point: Int64
     @NSManaged public var taskEvent: TaskCore?
 
 }
